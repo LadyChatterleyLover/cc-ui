@@ -6,6 +6,9 @@ cc-ui是uni-app生态组件库, 宗旨是一切为了简单。
 本组件库使用与uni-app开发, 目前适配了全部h5和微信小程序端, 大部分的app端, 后续会陆续适配所有端。
 在维护此组件库的同时, 作者也会陆续推出vue3版本和react版本, 敬请期待。
 
+### 在线文档
+[cc-ui在线文档](https://ladychatterleylover.github.io/cc-ui-web/)
+
 ### 在线预览
 1. 你可以通过手机浏览器访问: [cc-ui](https://static-df19c143-c147-44fa-84a0-61752f5834cc.bspapp.com/cc-ui/#/), 如是用电脑浏览器访问, 请将浏览器设置为手机模式。
 2. 微信小程序请扫码预览或者直接在小程序市场搜索`ccccccui组件库` 
