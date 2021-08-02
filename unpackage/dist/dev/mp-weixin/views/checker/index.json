@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "checker选择项",
+  "usingComponents": {
+    "cc-checker": "/components/cc-checker/cc-checker"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "steps步骤条",
+  "usingComponents": {
+    "cc-steps": "/components/cc-steps/cc-steps",
+    "cc-button": "/components/cc-button/cc-button"
+  }
+}

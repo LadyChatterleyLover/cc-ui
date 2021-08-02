@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cc-radio": "/components/cc-radio/cc-radio",
+    "cc-tag": "/components/cc-tag/cc-tag",
+    "cc-icon": "/components/cc-icon/cc-icon",
+    "cc-button": "/components/cc-button/cc-button"
+  }
+}

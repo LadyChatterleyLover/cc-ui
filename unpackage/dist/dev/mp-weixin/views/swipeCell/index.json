@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "swipeCell滑动单元格",
+  "usingComponents": {
+    "cc-swipe-cell": "/components/cc-swipe-cell/cc-swipe-cell",
+    "cc-cell": "/components/cc-cell/cc-cell",
+    "cc-button": "/components/cc-button/cc-button"
+  }
+}

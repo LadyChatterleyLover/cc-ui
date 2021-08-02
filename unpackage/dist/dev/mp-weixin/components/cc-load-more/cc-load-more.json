@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cc-divider": "/components/cc-divider/cc-divider",
+    "cc-loading": "/components/cc-loading/cc-loading"
+  }
+}

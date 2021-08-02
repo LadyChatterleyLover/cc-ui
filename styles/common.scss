@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.j-around {
+  justify-content: space-around;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "contactCard联系人卡片",
+  "usingComponents": {
+    "cc-contact-card": "/components/cc-contact-card/cc-contact-card"
+  }
+}

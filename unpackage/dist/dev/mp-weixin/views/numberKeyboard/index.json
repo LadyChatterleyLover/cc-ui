@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "numberKeyboard数字键盘",
+  "usingComponents": {
+    "cc-button": "/components/cc-button/cc-button",
+    "cc-number-keyboard": "/components/cc-number-keyboard/cc-number-keyboard"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cc-swiper": "/components/cc-swiper/cc-swiper",
+    "cc-action-sheet": "/components/cc-action-sheet/cc-action-sheet"
+  }
+}

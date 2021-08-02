@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "skeleton骨架屏",
+  "usingComponents": {
+    "cc-skeleton": "/components/cc-skeleton/cc-skeleton",
+    "cc-button": "/components/cc-button/cc-button"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "loading加载",
+  "usingComponents": {
+    "cc-loading": "/components/cc-loading/cc-loading"
+  }
+}

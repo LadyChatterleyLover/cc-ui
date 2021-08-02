@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "passwordInput密码输入框",
+  "usingComponents": {
+    "cc-button": "/components/cc-button/cc-button",
+    "cc-password-input": "/components/cc-password-input/cc-password-input"
+  }
+}

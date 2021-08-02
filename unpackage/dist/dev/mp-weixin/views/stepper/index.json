@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "stepper步进器",
+  "usingComponents": {
+    "cc-stepper": "/components/cc-stepper/cc-stepper"
+  }
+}

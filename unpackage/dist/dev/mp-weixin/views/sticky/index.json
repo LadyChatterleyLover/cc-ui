@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "sticky粘性布局",
+  "usingComponents": {
+    "cc-sticky": "/components/cc-sticky/cc-sticky"
+  }
+}

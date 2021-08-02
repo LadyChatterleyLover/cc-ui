@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cc-badge": "/components/cc-badge/cc-badge"
+  }
+}

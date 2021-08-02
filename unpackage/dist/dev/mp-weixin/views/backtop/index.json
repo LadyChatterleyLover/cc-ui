@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "backtop回到顶部",
+  "usingComponents": {
+    "cc-backtop": "/components/cc-backtop/cc-backtop"
+  }
+}

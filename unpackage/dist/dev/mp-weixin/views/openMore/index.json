@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "openMore展开更多",
+  "usingComponents": {
+    "cc-open-more": "/components/cc-open-more/cc-open-more"
+  }
+}

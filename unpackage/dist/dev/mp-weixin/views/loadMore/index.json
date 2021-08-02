@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "loadMore加载更多",
+  "usingComponents": {
+    "cc-load-more": "/components/cc-load-more/cc-load-more"
+  }
+}

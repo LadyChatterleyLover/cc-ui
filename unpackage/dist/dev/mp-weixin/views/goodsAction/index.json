@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "goodsAction商品导航",
+  "usingComponents": {
+    "cc-goods-action": "/components/cc-goods-action/cc-goods-action"
+  }
+}

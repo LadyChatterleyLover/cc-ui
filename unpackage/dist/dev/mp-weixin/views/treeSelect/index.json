@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "treeSelect分类选择",
+  "usingComponents": {
+    "cc-tree-select": "/components/cc-tree-select/cc-tree-select"
+  }
+}

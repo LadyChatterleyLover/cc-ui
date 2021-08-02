@@ -1,0 +1,1 @@
+<view class="data-v-e35bb75e"><cc-open-more vue-id="3bf2e6d5-1" class="data-v-e35bb75e" bind:__l="__l" vue-slots="{{['default']}}"><rich-text nodes="{{content}}" class="data-v-e35bb75e"></rich-text></cc-open-more></view>

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cc-tag": "/components/cc-tag/cc-tag"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "link超链接",
+  "usingComponents": {
+    "cc-link": "/components/cc-link/cc-link"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "divider分割线",
+  "usingComponents": {
+    "cc-divider": "/components/cc-divider/cc-divider"
+  }
+}

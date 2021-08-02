@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "contactEdit联系人编辑",
+  "usingComponents": {
+    "cc-contact-edit": "/components/cc-contact-edit/cc-contact-edit"
+  }
+}

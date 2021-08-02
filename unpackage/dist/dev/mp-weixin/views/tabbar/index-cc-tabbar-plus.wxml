@@ -1,0 +1,1 @@
+<image width="37" height="37" src="{{item.active?'https://cdn.uviewui.com/uview/common/min_button_select.png':'https://cdn.uviewui.com/uview/common/min_button.png'}}" class="_img data-v-43e742f0"></image>

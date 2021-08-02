@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['handleClick',['$event']]]]]}}" class="cc-row data-v-a7cb28b8" style="{{'margin-left:'+(margin)+';'+('margin-right:'+(margin)+';')+('justify-content:'+(justifyValue)+';')}}" bindtap="__e"><slot></slot></view>

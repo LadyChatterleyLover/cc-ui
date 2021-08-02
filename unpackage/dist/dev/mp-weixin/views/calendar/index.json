@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "calendar日历",
+  "usingComponents": {
+    "cc-calendar": "/components/cc-calendar/cc-calendar",
+    "cc-button": "/components/cc-button/cc-button"
+  }
+}

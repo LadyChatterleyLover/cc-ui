@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "upload上传",
+  "usingComponents": {
+    "cc-upload": "/components/cc-upload/cc-upload",
+    "cc-button": "/components/cc-button/cc-button"
+  }
+}

@@ -1,0 +1,61 @@
+button {
+  &::after {
+    width: 0;
+    height: 0;
+  }
+}
+.cc-index-bar-anchor {
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+  color: #323233;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 64rpx;
+  background: #f5f5f5;
+  &-active {
+    color: $primary !important;
+  }
+  &-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ebedf0;
+  }
+  &-init-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  &-active-index {
+    height: 64rpx !important;
+  }
+}
+
+.cc-filed-cell-left-icon {
+  .cc-cell-left-icon {
+    position: relative;
+    top: 6rpx;
+  }
+}
+.cc-number-keyboard__svg {
+  svg {
+    width: 48rpx;
+    height: 28rpx;
+  }
+}
+.cc-address-edit {
+  padding: 24rpx;
+  .cc-form-item {
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+}
+.cc-tabs-scroll-view {
+  .uni-scroll-view, .uni-scroll-view-content{
+    height: auto !important;
+  }
+}

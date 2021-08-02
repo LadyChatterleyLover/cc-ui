@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "switch开关",
+  "usingComponents": {
+    "cc-switch": "/components/cc-switch/cc-switch"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "search搜索框",
+  "usingComponents": {
+    "cc-search": "/components/cc-search/cc-search",
+    "cc-icon": "/components/cc-icon/cc-icon"
+  }
+}

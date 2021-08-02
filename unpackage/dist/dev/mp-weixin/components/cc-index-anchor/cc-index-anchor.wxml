@@ -1,0 +1,1 @@
+<view class="data-v-53496ec0"><view class="cc-index-anchor-item data-v-53496ec0" id="{{'cc-index-anchor-item-'+index}}" data-event-opts="{{[['tap',[['clickItem',['$0'],['index']]]]]}}" bindtap="__e">{{index}}</view></view>

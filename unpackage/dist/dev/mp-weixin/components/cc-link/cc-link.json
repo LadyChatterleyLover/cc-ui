@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cc-toast": "/components/cc-toast/cc-toast"
+  }
+}

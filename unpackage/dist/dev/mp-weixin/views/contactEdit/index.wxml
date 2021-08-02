@@ -1,0 +1,1 @@
+<view class="data-v-2c276a4e"><cc-contact-edit vue-id="58c66078-1" contactInfo="{{editingContact}}" class="data-v-2c276a4e" bind:__l="__l"></cc-contact-edit></view>

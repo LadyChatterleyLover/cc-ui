@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "goodsCard商品卡片",
+  "usingComponents": {
+    "cc-goods-card": "/components/cc-goods-card/cc-goods-card",
+    "cc-tag": "/components/cc-tag/cc-tag"
+  }
+}

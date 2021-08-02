@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "dropdown下拉菜单",
+  "usingComponents": {
+    "cc-dropdown": "/components/cc-dropdown/cc-dropdown"
+  }
+}

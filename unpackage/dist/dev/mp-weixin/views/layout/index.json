@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "layout布局",
+  "usingComponents": {
+    "cc-row": "/components/cc-row/cc-row",
+    "cc-col": "/components/cc-col/cc-col"
+  }
+}

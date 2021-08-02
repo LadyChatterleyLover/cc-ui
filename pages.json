@@ -1,0 +1,607 @@
+{
+  "pages": [{
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "cc-ui",
+        "h5": {
+          "titleNView": false
+        }
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "cc-ui",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "subPackages":[
+    {
+      "root":"views",
+      "pages":[
+        {
+          "path": "cell/index",
+          "style": {
+            "navigationBarTitleText": "cell单元格",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "swipeCell/index",
+          "style": {
+            "navigationBarTitleText": "swipeCell滑动单元格",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "search/index",
+          "style": {
+            "navigationBarTitleText": "search搜索框",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "calendar/index",
+          "style": {
+            "navigationBarTitleText": "calendar日历",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "field/index",
+          "style": {
+            "navigationBarTitleText": "field输入框",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "form/index",
+          "style": {
+            "navigationBarTitleText": "form表单",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "upload/index",
+          "style": {
+            "navigationBarTitleText": "upload上传",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "treeSelect/index",
+          "style": {
+            "navigationBarTitleText": "treeSelect分类选择",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "countDown/index",
+          "style": {
+            "navigationBarTitleText": "countDown倒计时",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "backtop/index",
+          "style": {
+            "navigationBarTitleText": "backtop回到顶部",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "swiper/index",
+          "style": {
+            "navigationBarTitleText": "swiper轮播图",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "sticky/index",
+          "style": {
+            "navigationBarTitleText": "sticky粘性布局",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "subsection/index",
+          "style": {
+            "navigationBarTitleText": "subsection分段器",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "indexBar/index",
+          "style": {
+            "navigationBarTitleText": "indexBar索引列表",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "checker/index",
+          "style": {
+            "navigationBarTitleText": "checker选择项",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "popup/index",
+          "style": {
+            "navigationBarTitleText": "popup弹出层"
+          }
+        },
+        {
+          "path": "button/index",
+          "style": {
+            "navigationBarTitleText": "button按钮",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "imagePreview/index",
+          "style": {
+            "navigationBarTitleText": "imagePreview图片预览",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "actionSheet/index",
+          "style": {
+            "navigationBarTitleText": "actionSheet动作面板",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "progress/index",
+          "style": {
+            "navigationBarTitleText": "progress进度条",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "steps/index",
+          "style": {
+            "navigationBarTitleText": "steps步骤条",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "circleProgress/index",
+          "style": {
+            "navigationBarTitleText": "circleProgress圆形进度条",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "tag/index",
+          "style": {
+            "navigationBarTitleText": "tag标签",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "gap/index",
+          "style": {
+            "navigationBarTitleText": "gap间隔槽",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "loadMore/index",
+          "style": {
+            "navigationBarTitleText": "loadMore加载更多",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "avatar/index",
+          "style": {
+            "navigationBarTitleText": "avatar头像",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "badge/index",
+          "style": {
+            "navigationBarTitleText": "badge徽标",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "countup/index",
+          "style": {
+            "navigationBarTitleText": "countup数字滚动",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "collapse/index",
+          "style": {
+            "navigationBarTitleText": "collapse折叠面板",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "radio/index",
+          "style": {
+            "navigationBarTitleText": "radio单选框",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "checkbox/index",
+          "style": {
+            "navigationBarTitleText": "checkbox复选框",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "loading/index",
+          "style": {
+            "navigationBarTitleText": "loading加载",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "mask/index",
+          "style": {
+            "navigationBarTitleText": "mask遮罩层",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "layout/index",
+          "style": {
+            "navigationBarTitleText": "layout布局",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "grid/index",
+          "style": {
+            "navigationBarTitleText": "grid宫格布局",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "dialog/index",
+          "style": {
+            "navigationBarTitleText": "dialog弹出框",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "divider/index",
+          "style": {
+            "navigationBarTitleText": "divider分割线",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "dropdown/index",
+          "style": {
+            "navigationBarTitleText": "dropdown下拉菜单",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "rate/index",
+          "style": {
+            "navigationBarTitleText": "rate评分",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "link/index",
+          "style": {
+            "navigationBarTitleText": "link超链接",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "navBar/index",
+          "style": {
+            "navigationBarTitleText": "navBar导航栏",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "noticeBar/index",
+          "style": {
+            "navigationBarTitleText": "noticeBar通知栏",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "notify/index",
+          "style": {
+            "navigationBarTitleText": "notify顶部通知",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "numberKeyboard/index",
+          "style": {
+            "navigationBarTitleText": "numberKeyboard数字键盘",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "passwordInput/index",
+          "style": {
+            "navigationBarTitleText": "passwordInput密码输入框",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "sidebar/index",
+          "style": {
+            "navigationBarTitleText": "sidebar侧边栏",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "skeleton/index",
+          "style": {
+            "navigationBarTitleText": "skeleton骨架屏",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "slider/index",
+          "style": {
+            "navigationBarTitleText": "slider滑块",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "stepper/index",
+          "style": {
+            "navigationBarTitleText": "stepper步进器",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "switch/index",
+          "style": {
+            "navigationBarTitleText": "switch开关",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "tabbar/index",
+          "style": {
+            "navigationBarTitleText": "tabbar底部导航栏",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "toast/index",
+          "style": {
+            "navigationBarTitleText": "toast轻提示",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "verifyButton/index",
+          "style": {
+            "navigationBarTitleText": "verifyButton验证码按钮",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "tabs/index",
+          "style": {
+            "navigationBarTitleText": "tabs标签页",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "submitBar/index",
+          "style": {
+            "navigationBarTitleText": "submitBar订单提交栏",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "goodsAction/index",
+          "style": {
+            "navigationBarTitleText": "goodsAction商品导航",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "addressEdit/index",
+          "style": {
+            "navigationBarTitleText": "addressEdit地址编辑",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "addressList/index",
+          "style": {
+            "navigationBarTitleText": "addressList地址列表",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "area/index",
+          "style": {
+            "navigationBarTitleText": "area省市区选择",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "openMore/index",
+          "style": {
+            "navigationBarTitleText": "openMore展开更多",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "goodsCard/index",
+          "style": {
+            "navigationBarTitleText": "goodsCard商品卡片",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "contactEdit/index",
+          "style": {
+            "navigationBarTitleText": "contactEdit联系人编辑",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "contactCard/index",
+          "style": {
+            "navigationBarTitleText": "contactCard联系人卡片",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "contactList/index",
+          "style": {
+            "navigationBarTitleText": "ContactList联系人列表",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "coupon/index",
+          "style": {
+            "navigationBarTitleText": "Coupon优惠券",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

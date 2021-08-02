@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "noticeBar通知栏",
+  "usingComponents": {
+    "cc-notice-bar": "/components/cc-notice-bar/cc-notice-bar",
+    "cc-icon": "/components/cc-icon/cc-icon"
+  }
+}

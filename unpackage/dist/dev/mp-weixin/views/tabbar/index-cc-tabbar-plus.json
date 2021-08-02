@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "index-cc-tabbar-plus": "/views/tabbar/index-cc-tabbar-plus",
+    "cc-tabbar": "/components/cc-tabbar/cc-tabbar"
+  }
+}

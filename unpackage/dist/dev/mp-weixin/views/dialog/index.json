@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "dialog弹出框",
+  "usingComponents": {
+    "cc-dialog": "/components/cc-dialog/cc-dialog",
+    "cc-button": "/components/cc-button/cc-button"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "slider滑块",
+  "usingComponents": {
+    "cc-slider": "/components/cc-slider/cc-slider"
+  }
+}

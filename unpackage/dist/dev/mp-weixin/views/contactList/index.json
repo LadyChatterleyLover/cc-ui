@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "ContactList联系人列表",
+  "usingComponents": {
+    "cc-contact-list": "/components/cc-contact-list/cc-contact-list"
+  }
+}

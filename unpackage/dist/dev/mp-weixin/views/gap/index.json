@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "gap间隔槽",
+  "usingComponents": {
+    "cc-gap": "/components/cc-gap/cc-gap"
+  }
+}

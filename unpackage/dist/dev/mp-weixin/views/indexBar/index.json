@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "indexBar索引列表",
+  "usingComponents": {
+    "cc-index-bar": "/components/cc-index-bar/cc-index-bar",
+    "cc-index-anchor": "/components/cc-index-anchor/cc-index-anchor"
+  }
+}

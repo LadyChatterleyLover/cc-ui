@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "subsection分段器",
+  "usingComponents": {
+    "cc-subsection": "/components/cc-subsection/cc-subsection"
+  }
+}

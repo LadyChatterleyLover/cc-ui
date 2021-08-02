@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cc-badge": "/components/cc-badge/cc-badge",
+    "cc-icon": "/components/cc-icon/cc-icon"
+  }
+}

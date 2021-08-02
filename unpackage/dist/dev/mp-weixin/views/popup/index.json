@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "popup弹出层",
+  "usingComponents": {
+    "cc-popup": "/components/cc-popup/cc-popup",
+    "cc-button": "/components/cc-button/cc-button"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="data-v-0f4e0a72"><view class="{{['cc-notify','data-v-0f4e0a72',(showNotify)?'cc-notify-show':'',(!showNotify)?'cc-notify-hide':'',(radius)?'cc-notify-radius':'']}}" style="{{'background:'+(bgColor)+';'+('top:'+(top)+';')}}"><view class="cc-notify-content data-v-0f4e0a72" style="{{'color:'+(textColor)+';'}}">{{text}}</view></view></view>

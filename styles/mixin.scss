@@ -1,0 +1,34 @@
+@mixin f-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin j-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin a-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin j-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin j-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin f-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

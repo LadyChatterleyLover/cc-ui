@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "rate评分",
+  "usingComponents": {
+    "cc-rate": "/components/cc-rate/cc-rate"
+  }
+}

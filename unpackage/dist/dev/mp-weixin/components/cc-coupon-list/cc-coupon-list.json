@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cc-search": "/components/cc-search/cc-search",
+    "cc-button": "/components/cc-button/cc-button",
+    "cc-tabs": "/components/cc-tabs/cc-tabs",
+    "cc-radio": "/components/cc-radio/cc-radio"
+  }
+}
