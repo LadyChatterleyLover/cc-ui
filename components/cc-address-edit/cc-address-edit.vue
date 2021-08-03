@@ -15,7 +15,7 @@
         <cc-form-item>
           <cc-field style="width: 100%;" :border="false" label="详细地址" clearable :placeholder="detailAddressPlaceholder" :value.sync="info.addressDetail"></cc-field>
         </cc-form-item>
-        <cc-form-item>
+        <cc-form-item v-if="showPostal">
           <cc-field style="width: 100%;" clearable :border="false" label="邮政编码" :placeholder="postalPlaceholder" :value.sync="info.postalCode"></cc-field>
         </cc-form-item>
       </cc-form>
@@ -27,7 +27,7 @@
     <view class="cc-address-edit-button-save" @click="save">
       <cc-button round block :color="saveButtonColor">{{ saveButtonText }}</cc-button>
     </view>
-    <view class="cc-address-edit-button-del" @click="del">
+    <view class="cc-address-edit-button-del" @click="del" v-if="showDelete">
       <cc-button round block :color="deleteButtonColor">{{ deleteButtonText }}</cc-button>
     </view>
 
