@@ -151,7 +151,7 @@
           this.$emit('close')
           setTimeout(() => {
             this.display = 'none'
-          }, 100)
+          }, 300)
         }
       }
     },
