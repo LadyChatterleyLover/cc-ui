@@ -172,6 +172,7 @@ export default {
       this.info.province = val[0].name
       this.info.city = val[1].name
       this.info.county = val[2].name
+      this.info.areaCode = val[2].code
       this.visible = false
     },
     cancel() {
