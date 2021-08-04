@@ -35,7 +35,7 @@
     </view>
 
     <view class="cc-address-list-btn" @click="add">
-      <cc-button type="error" round block>{{ addButtonText }}</cc-button>
+      <cc-button :color='addButtonColor' round block>{{ addButtonText }}</cc-button>
     </view>
   </view>
 </template>
@@ -74,6 +74,10 @@ export default {
     addButtonText: {
       type: String,
       default: '新增地址'
+    },
+    addButtonColor: {
+      type: String,
+      default: '#e54d42'
     },
     // 默认地址标签文字
     defaultTagText: {
