@@ -10,9 +10,9 @@
           </view>
         </view>
       </view>
-      <view class="cc-nav-bar-title" @click="clickTitle">
+      <view  @click="clickTitle">
         <slot v-if="$slots.default"></slot>
-        <view v-else :style="{ color: background ? '#fff' : titleColor }">{{ title }}</view>
+        <view class="cc-nav-bar-title" v-else :style="{ color: background ? '#fff' : titleColor }">{{ title }}</view>
       </view>
       <view class="cc-nav-bar-right" @click="clickRight">
         <view>
