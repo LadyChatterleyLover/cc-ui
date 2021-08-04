@@ -2,10 +2,21 @@
   <view class="demo">
     <cc-nav-bar fixed placeholder leftArrow leftText="倾城" title="普通成熟时" rightText="无条件"></cc-nav-bar>
     <view>占位之后的内容: 岁月如歌</view>
-    <view class="item1"><cc-nav-bar @clickTitle="click" @clickRight="right" @clickLeft="left" leftText="单车" title="富士山下" rightText="人来人往"></cc-nav-bar></view>
-    
-    <view class="item2"><cc-nav-bar leftArrow leftText="十年" title="不要说话" rightText="浮夸"></cc-nav-bar></view>
-    
+    <view class="item1">
+      <cc-nav-bar
+        @clickTitle="click"
+        @clickRight="right"
+        @clickLeft="left"
+        leftText="单车"
+        title="富士山下"
+        rightText="人来人往"
+      ></cc-nav-bar>
+    </view>
+
+    <view class="item2">
+      <cc-nav-bar leftArrow leftText="十年" title="不要说话" rightText="浮夸"></cc-nav-bar>
+    </view>
+
     <view class="item3">
       <cc-nav-bar
         leftArrow
@@ -19,18 +30,24 @@
         rightText="你的背包"
       ></cc-nav-bar>
     </view>
-    
-    <view class="item4"><cc-nav-bar background="#1989fa" leftArrow leftText="十年" title="不要说话" rightText="浮夸"></cc-nav-bar></view>
-   
-    <view class="item5"><cc-nav-bar title="陈奕迅林夕黄伟文陪你度过漫长岁月"></cc-nav-bar></view>
-    
+
+    <view class="item4">
+      <cc-nav-bar background="#1989fa" leftArrow leftText="十年" title="不要说话" rightText="浮夸"></cc-nav-bar>
+    </view>
+
+    <view class="item5">
+      <cc-nav-bar title="陈奕迅林夕黄伟文陪你度过漫长岁月"></cc-nav-bar>
+    </view>
+
     <view class="item6">
       <cc-nav-bar>
         <template #left>
           <cc-tag>内疚</cc-tag>
         </template>
         <template #default>
-          <view class="demo-rate"><cc-rate v-model:value="value"></cc-rate></view>
+          <view class="demo-rate">
+            <cc-rate v-model:value="value"></cc-rate>
+          </view>
         </template>
         <template #right>
           <cc-tag type="success">陀飞轮</cc-tag>
@@ -60,9 +77,9 @@ export default {
       console.log('left')
     }
   },
-  mounted() {},
-  onLoad() {},
-  onShow() {},
+  mounted() { },
+  onLoad() { },
+  onShow() { },
   filters: {},
   computed: {},
   watch: {}

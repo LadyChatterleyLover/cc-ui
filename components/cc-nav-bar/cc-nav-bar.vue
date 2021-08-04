@@ -17,7 +17,7 @@
       <view class="cc-nav-bar-right" @click="clickRight">
         <view>
           <slot name="right" v-if="$slots.right"></slot>
-          <view :style="{ color: background ? '#fff' : rightColor, fontSize: titleSize }" v-else>{{ rightText }}</view>
+          <view :style="{ color: background ? '#fff' : rightColor, fontSize: titleSize + 'px' }" v-else>{{ rightText }}</view>
         </view>
       </view>
     </view>
@@ -40,9 +40,10 @@ export default {
       type: String,
       default: '#606266'
     },
+    // 标题尺寸
     titleSize: {
-      type: String,
-      default: '22'
+      type: [String, Number],
+      default: '14'
     },
     // 左侧文字
     leftText: {

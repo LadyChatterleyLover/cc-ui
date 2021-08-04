@@ -1,6 +1,7 @@
 <template>
   <view class="cc-form-item" :class="{ 'cc-form-item-haserror': error }">
     <view v-if="label" class="cc-form-item-label" :style="{ width: labelWidth + 'rpx', justifyContent: lebelAlignValue }">
+      <view class="cc-form-item-label-required" v-if="required || (rules[prop] &&  rules[prop].find(rule => rule.required))">*</view>
       <view class="cc-form-item-label-icon" v-if="leftIcon"><cc-icon :type="leftIcon" size="14"></cc-icon></view>
       <view class="cc-form-item-label-text">{{ label }}</view>
     </view>
@@ -19,6 +20,11 @@ export default {
     prop: {
       type: String,
       default: ''
+    },
+    // label是否显示 *号
+    required: {
+      type: Boolean,
+      default: false
     },
     // 左侧文字
     label: {
@@ -211,8 +217,15 @@ export default {
     align-items: center;
     font-size: 14px;
     padding-left: 24rpx;
+    position: relative;
     &-icon {
       margin-right: 6rpx;
+    }
+    &-required {
+      color: red;
+      position: absolute;
+      left: 4rpx;
+      top: -4rpx;
     }
   }
   &-content {
