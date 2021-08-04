@@ -198,21 +198,21 @@ export default {
   font-size: 11px;
   color: #303133;
   border-bottom: 1px solid #ebedf0;
-  padding: #{topx(8)};
-  min-height: #{topx(50)};
+  padding: 16rpx;
+  min-height: 100rpx;
   &-haserror {
-    padding-bottom: #{topx(16)};
+    padding-bottom: 32rpx;
   }
   .cc-cell {
-    padding: #{topx(4)} #{topx(10)};
+    padding: 8rpx 20rpx;
   }
   &-label {
     display: flex;
     align-items: center;
     font-size: 14px;
-    padding-left: #{topx(12)};
+    padding-left: 24rpx;
     &-icon {
-      margin-right: #{topx(3)};
+      margin-right: 6rpx;
     }
   }
   &-content {
@@ -226,7 +226,7 @@ export default {
     font-size: 12px;
     bottom: 0;
     left: 164rpx;
-    margin-top: #{topx(10)};
+    margin-top: 20rpx;
   }
 }
 </style>

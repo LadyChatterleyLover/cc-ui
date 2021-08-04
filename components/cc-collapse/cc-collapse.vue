@@ -192,7 +192,7 @@ export default {
       align-items: center;
       &-content {
         transition: all 0.3s;
-        margin-left: #{topx(4)};
+        margin-left: 8rpx;
       }
       &-active {
         transform: rotate(180deg);
@@ -204,7 +204,7 @@ export default {
       overflow: hidden;
     }
     &-content {
-      padding: #{topx(12)} #{topx(16)};
+      padding: 24rpx 32rpx;
       color: #969799;
       font-size: 14px;
     }

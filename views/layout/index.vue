@@ -110,12 +110,12 @@ export default {
 
 <style lang="scss">
 .title {
-  margin: #{topx(20)};
+  margin: 40rpx;
 }
 .demo {
   width: 100%;
-  height: #{topx(40)};
-  margin: #{topx(10)} 0;
+  height: 80rpx;
+  margin: 20rpx 0;
 }
 .cc-col {
   margin-bottom: 20rpx;

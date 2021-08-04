@@ -246,14 +246,14 @@ export default {
       border-radius: 100% !important;
     }
     &:first-child {
-      border-radius: #{topx(4) 0 0 #{topx(4)}};
+      border-radius: 8rpx 0 0 8rpx;
     }
     &:last-child {
-      border-radius: 0 #{topx(4) #{topx(4)}} 0;
+      border-radius: 0 8rpx 8rpx 0;
     }
   }
   &-value {
-    margin: 0 #{topx(2)};
+    margin: 0 4rpx;
     color: #323233;
     font-size: 14px;
     text-align: center;

@@ -47,7 +47,7 @@ export default {
 .cc-divider {
   width: 100%;
   &-nocontent {
-    height: #{topx(1)};
+    height: 2rpx;
     background: #ebedf0;
     width: 100%;
   }
@@ -58,14 +58,14 @@ export default {
     width: 100%;
     &-left-line,
     &-right-line {
-      height: #{topx(1)};
+      height: 2rpx;
     }
     &-left-line {
-      margin-right: #{topx(15)};
+      margin-right: 30rpx;
       flex: 1;
     }
     &-right-line {
-      margin-left: #{topx(15)};
+      margin-left: 30rpx;
       flex: 1;
     }
   }

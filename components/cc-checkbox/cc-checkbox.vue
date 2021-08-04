@@ -90,7 +90,7 @@ export default {
     .cc-checkbox-item {
       margin-bottom: 0;
       height: 100%;
-      margin-left: #{topx(12)};
+      margin-left: 24rpx;
       &:first-child {
         margin-left: 0;
       }
@@ -100,7 +100,7 @@ export default {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: #{topx(6)};
+    margin-bottom: 12rpx;
     &:last-child {
       margin-bottom: 0;
     }
@@ -113,7 +113,7 @@ export default {
       }
     }
     &-text {
-      margin-left: #{topx(10)};
+      margin-left: 20rpx;
       &-disabled {
         pointer-events: none;
       }

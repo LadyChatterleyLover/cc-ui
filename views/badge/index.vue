@@ -140,20 +140,20 @@ export default {
 
 <style scoped lang="scss">
 .title {
-  margin: #{topx(10)};
+  margin: 20rpx;
 }
 .demo {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   &-item {
-    margin-left: #{topx(15)};
+    margin-left: 30rpx;
   }
 }
 .child {
-  width: #{topx(40)};
-  height: #{topx(40)};
+  width: 80rpx;
+  height: 80rpx;
   background: #f2f3f5;
-  border-radius: #{topx(4)};
+  border-radius: 8rpx;
 }
 </style>

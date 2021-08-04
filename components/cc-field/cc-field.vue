@@ -215,7 +215,7 @@ export default {
   width: 100%;
   textarea {
     position: relative;
-    top: #{topx(4)};
+    top: 8rpx;
   }
   &-icon {
     position: relative;
@@ -225,14 +225,14 @@ export default {
     position: absolute;
     color: #ee0a24;
     font-size: 12px;
-    bottom: #{topx(-20)};
-    left: #{topx(82)};
+    bottom: -40rpx;
+    left: 164rpx;
   }
   &-word-limit {
     position: absolute;
     color: #646566;
     font-size: 12px;
-    bottom: #{topx(-18)};
+    bottom: -36rpx;
     right: 0;
   }
   &-start {
@@ -241,8 +241,8 @@ export default {
     }
   }
   &-label {
-    min-width: #{topx(54)};
-    margin-right: #{topx(12)};
+    min-width: 108rpx;
+    margin-right: 24rpx;
     position: relative;
     top: 4rpx;
     &-disabled {
@@ -250,8 +250,8 @@ export default {
     }
     &-required {
       position: absolute;
-      left: #{topx(-8)};
-      top: #{topx(-2)};
+      left: -16rpx;
+      top: -4rpx;
       color: #ee0a24;
       font-size: 14px;
     }

@@ -183,15 +183,15 @@
     position: fixed;
     overflow: auto;
     &-round {
-      border-radius: #{topx(24)} #{topx(24)} 0 0;
+      border-radius: 48rpx 48rpx 0 0;
     }
     &-padding {
-      padding: #{topx(40)} #{topx(30)};
+      padding: 80rpx 60rpx;
     }
     &-close {
       position: absolute;
-      top: #{topx(14)};
-      right: #{topx(5)};
+      top: 28rpx;
+      right: 10rpx;
       z-index: 1000;
     }
     &-center {

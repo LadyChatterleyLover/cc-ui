@@ -89,16 +89,16 @@ export default {
 
 <style scoped lang="scss">
 .demo {
-  margin-bottom: #{topx(20)};
+  margin-bottom: 40rpx;
   &-title {
-    padding: #{topx(10)};
+    padding: 20rpx;
   }
   &-item {
     display: flex;
     align-items: center;
-    margin-left: #{topx(15)};
+    margin-left: 30rpx;
     view {
-      margin-left: #{topx(15)};
+      margin-left: 30rpx;
     }
   }
 }

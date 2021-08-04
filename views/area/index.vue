@@ -55,9 +55,9 @@
 
 <style scoped lang="scss">
 .demo {
-  margin-bottom: #{topx(20)};
+  margin-bottom:40rpx;
   &-title {
-    padding: #{topx(10)};
+    padding: 20rpx;
   }
 }
 </style>

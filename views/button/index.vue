@@ -205,19 +205,19 @@ export default {
 
 <style scoped lang="scss">
 .item {
-  margin: #{topx(20)};
+  margin: 40rpx;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .title {
-  margin: #{topx(10)};
+  margin: 20rpx;
 }
 .container {
-  padding-bottom: #{topx(20)};
+  padding-bottom: 40rpx;
 }
 .item-content {
-  margin: #{topx(10)};
+  margin: 20rpx;
 }
 </style>

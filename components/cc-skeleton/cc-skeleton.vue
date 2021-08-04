@@ -82,7 +82,6 @@ export default {
 
 <style scoped lang="scss">
 .cc-skeleton {
-  width: 100%;
   display: flex;
   &-animate {
     animation: skeleton-animate 1.2s ease-in-out infinite;
@@ -93,21 +92,21 @@ export default {
   &-wrap {
     flex: 1;
     &-hasavatar {
-      padding-top: #{topx(8)};
+      padding-top: 16rpx;
     }
   }
   &-content {
     height: 16px;
   }
   &-avatar {
-    margin-right: #{topx(16)};
+    margin-right: 32rpx;
     &-round {
       border-radius: 100%;
     }
   }
   &-row {
     width: 750rpx;
-    margin-top: #{topx(20)};
+    margin-top: 40rpx;
     &-last {
       width: 750 * 0.6rpx;
     }

@@ -65,10 +65,10 @@ export default {
 <style scoped lang="scss">
 .demo {
   &-title {
-    padding: #{topx(20)};
+    padding: 40rpx;
   }
   &-item {
-    margin-bottom: #{topx(30)};
+    margin-bottom: 60rpx;
     &:last-child {
       margin-bottom: 0;
     }

@@ -119,14 +119,14 @@ export default {
 
 <style scoped lang="scss">
 .title {
-  margin: #{topx(10)};
+  margin: 20rpx;
 }
 .item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   button {
-    margin-right: #{topx(5)};
+    margin-right: 10rpx;
   }
 }
 </style>

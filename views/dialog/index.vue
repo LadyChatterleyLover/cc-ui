@@ -170,15 +170,15 @@ export default {
 
 <style scoped lang="scss">
 .title {
-  margin: #{topx(10)};
+  margin: 20rpx;
 }
 .item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: #{topx(10)} 0;
+  margin: 20rpx 0;
   view {
-    margin: #{topx(5)};
+    margin: 10rpx;
   }
 }
 .btn {
@@ -187,10 +187,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: #{topx(33)};
+  height: 66rpx;
   width: 92%;
   margin-left: 4%;
-  border-radius: #{topx(24)};
+  border-radius: 48rpx;
   font-size: 14px;
 }
 </style>

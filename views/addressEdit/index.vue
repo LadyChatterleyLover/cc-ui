@@ -50,10 +50,10 @@ export default {
   background: #f7f7f7;
   height: 100vh;
   &-title {
-    padding: #{topx(10)};
+    padding: 20rpx;
   }
   &-item {
-    margin-bottom: #{topx(30)};
+    margin-bottom: 60rpx;
     &:last-child {
       margin-bottom: 0;
     }

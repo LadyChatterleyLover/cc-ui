@@ -82,7 +82,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: #{topx(8)} 0;
+  padding: 16rpx 0;
   position: fixed;
   left: 0;
   right: 0;
@@ -93,7 +93,7 @@ export default {
     font-size: 14px;
   }
   &-radius {
-    border-radius: #{topx(10)} #{topx(10)} 0 0;
+    border-radius: 20rpx 20rpx 0 0;
   }
 }
 .cc-notify-show {

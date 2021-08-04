@@ -142,11 +142,11 @@ export default {
   background: #f7f7f7;
   height: 100vh;
   .demo-content {
-    margin-bottom: #{topx(20)};
-    padding: #{topx(10)};
+    margin-bottom: 40rpx;
+    padding: 20rpx;
   }
   &-title {
-    padding: #{topx(10)};
+    padding: 20rpx;
   }
   &-item {
     padding: 0 5px;

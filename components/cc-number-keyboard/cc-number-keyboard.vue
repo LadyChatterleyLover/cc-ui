@@ -164,7 +164,7 @@ export default {
     display: flex;
     align-items: center;
     font-size: 14px;
-    margin: #{topx(10)} 0;
+    margin: 20rpx 0;
     &-cancel,
     &-text,
     &-confirm {
@@ -189,24 +189,24 @@ export default {
     position: relative;
     z-index: 999;
     background: #f2f3f5;
-    padding: #{topx(6)} 0 0 #{topx(6)};
+    padding: 12rpx 0 0 12rpx;
     &-content {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       &-item {
         box-sizing: border-box;
-        padding: 0 #{topx(6)} #{topx(6)} 0;
+        padding: 0 12rpx 12rpx 0;
         flex-basis: 33.333333%;
         font-size: 18px;
         color: #333;
         font-weight: 500;
-        border-radius: #{topx(8)};
+        border-radius: 16rpx;
         &-key {
           display: flex;
           align-items: center;
           justify-content: center;
-          height: #{topx(48)};
+          height: 96rpx;
           background: #fff;
         }
       }

@@ -149,13 +149,13 @@ export default {
     background: #fff;
     display: flex;
     align-items: center;
-    padding: #{topx(28)} #{topx(24)};
+    padding: 56rpx 48rpx;
     opacity: 0;
     z-index: 2000;
     &-close {
       position: absolute;
-      right: #{topx(4)};
-      top: #{topx(4)};
+      right: 8rpx;
+      top: 8rpx;
       z-index: 99;
     }
     &-show {
@@ -165,8 +165,8 @@ export default {
       animation: hide-content 0.3s linear forwards;
     }
     &-item {
-      width: #{topx(40)};
-      height: #{topx(40)};
+      width: 80rpx;
+      height: 80rpx;
       background: #fff;
       border: 1px solid #ccc;
       display: flex;
@@ -176,16 +176,16 @@ export default {
         border-right: 0;
       }
       &-content {
-        width: #{topx(10)};
-        height: #{topx(10)};
+        width: 20rpx;
+        height: 20rpx;
         &-mask {
           background: #000;
           border-radius: 100%;
         }
         &-nomask {
           position: relative;
-          top: #{topx(-4)};
-          left: #{topx(1)};
+          top: -8rpx;
+          left: 2rpx;
         }
       }
     }
@@ -198,13 +198,13 @@ export default {
   }
   to {
     opacity: 1;
-    bottom: #{topx(222)};
+    bottom: 444rpx;
   }
 }
 @keyframes hide {
   from {
     opacity: 1;
-    bottom: #{topx(222)};
+    bottom: 444rpx;
   }
   to {
     opacity: 0;

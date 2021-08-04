@@ -111,9 +111,9 @@ export default {
 
 <style scoped lang="scss">
 .demo {
-  margin-bottom: #{topx(100)};
+  margin-bottom: 200rpx;
   &-title {
-    padding: #{topx(10)};
+    padding: 20rpx;
   }
   &-item {
     margin-bottom: 10px;

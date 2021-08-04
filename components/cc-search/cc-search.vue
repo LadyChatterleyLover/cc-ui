@@ -169,22 +169,22 @@ export default {
 .cc-search {
   display: flex;
   align-items: center;
-  padding: #{topx(10)} #{topx(12)};
+  padding: 20rpx 24rpx;
   background: #fff;
   input {
     outline: none;
     border: none;
   }
   &-round {
-    border-radius: #{topx(24)} !important;
+    border-radius: 48rpx !important;
   }
   &-content {
     position: relative;
     display: flex;
     flex: 1;
-    padding-left: #{topx(24)};
+    padding-left: 48rpx;
     background-color: #f7f8fa;
-    border-radius: #{topx(2)};
+    border-radius: 4rpx;
     &-text-align-center {
       justify-content: center;
       text-align: center;
@@ -212,12 +212,12 @@ export default {
       flex: 1;
       display: flex;
       align-items: center;
-      padding: #{topx(5)} #{topx(8)} #{topx(5)} 0;
+      padding: 10rpx 16rpx 10rpx 0;
     }
     &-input {
       position: relative;
       flex: 1;
-      margin-left: #{topx(6)};
+      margin-left: 12rpx;
       display: flex;
       align-items: center;
       &-wrap {
@@ -236,8 +236,8 @@ export default {
     }
   }
   &-action {
-    width: #{topx(33)};
-    margin-left: #{topx(6)};
+    width: 66rpx;
+    margin-left: 12rpx;
     font-size: 14px;
   }
 }

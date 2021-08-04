@@ -183,7 +183,7 @@ export default {
   position: relative;
   display: inline-flex;
   box-sizing: border-box;
-  height: #{topx(44)};
+  height: 88rpx;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -192,7 +192,7 @@ export default {
   border-radius: 2px;
   cursor: pointer;
   transition: opacity 0.2s;
-  padding: 0 #{topx(15)};
+  padding: 0 30rpx;
   background: #fff;
   color: #000;
   border: 1px solid #ebedf0;
@@ -208,10 +208,10 @@ export default {
       height: 100%;
     }
     .cc-button-text {
-      margin-left: #{topx(4)};
+      margin-left: 8rpx;
     }
     .cc-button-icon {
-      margin-left: #{topx(6)};
+      margin-left: 12rpx;
     }
   }
   &-block {
@@ -221,13 +221,13 @@ export default {
     opacity: 0.8;
   }
   &-large {
-    height: #{topx(50)};
+    height: 100rpx;
   }
   &-small {
-    height: #{topx(32)};
+    height: 64rpx;
   }
   &-mini {
-    height: #{topx(24)};
+    height: 48rpx;
   }
   &-disabled {
     cursor: not-allowed;
@@ -235,76 +235,76 @@ export default {
     pointer-events: none;
   }
   &-round {
-    border-radius: #{topx(24)};
+    border-radius: 48rpx;
   }
   &-primary {
-    background: $primary;
-    border: 1px solid $primary;
+    background: #0081ff;
+    border: 1px solid #0081ff;
     color: #fff;
   }
   &-primary-plain {
     background: #fff;
-    border: 1px solid $primary;
-    color: $primary;
+    border: 1px solid #0081ff;
+    color: #0081ff;
   }
   &-primary-hover {
-    background: $primary;
+    background: #0081ff;
     color: #fff;
   }
   &-success {
-    background: $success;
-    border: 1px solid $success;
+    background: #39b54a;
+    border: 1px solid #39b54a;
     color: #fff;
   }
   &-success-plain {
     background: #fff;
-    border: 1px solid $success;
-    color: $success;
+    border: 1px solid #39b54a;
+    color: #39b54a;
   }
   &-success-hover {
-    background: $success;
+    background: #39b54a;
     color: #fff;
   }
   &-warning {
-    background: $warning;
-    border: 1px solid $warning;
+    background: #f37b1d;
+    border: 1px solid #f37b1d;
     color: #fff;
   }
   &-warning-plain {
     background: #fff;
-    border: 1px solid $warning;
-    color: $warning;
+    border: 1px solid #f37b1d;
+    color: #f37b1d;
   }
   &-warning-hover {
-    background: $warning;
+    background: #f37b1d;
     color: #fff;
   }
   &-info {
-    background: $info;
-    border: 1px solid $info;
+    background: #909399;
+    border: 1px solid #909399;
     color: #fff;
   }
   &-info-plain {
     background: #fff;
-    border: 1px solid $info;
-    color: $info;
+    border: 1px solid #909399;
+    color: #909399;
   }
   &-info-hover {
-    background: $info;
+    background: #909399;
     color: #fff;
   }
   &-error {
-    background: $error;
-    border: 1px solid $error;
+    background: #e54d42;
+    border: 1px solid #e54d42;
     color: #fff;
   }
   &-error-plain {
     background: #fff;
-    border: 1px solid $error;
-    color: $error;
+    border: 1px solid #e54d42;
+    color: #e54d42;
   }
   &-error-hover {
-    background: $error;
+    background: #e54d42;
     color: #fff;
   }
 }

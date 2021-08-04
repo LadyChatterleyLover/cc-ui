@@ -193,7 +193,7 @@ export default {
       width: 100%;
       background: #fff;
       box-shadow: 0 2px 12px #fff;
-      height: #{topx(48)};
+      height: 96rpx;
       &-active {
         z-index: 999;
       }
@@ -204,7 +204,7 @@ export default {
       }
       &-icon {
         transition: all 0.3s;
-        margin-left: #{topx(6)};
+        margin-left: 12rpx;
         &-active {
           transform: rotate(180deg);
         }
@@ -218,7 +218,7 @@ export default {
       z-index: 999;
       background: #fff;
       &-active {
-        top: #{topx(48)};
+        top: 96rpx;
       }
     }
   }

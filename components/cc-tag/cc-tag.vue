@@ -148,10 +148,10 @@ export default {
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding: #{topx(6)};
+  padding: 12rpx;
   color: #fff;
   font-size: 12px;
-  line-height: #{topx(8)};
+  line-height: 16rpx;
   border-radius: 2px;
   &-close {
     z-index: 999;
@@ -169,64 +169,64 @@ export default {
     pointer-events: none;
   }
   &-round {
-    border-radius: #{topx(24)};
+    border-radius: 48rpx;
   }
   &-circle-left {
-    border-radius: #{topx(24)} 0 0 #{topx(24)};
+    border-radius: 48rpx 0 0 48rpx;
   }
   &-circle-right {
-    border-radius: 0 #{topx(24)} #{topx(24)} 0;
+    border-radius: 0 48rpx 48rpx 0;
   }
   &-medium {
-    padding: #{topx(8)};
+    padding: 16rpx;
   }
   &-large {
-    padding: #{topx(10)};
+    padding: 20rpx;
     font-size: 14px;
   }
   &-primary {
-    background: $primary;
+    background: #0081ff;
     color: #fff;
   }
   &-primary-plain {
     background: #fff;
-    color: $primary;
+    color: #0081ff;
   }
   &-success {
-    background: $success;
+    background: #39b54a;
     color: #fff;
   }
   &-success-plain {
     background: #fff;
-    border-color: $success;
-    color: $success;
+    border-color: #39b54a;
+    color: #39b54a;
   }
   &-warning {
-    background: $warning;
+    background: #f37b1d;
     color: #fff;
   }
   &-warning-plain {
     background: #fff;
-    border-color: $warning;
-    color: $warning;
+    border-color: #f37b1d;
+    color: #f37b1d;
   }
   &-info {
-    background: $info;
+    background: #909399;
     color: #fff;
   }
   &-info-plain {
     background: #fff;
-    border-color: $info;
-    color: $info;
+    border-color: #909399;
+    color: #909399;
   }
   &-error {
-    background: $error;
+    background: #e54d42;
     color: #fff;
   }
   &-error-plain {
     background: #fff;
-    border-color: $error;
-    color: $error;
+    border-color: #e54d42;
+    color: #e54d42;
   }
 }
 </style>

@@ -129,7 +129,7 @@ export default {
   align-items: center;
   height: 44px;
   justify-content: space-between;
-  padding: 0 #{topx(20)};
+  padding: 0 40rpx;
   background: #fff;
   &-placeholder {
     height: 44px;
@@ -141,7 +141,7 @@ export default {
     right: 0;
   }
   &-title {
-    width: #{topx(200)};
+    width: 400rpx;
     text-align: center;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -164,7 +164,7 @@ export default {
         align-items: center;
       }
       &-text {
-        margin-left: #{topx(4)};
+        margin-left: 8rpx;
       }
     }
   }

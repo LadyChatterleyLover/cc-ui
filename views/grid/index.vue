@@ -154,10 +154,10 @@ export default {
 .demo {
   background: #f7f8fa;
   &-title {
-    padding: #{topx(10)};
+    padding: 20rpx;
   }
   &-item {
-    margin-bottom: #{topx(30)};
+    margin-bottom: 60rpx;
     &:last-child {
       margin-bottom: 0;
     }

@@ -89,20 +89,20 @@ export default {
 
 <style lang="scss" scoped>
 .title {
-  margin: #{topx(10)};
+  margin: 20rpx;
 }
 .custom-title {
-  margin-right: #{topx(2)};
+  margin-right: 4rpx;
   vertical-align: middle;
   color: #ee0a24;
 }
 .danger {
   background-color: #ee0a24;
-  padding: 0 #{topx(2)};
+  padding: 0 4rpx;
   color: #fff;
   font-size: 12px;
-  line-height: #{topx(32)};
-  border-radius: #{topx(1)};
+  line-height: 64rpx;
+  border-radius: 2rpx;
 }
 .search-icon {
   font-size: 16px;

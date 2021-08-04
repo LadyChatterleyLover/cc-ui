@@ -90,7 +90,7 @@ export default {
   background: #f7f7f7;
   padding: 10px;
   &-title {
-    padding: #{topx(10)};
+    padding: 20rpx;
   }
   &-item {
     padding: 0 5px;

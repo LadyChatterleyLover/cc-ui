@@ -146,16 +146,16 @@ export default {
   .cc-toast-content {
     position: absolute;
     font-size: 14px;
-    padding: #{topx(10)} #{topx(25)};
+    padding: 20rpx 50rpx;
     border-radius: 4rpx;
     color: #fff;
     display: flex;
     align-items: center;
     transform: translateY(-50%);
     .cc-toast-icon {
-      margin-right: #{topx(4)};
+      margin-right: 8rpx;
       position: relative;
-      top: #{topx(1)};
+      top: 2rpx;
     }
   }
 }

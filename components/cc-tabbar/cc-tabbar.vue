@@ -153,7 +153,7 @@ export default {
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    padding: #{topx(4)} 0;
+    padding: 8rpx 0;
     &-midbtn {
       width: 37px;
       height: 37px;
@@ -173,29 +173,29 @@ export default {
     }
     &-count {
       position: absolute;
-      top: #{topx(8)};
-      right: #{topx(-8)};
+      top: 16rpx;
+      right: -16rpx;
       box-sizing: border-box;
-      min-width: #{topx(16)};
-      padding: 0 #{topx(3)};
+      min-width: 32rpx;
+      padding: 0 6rpx;
       color: #fff;
       font-weight: 500;
       font-size: 12px;
       text-align: center;
       background-color: #ee0a24;
       border: 1px solid #fff;
-      border-radius: #{topx(16)};
+      border-radius: 32rpx;
       transform: translate(50%, -50%);
       transform-origin: 100%;
     }
     &-dot {
       position: absolute;
-      width: #{topx(8)};
-      height: #{topx(8)};
+      width: 16rpx;
+      height: 16rpx;
       background: #ee0a24;
       border-radius: 100%;
-      top: #{topx(4)};
-      right: #{topx(-6)};
+      top: 8rpx;
+      right: -12rpx;
       transform: translate(50%, -50%);
       transform-origin: 100%;
     }

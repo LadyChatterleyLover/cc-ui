@@ -96,7 +96,7 @@ export default {
   flex-direction: column;
   &-item {
     position: relative;
-    padding: #{topx(20)} #{topx(20)};
+    padding: 40rpx;
     overflow: hidden;
     display: flex;
     justify-content: center;

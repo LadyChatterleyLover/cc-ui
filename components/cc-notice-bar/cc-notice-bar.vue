@@ -130,10 +130,10 @@ export default {
   display: flex;
   align-items: center;
   height: 40px;
-  padding: 0 #{topx(16)};
+  padding: 0 32rpx;
   font-size: 14px;
   &-left {
-    margin-right: #{topx(8)};
+    margin-right: 16rpx;
   }
   &-wrap {
     position: relative;
@@ -151,7 +151,7 @@ export default {
   }
   &-right {
     position: relative;
-    left: #{topx(8)};
+    left: 16rpx;
   }
 }
 @keyframes loop {

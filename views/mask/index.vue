@@ -54,15 +54,15 @@ export default {
 
 <style scoped lang="scss">
 .title {
-  margin: #{topx(10)};
+  margin: 20rpx;
 }
 .item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: #{topx(10)};
+  margin: 20rpx;
   view {
-    margin: #{topx(5)};
+    margin: 10rpx;
   }
 }
 .content {
@@ -71,8 +71,8 @@ export default {
   align-items: center;
   justify-content: center;
   .block {
-    width: #{topx(120)};
-    height: #{topx(120)};
+    width: 240rpx;
+    height: 240rpx;
     background-color: #fff;
   }
 }

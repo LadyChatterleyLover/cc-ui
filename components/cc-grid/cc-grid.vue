@@ -91,14 +91,14 @@ export default {
     box-sizing: border-box;
     position: relative;
     &-content {
-      padding: #{topx(16)} #{topx(8)};
+      padding: 32rpx 16rpx;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: #fff;
     }
     &-content-row {
-      margin-left: #{topx(8)};
+      margin-left: 16rpx;
     }
     &-border-right {
       position: absolute;

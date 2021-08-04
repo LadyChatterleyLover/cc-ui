@@ -125,7 +125,7 @@ export default {
   }
   &-text {
     font-size: 16px;
-    margin-left: #{topx(6)};
+    margin-left: 12rpx;
   }
 }
 .disabled {

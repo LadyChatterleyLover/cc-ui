@@ -86,12 +86,12 @@ export default {
       background-size: 100%;
     }
     &-left {
-      margin-left: #{topx(8)};
+      margin-left: 16rpx;
       display: flex;
       align-items: center;
     }
     &-top {
-      margin-top: #{topx(8)};
+      margin-top: 16rpx;
     }
   }
 }

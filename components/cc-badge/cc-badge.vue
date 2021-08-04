@@ -84,7 +84,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 #{topx(4)};
+    padding: 0 8rpx;
     border-radius: 100%;
     z-index: 99;
     font-size: 12px;
@@ -94,14 +94,14 @@ export default {
     transform-origin: 100%;
   }
   &-dot {
-    width: #{topx(8)};
+    width: 16rpx;
     min-width: 0;
-    height: #{topx(8)};
+    height: 16rpx;
     background-color: #ee0a24;
     border-radius: 100%;
     position: absolute;
-    top: #{topx(-4)};
-    right: #{topx(-4)};
+    top: -8rpx;
+    right: -8rpx;
     transform: translate(0, 0);
   }
 }

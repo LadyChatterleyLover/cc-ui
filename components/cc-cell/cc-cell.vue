@@ -103,7 +103,7 @@ export default {
   align-items: center;
   box-sizing: border-box;
   width: 100%;
-  padding: #{topx(10)} #{topx(16)};
+  padding: 20rpx 32rpx;
   overflow: hidden;
   color: #323233;
   font-size: 14px;
@@ -113,19 +113,19 @@ export default {
     box-sizing: border-box;
     content: ' ';
     pointer-events: none;
-    right: #{topx(16)};
+    right: 32rpx;
     bottom: 0;
-    left: #{topx(16)};
+    left: 32rpx;
     border-bottom: 1px solid #ebedf0;
     transform: scaleY(0.5);
   }
   &-left-icon {
-    margin-right: #{topx(4)};
+    margin-right: 8rpx;
     flex-shrink: 0;
   }
   &-large {
-    padding-top: #{topx(12)};
-    padding-bottom: #{topx(12)};
+    padding-top: 24rpx;
+    padding-bottom: 24rpx;
   }
   &-title,
   &-value {
@@ -153,15 +153,15 @@ export default {
     }
     .cc-cell-right-icon {
       position: relative;
-      top: #{topx(1)};
-      margin-left: #{topx(4)};
+      top: 2rpx;
+      margin-left: 8rpx;
     }
   }
   &-label {
-    margin-top: #{topx(4)};
+    margin-top: 8rpx;
     color: #969799;
     font-size: 12px;
-    line-height: #{topx(18)};
+    line-height: 36rpx;
   }
 }
 </style>

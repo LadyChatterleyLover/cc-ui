@@ -158,10 +158,10 @@ export default {
   overflow: hidden;
   font-size: 16px;
   background-color: #fff;
-  border-radius: #{topx(16)};
+  border-radius: 32rpx;
   transform: translate3d(-50%, -50%, 0);
-  min-width: #{topx(36)};
-  min-height: #{topx(36)};
+  min-width: 72rpx;
+  min-height: 72rpx;
   opacity: 0;
   z-index: -1;
   &-show {
@@ -188,13 +188,13 @@ export default {
   }
   &-content {
     &-title {
-      padding-top: #{topx(26)};
+      padding-top: 52rpx;
       font-weight: 500;
-      line-height: #{topx(12)};
+      line-height: 24rpx;
       text-align: center;
     }
     &-nocontent {
-      padding-bottom: #{topx(26)};
+      padding-bottom: 52rpx;
     }
     &-content {
       white-space: pre-wrap;
@@ -203,11 +203,11 @@ export default {
       color: #646566;
       font-size: 14px;
       &-padding {
-        padding: #{topx(17)};
+        padding: 34rpx;
       }
     }
     &-button {
-      height: #{topx(48)};
+      height: 96rpx;
       border: 1px solid #ebedf0;
       display: flex;
       align-items: center;
