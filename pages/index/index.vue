@@ -381,36 +381,36 @@ export default {
 <style lang="scss" scoped>
 .demo {
   background: #f7f8fa;
-  padding: 60rpx 50rpx;
+  padding: #{topx(30)} #{topx(25)};
   &-title {
     font-size: 14px;
     color: #909ca4;
-    margin-bottom: 40rpx;
+    margin-bottom: #{topx(20)};
   }
   &-content {
     position: relative;
     display: flex;
     align-items: center;
-    padding: 0 80rpx;
+    padding: 0 #{topx(40)};
     background: #fff;
-    height: 90rpx;
+    height: #{topx(45)};
     background: #fff;
-    border-radius: 44rpx;
-    margin-bottom: 26rpx;
+    border-radius: #{topx(22)};
+    margin-bottom: #{topx(13)};
     &-left {
       display: flex;
       align-items: center;
       font-weight: 700;
       color: #333;
       &-title {
-        margin-left: 20rpx;
+        margin-left: #{topx(10)};
       }
     }
     &-icon {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 60rp;
+      right: #{topx(30)};
     }
   }
 }

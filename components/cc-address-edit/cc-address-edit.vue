@@ -3,26 +3,67 @@
     <view class="cc-address-edit-field">
       <cc-form :model="addressInfo" :rules="rules">
         <cc-form-item prop="name">
-          <cc-field style="width: 100%;" :border="false" clearable  label="姓名" :placeholder="userPlaceholder" :value.sync="info.name"></cc-field>
+          <cc-field
+            style="width: 100%;"
+            :border="false"
+            clearable
+            label="姓名"
+            :placeholder="userPlaceholder"
+            :value.sync="info.name"
+          ></cc-field>
         </cc-form-item>
 
-        <cc-form-item prop="tel"><cc-field :border="false" style="width: 100%;" clearable  label="电话" :placeholder="telPlaceholder" :value.sync="info.tel"></cc-field></cc-form-item>
-
-        <cc-form-item>
-          <cc-field style="width: 100%;" :border="false" label="地区" readonly :placeholder="areaPlaceholder" rightIcon="arrowright" :value.sync="area" @click="clickArea"></cc-field>
+        <cc-form-item prop="tel">
+          <cc-field
+            :border="false"
+            style="width: 100%;"
+            clearable
+            label="电话"
+            :placeholder="telPlaceholder"
+            :value.sync="info.tel"
+          ></cc-field>
         </cc-form-item>
 
         <cc-form-item>
-          <cc-field style="width: 100%;" :border="false" label="详细地址" clearable :placeholder="detailAddressPlaceholder" :value.sync="info.addressDetail"></cc-field>
+          <cc-field
+            style="width: 100%;"
+            :border="false"
+            label="地区"
+            readonly
+            :placeholder="areaPlaceholder"
+            rightIcon="arrowright"
+            :value.sync="area"
+            @click="clickArea"
+          ></cc-field>
+        </cc-form-item>
+
+        <cc-form-item>
+          <cc-field
+            style="width: 100%;"
+            :border="false"
+            label="详细地址"
+            clearable
+            :placeholder="detailAddressPlaceholder"
+            :value.sync="info.addressDetail"
+          ></cc-field>
         </cc-form-item>
         <cc-form-item v-if="showPostal">
-          <cc-field style="width: 100%;" clearable :border="false" label="邮政编码" :placeholder="postalPlaceholder" :value.sync="info.postalCode"></cc-field>
+          <cc-field
+            style="width: 100%;"
+            clearable
+            :border="false"
+            label="邮政编码"
+            :placeholder="postalPlaceholder"
+            :value.sync="info.postalCode"
+          ></cc-field>
         </cc-form-item>
       </cc-form>
     </view>
     <view class="cc-address-edit-default">
       <view class="cc-address-edit-default-title">设置为默认地址</view>
-      <view class="cc-address-edit-default-check"><cc-switch :value.sync="info.isDefault"></cc-switch></view>
+      <view class="cc-address-edit-default-check">
+        <cc-switch :value.sync="info.isDefault"></cc-switch>
+      </view>
     </view>
     <view class="cc-address-edit-button-save" @click="save">
       <cc-button round block :color="saveButtonColor">{{ saveButtonText }}</cc-button>
@@ -31,7 +72,9 @@
       <cc-button round block :color="deleteButtonColor">{{ deleteButtonText }}</cc-button>
     </view>
 
-    <cc-popup @ mode="bottom" :show.sync="visible" height="600rpx"><cc-area title=" " @confirm="confirm" @cancel="cancel"></cc-area></cc-popup>
+    <cc-popup @ mode="bottom" :show.sync="visible" height="600rpx">
+      <cc-area title=" " @confirm="confirm" @cancel="cancel"></cc-area>
+    </cc-popup>
   </view>
 </template>
 
@@ -177,13 +220,17 @@ export default {
     },
     cancel() {
       this.visible = false
-    }
+    },
+    // 生成id
+    genID(length) {
+      return Number(Math.random().toString().substr(3, length) + Date.now()).toString(36)
+    },
   },
   mounted() {
-    this.info.id = this.$utils.genID(20)
+    this.info.id = this.genID(20)
   },
-  onLoad() {},
-  onShow() {},
+  onLoad() { },
+  onShow() { },
   filters: {},
   computed: {
     area: {
@@ -196,7 +243,7 @@ export default {
           }
         }
       },
-      set() {}
+      set() { }
     }
   },
   watch: {}
