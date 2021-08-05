@@ -2,9 +2,9 @@
   <view class="cc-cell" :class="[{ 'cc-cell-large': size }, { 'cc-cell-border': border }]" @click="onClick">
     <view>
       <view class="cc-cell-title">
-        <view v-if="icon" class="cc-cell-left-icon">
-          <cc-icon :size="iconSize" :type="icon" color="#323233"></cc-icon>
-          <slot name="left-icon"></slot>
+        <view class="cc-cell-left-icon">
+          <cc-icon v-if="icon"  :size="iconSize" :type="icon" color="#323233"></cc-icon>
+          <slot v-else name="left-icon"></slot>
         </view>
         <view>
           <slot name="title" v-if="!title"></slot>
