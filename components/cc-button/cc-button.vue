@@ -9,7 +9,7 @@
   >
     <view class="cc-button-content">
       <cc-icon v-if="icon" class="cc-button-icon" :color="iconColor" :type="icon" :size="iconSize"></cc-icon>
-      <text :class="{ 'cc-button-text': icon, 'cc-button-text-white': color }"><slot></slot></text>
+      <text :class="{ 'cc-button-text': icon, 'cc-button-text-white': color && !plain }"><slot></slot></text>
     </view>
   </button>
 </template>
