@@ -163,11 +163,6 @@ var _default2 =
       type: Array,
       default: function _default() {return [];} },
 
-    // 能否切换优惠券
-    editable: {
-      type: Boolean,
-      default: true },
-
     // 货币符号
     currency: {
       type: String,

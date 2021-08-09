@@ -189,6 +189,19 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   name: 'cc-search',
@@ -239,7 +252,7 @@ var _default =
 
     // 最大输入字符
     maxlength: {
-      type: [String, Number],
+      type: Number,
       default: -1 },
 
     // 文字对齐方式
@@ -271,7 +284,6 @@ var _default =
       this.$emit('confirm', e);
     },
     clear: function clear(e) {
-      console.log(111);
       this.$emit('update:value', '');
       this.$emit('clear', e);
     },

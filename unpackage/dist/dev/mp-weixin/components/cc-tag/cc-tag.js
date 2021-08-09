@@ -162,7 +162,7 @@ var _default =
   name: 'cc-tag',
   components: {},
   props: {
-    // 标签类型
+    // 标签主题类型
     type: {
       type: String,
       default: 'primary' },

@@ -273,7 +273,7 @@ var _default =
       console.log(val);
     },
     handleChange: function handleChange(val) {
-      // console.log(val)
+      console.log(val);
     } },
 
   mounted: function mounted() {},

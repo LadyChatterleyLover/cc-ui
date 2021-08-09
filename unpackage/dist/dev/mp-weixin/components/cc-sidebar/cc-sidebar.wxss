@@ -35,7 +35,7 @@
 }
 .cc-sidebar-item.data-v-91506f38 {
   position: relative;
-  padding: 40rpx 40rpx;
+  padding: 40rpx;
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;

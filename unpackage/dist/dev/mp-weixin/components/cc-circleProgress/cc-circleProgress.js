@@ -207,13 +207,17 @@ var _default =
       context.arc(Number(this.width) / 2, Number(this.width) / 2, Number(this.width) / 2 - 10, -Math.PI / 2, step * Math.PI - Math.PI / 2, false);
       context.stroke();
       context.draw();
+    },
+    // 生成id
+    genID: function genID(length) {
+      return Number(Math.random().toString().substr(3, length) + Date.now()).toString(36);
     } },
 
   mounted: function mounted() {
     this.drawProgressbg();
     this.drawCircle(Number(this.percent) / 50);
 
-    this.id = this.$utils.genID(20);
+    this.id = this.genID(20);
 
   },
   onLoad: function onLoad() {},

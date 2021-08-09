@@ -213,11 +213,12 @@ var _default =
       type: [Number, String],
       default: 0 },
 
+    // 步骤条数据
     list: {
       type: Array,
       required: true },
 
-    // 已点的形式展现
+    // 以点的形式展现
     dot: {
       type: Boolean,
       default: false },

@@ -235,20 +235,21 @@ var _default =
       type: [String, Number],
       default: '' },
 
-    // 当前选中的指示点颜色
+    // 当前未选中的指示点颜色
     indicatorActiveColor: {
       type: String,
       default: '#ccc' },
 
-    // 指示点颜色
+    // 当前选中指示点颜色
     activeColor: {
       type: String,
       default: '#fff' },
 
-    // 指示点尺寸
+    // 指示点样式
     dotStyle: {
       type: Object },
 
+    // 禁止用户滑动
     disableTouch: {
       type: Boolean,
       default: false } },

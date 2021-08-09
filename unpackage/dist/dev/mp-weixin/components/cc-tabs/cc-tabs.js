@@ -149,12 +149,12 @@ var _default =
     // 底部滑块宽度
     lineWidth: {
       type: [Number, String],
-      default: 20 },
+      default: 40 },
 
     // 底部滑块高度
     lineHeight: {
       type: [Number, String],
-      default: 3 },
+      default: 6 },
 
     // 底部滑块颜色
     lineColor: {
@@ -166,7 +166,7 @@ var _default =
       type: String,
       default: '#2979ff' },
 
-    // 标签栏文字
+    // 标签栏文字未激活颜色
     inactiveColor: {
       type: String,
       default: '#303133' } },

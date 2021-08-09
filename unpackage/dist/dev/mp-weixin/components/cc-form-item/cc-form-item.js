@@ -104,6 +104,19 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var g0 = _vm.label
+    ? _vm.rules[_vm.prop].find(function(rule) {
+        return rule.required
+      })
+    : null
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        g0: g0
+      }
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -149,6 +162,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var _asyncValidator = _interopRequireDefault(__webpack_require__(/*! async-validator */ 584));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 {
   name: 'cc-form-item',
@@ -158,6 +172,11 @@ var _asyncValidator = _interopRequireDefault(__webpack_require__(/*! async-valid
     prop: {
       type: String,
       default: '' },
+
+    // label是否显示 *号
+    required: {
+      type: Boolean,
+      default: false },
 
     // 左侧文字
     label: {
@@ -172,14 +191,14 @@ var _asyncValidator = _interopRequireDefault(__webpack_require__(/*! async-valid
     // 左侧内容宽度
     labelWidth: {
       type: [String, Number],
-      default: 80 },
+      default: 160 },
 
     // label对齐方式
     labelAlign: {
       type: String,
       default: 'left' },
 
-    // label对齐方式
+    // 内容对齐方式
     contentAlign: {
       type: String,
       default: 'left' } },

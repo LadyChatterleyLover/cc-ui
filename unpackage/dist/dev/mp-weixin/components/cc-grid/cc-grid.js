@@ -179,6 +179,7 @@ var _default =
   name: 'cc-grid',
   components: {},
   props: {
+    // 宫格数据
     list: {
       type: Array },
 
@@ -193,7 +194,7 @@ var _default =
       default: 0 },
 
     // 内容是否横向排列
-    direction: {
+    vertical: {
       type: Boolean,
       default: false } },
 

@@ -67,7 +67,7 @@ export default {
 .cc-contact-card {
   display: flex;
   align-items: center;
-  padding: 24px;
+  padding: 48rpx;
   position: relative;
   background: #fff;
   &::before {
@@ -75,7 +75,7 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    height: 2px;
+    height: 4rpx;
     background: -webkit-repeating-linear-gradient(135deg, #ff6c6c 0, #ff6c6c 20%, transparent 0, transparent 25%, #1989fa 0, #1989fa 45%, transparent 0, transparent 50%);
     background: repeating-linear-gradient(-45deg, #ff6c6c 0, #ff6c6c 20%, transparent 0, transparent 25%, #1989fa 0, #1989fa 45%, transparent 0, transparent 50%);
     background-size: 80px;

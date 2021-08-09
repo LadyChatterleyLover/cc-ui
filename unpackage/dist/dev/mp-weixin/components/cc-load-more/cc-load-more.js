@@ -163,6 +163,7 @@ var _default =
       type: String,
       default: '' },
 
+    // 线条宽度
     lineWidth: {
       type: [Number, String],
       default: 80 },
@@ -192,10 +193,12 @@ var _default =
       type: [String, Number],
       default: 0 },
 
+    // 加载图标类型
     loadingType: {
       type: String,
       default: 'circle' },
 
+    // 是否显示点的模式
     dot: {
       type: Boolean,
       default: false } },

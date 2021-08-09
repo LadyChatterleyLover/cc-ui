@@ -187,7 +187,7 @@
       },
       // 点击兑换按钮
       exchange() {
-        if (!exchangeButtonDisabled || !inputValue || !inputValue.length) return
+        if (!this.exchangeButtonDisabled || !inputValue || !inputValue.length) return
         this.$emit('exchange', this.inputValue)
       },
       // 点击不使用优惠券按钮
@@ -305,7 +305,7 @@
          }
        }
        &-label {
-         padding: 8px 16px;
+         padding: 16rpx 32rpx;
          font-size: 12px;
          border-top: 1px dashed #ebedf0;
          color: #323233;

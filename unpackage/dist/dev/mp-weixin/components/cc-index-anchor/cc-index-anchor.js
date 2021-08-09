@@ -128,10 +128,7 @@ var _default =
   props: {
     index: {
       type: [Number, String],
-      default: '' },
-
-    className: {
-      type: String } },
+      default: '' } },
 
 
   data: function data() {

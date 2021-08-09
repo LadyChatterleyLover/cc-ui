@@ -214,7 +214,7 @@ var _default =
       type: [Number, String],
       default: '' },
 
-    // 商品数量
+    // 商品划线原价
     originPrice: {
       type: [Number, String],
       default: '' },
@@ -222,18 +222,20 @@ var _default =
     // 货币符号
     currency: {
       type: String,
-      default: '￥' },
-
-    // 点击左侧图片后跳转的链接地址
-    thumbLink: {
-      type: String,
-      default: '' } },
+      default: '￥' } },
 
 
   data: function data() {
     return {};
   },
-  methods: {},
+  methods: {
+    handleClick: function handleClick() {
+      this.$emit('click');
+    },
+    clickImage: function clickImage() {
+      this.$emit('click-thumb');
+    } },
+
   mounted: function mounted() {},
   onLoad: function onLoad() {},
   onShow: function onShow() {},

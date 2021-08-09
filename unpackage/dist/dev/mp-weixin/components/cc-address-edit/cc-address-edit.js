@@ -89,7 +89,7 @@ try {
       return __webpack_require__.e(/*! import() | components/cc-field/cc-field */ "components/cc-field/cc-field").then(__webpack_require__.bind(null, /*! @/components/cc-field/cc-field.vue */ 567))
     },
     ccSwitch: function() {
-      return __webpack_require__.e(/*! import() | components/cc-switch/cc-switch */ "components/cc-switch/cc-switch").then(__webpack_require__.bind(null, /*! @/components/cc-switch/cc-switch.vue */ 1010))
+      return __webpack_require__.e(/*! import() | components/cc-switch/cc-switch */ "components/cc-switch/cc-switch").then(__webpack_require__.bind(null, /*! @/components/cc-switch/cc-switch.vue */ 933))
     },
     ccButton: function() {
       return __webpack_require__.e(/*! import() | components/cc-button/cc-button */ "components/cc-button/cc-button").then(__webpack_require__.bind(null, /*! @/components/cc-button/cc-button.vue */ 546))
@@ -156,6 +156,49 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -329,14 +372,19 @@ var _default2 =
       this.info.province = val[0].name;
       this.info.city = val[1].name;
       this.info.county = val[2].name;
+      this.info.areaCode = val[2].code;
       this.visible = false;
     },
     cancel: function cancel() {
       this.visible = false;
+    },
+    // 生成id
+    genID: function genID(length) {
+      return Number(Math.random().toString().substr(3, length) + Date.now()).toString(36);
     } },
 
   mounted: function mounted() {
-    this.info.id = this.$utils.genID(20);
+    this.info.id = this.genID(20);
   },
   onLoad: function onLoad() {},
   onShow: function onShow() {},

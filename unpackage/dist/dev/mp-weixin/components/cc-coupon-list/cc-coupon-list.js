@@ -336,7 +336,7 @@ var _default2 = { components: {}, props: { // 当前输入的兑换码
     // 点击兑换按钮
     exchange: function exchange() {
       if (!exchangeButtonDisabled || !inputValue || !inputValue.length) return;
-      this.$emit('exchange');
+      this.$emit('exchange', this.inputValue);
     },
     // 点击不使用优惠券按钮
     close: function close() {

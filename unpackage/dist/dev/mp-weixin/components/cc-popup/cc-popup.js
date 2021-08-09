@@ -210,6 +210,7 @@ var _default =
       type: Boolean,
       default: true },
 
+    // 点击遮罩层可关闭
     closeOnClickOverlay: {
       type: Boolean,
       default: true } },

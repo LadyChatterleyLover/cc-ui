@@ -394,11 +394,6 @@ var _default =
           url: '/views/subsection/index' },
 
         {
-          title: 'Steps',
-          label: '步骤条',
-          url: '/views/steps/index' },
-
-        {
           title: 'Sticky',
           label: '粘性布局',
           url: '/views/sticky/index' },
@@ -527,6 +522,7 @@ var _default =
           title: 'Coupon',
           label: '优惠券',
           url: '/views/coupon/index' }] }] };
+
 
 
 

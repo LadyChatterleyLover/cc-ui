@@ -94,7 +94,7 @@ var components
 try {
   components = {
     ccLink: function() {
-      return __webpack_require__.e(/*! import() | components/cc-link/cc-link */ "components/cc-link/cc-link").then(__webpack_require__.bind(null, /*! @/components/cc-link/cc-link.vue */ 940))
+      return __webpack_require__.e(/*! import() | components/cc-link/cc-link */ "components/cc-link/cc-link").then(__webpack_require__.bind(null, /*! @/components/cc-link/cc-link.vue */ 947))
     }
   }
 } catch (e) {

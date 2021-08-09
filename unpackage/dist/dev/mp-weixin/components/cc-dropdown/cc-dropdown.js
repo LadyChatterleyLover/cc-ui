@@ -266,6 +266,7 @@ var _default = { name: 'cc-dropdown', components: {}, props: { list: { type: Arr
     },
     // 点击菜单
     clickItem: function clickItem(item, item1, index, index1) {var _this2 = this;
+      if (item1.disabled) return;
       item.activeItem = item1;
       item.activeItem.actived = false;
       item.activeIndex = index1;

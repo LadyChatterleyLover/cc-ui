@@ -163,7 +163,7 @@ var _default =
     // 进度条高度
     strokeWidth: {
       type: [Number, String],
-      default: 6 },
+      default: 12 },
 
     // 默认动画时长
     duration: {

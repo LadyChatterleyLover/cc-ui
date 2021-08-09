@@ -53,9 +53,16 @@
           align-items: center;
   font-size: 14px;
   padding-left: 24rpx;
+  position: relative;
 }
 .cc-form-item-label-icon.data-v-72d61438 {
   margin-right: 6rpx;
+}
+.cc-form-item-label-required.data-v-72d61438 {
+  color: red;
+  position: absolute;
+  left: 4rpx;
+  top: -4rpx;
 }
 .cc-form-item-content.data-v-72d61438 {
   -webkit-box-flex: 1;

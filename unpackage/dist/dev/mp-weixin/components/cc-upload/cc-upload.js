@@ -175,11 +175,6 @@ var _default2 =
       type: [Number, String],
       default: 99 },
 
-    // 显示进度条
-    showProgress: {
-      type: Boolean,
-      default: true },
-
     // 预览图片显示模式
     imageMode: {
       type: String,
@@ -352,20 +347,13 @@ var _default2 =
                   uni.hideLoading();
                 } });
 
-              // 监听上传进度
-              _this.uploadTask.onProgressUpdate(function (val) {
-                _this.percent = val.progress;
-                _this.$emit('progress', {
-                  progress: val });
-
-              });
             });
           } else {
             _this.$refs.toast.show({
               title: '选择图片失败,请重新选择',
               type: 'warning' });
 
-            _this.$emit('choose-fail', err);
+            _this.$emit('chooseFail', err);
           }
         },
         fail: function fail(err) {
@@ -404,7 +392,7 @@ var _default2 =
   watch: {
     imgList: {
       handler: function handler(val) {
-        this.$emit('list-change', val);
+        this.$emit('listChange', val);
       },
       deep: true } } };exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

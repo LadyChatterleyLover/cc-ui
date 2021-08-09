@@ -189,6 +189,7 @@ var _default = { name: 'cc-countup', components: {}, props: { // 是否自动滚
       type: String,
       default: '' },
 
+    // 结束时回调
     end: {
       type: Function } },
 

@@ -125,6 +125,7 @@ var _default =
   name: 'cc-sticky',
   components: {},
   props: {
+    // 吸顶时与顶部的距离
     offsetTop: {
       type: [String, Number],
       default: 0 } },

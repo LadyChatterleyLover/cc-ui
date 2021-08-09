@@ -25,7 +25,6 @@
 /* 透明度 */
 /* 文章场景相关 */
 .cc-skeleton.data-v-771e77ba {
-  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;

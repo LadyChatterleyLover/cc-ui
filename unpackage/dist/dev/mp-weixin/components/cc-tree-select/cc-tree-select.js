@@ -257,10 +257,10 @@ var _cloneDeep = _interopRequireDefault(__webpack_require__(/*! lodash/cloneDeep
 //
 var _default2 = { components: {}, props: { // 分类数据
     items: { type: Array, default: function _default() {return [];} }, // 左侧选中项的索引
-    mainActiveIndex: { type: [Number, String], default: 0 }, // 右侧选中项的 id，支持传入数组
+    mainActiveIndex: { type: Number, default: 0 }, // 右侧选中项的 id，支持传入数组
     activeId: { type: [Number, String, Array], default: 0 }, // 选中时的图标
-    selectedIcon: { type: String, default: 'checkmarkempty' }, activeColor: { type: String, default: '#ee0a24' } }, data: function data() {return { currentIndex: null, currentItem: null, list: (0, _cloneDeep.default)(this.items) };}, methods: { clickNav: function clickNav(item, index) {if (item.disabled) return;this.currentIndex = index;this.currentItem = this.list[this.currentIndex];this.currentItem.index = index;this.$emit('clickNav', this.list);}, clickItem: function clickItem(item, index) {var _this = this;if (item.disabled) return;if (this.isMultiple) {item.checked = !item.checked;this.$emit('clickItem', this.list);} else {this.list.map(function (item) {if (item.index !== _this.currentIndex) {_this.$set(item, 'currentChildIndex', -1);} else {_this.$set(item, 'currentChildIndex', index);}});this.$emit('clickItem', item);}} }, mounted: function mounted() {var _this2 = this;
-    console.log(this.items);
+    selectedIcon: { type: String, default: 'checkmarkempty' }, // 激活时颜色
+    activeColor: { type: String, default: '#ee0a24' } }, data: function data() {return { currentIndex: null, currentItem: null, list: (0, _cloneDeep.default)(this.items) };}, methods: { clickNav: function clickNav(item, index) {if (item.disabled) return;this.currentIndex = index;this.currentItem = this.list[this.currentIndex];this.currentItem.index = index;this.$emit('clickNav', this.list);}, clickItem: function clickItem(item, index) {var _this = this;if (item.disabled) return;if (this.isMultiple) {item.checked = !item.checked;this.$emit('clickItem', this.list);} else {this.list.map(function (item) {if (item.index !== _this.currentIndex) {_this.$set(item, 'currentChildIndex', -1);} else {_this.$set(item, 'currentChildIndex', index);}});this.$emit('clickItem', item);}} }, mounted: function mounted() {var _this2 = this;
     if (this.isMultiple) {
       this.list.map(function (item, index) {
         _this2.$set(item, 'index', index);

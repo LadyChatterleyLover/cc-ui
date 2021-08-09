@@ -178,6 +178,7 @@ var _default2 =
         scrollTop: this.$slots.default[index].elm.offsetTop,
         duration: 0 });
 
+      this.$emit('select', item);
     } },
 
   mounted: function mounted() {

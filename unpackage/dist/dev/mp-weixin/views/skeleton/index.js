@@ -96,7 +96,7 @@ var components
 try {
   components = {
     ccSkeleton: function() {
-      return __webpack_require__.e(/*! import() | components/cc-skeleton/cc-skeleton */ "components/cc-skeleton/cc-skeleton").then(__webpack_require__.bind(null, /*! @/components/cc-skeleton/cc-skeleton.vue */ 989))
+      return __webpack_require__.e(/*! import() | components/cc-skeleton/cc-skeleton */ "components/cc-skeleton/cc-skeleton").then(__webpack_require__.bind(null, /*! @/components/cc-skeleton/cc-skeleton.vue */ 996))
     },
     ccButton: function() {
       return __webpack_require__.e(/*! import() | components/cc-button/cc-button */ "components/cc-button/cc-button").then(__webpack_require__.bind(null, /*! @/components/cc-button/cc-button.vue */ 546))
@@ -197,13 +197,27 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   components: {},
   props: {},
   data: function data() {
     return {
-      loading: false };
+      loading: true };
 
   },
   methods: {

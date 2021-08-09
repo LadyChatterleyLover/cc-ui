@@ -97,6 +97,15 @@ try {
   components = {
     ccDropdown: function() {
       return Promise.all(/*! import() | components/cc-dropdown/cc-dropdown */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/cc-dropdown/cc-dropdown")]).then(__webpack_require__.bind(null, /*! @/components/cc-dropdown/cc-dropdown.vue */ 926))
+    },
+    ccCell: function() {
+      return __webpack_require__.e(/*! import() | components/cc-cell/cc-cell */ "components/cc-cell/cc-cell").then(__webpack_require__.bind(null, /*! @/components/cc-cell/cc-cell.vue */ 532))
+    },
+    ccSwitch: function() {
+      return __webpack_require__.e(/*! import() | components/cc-switch/cc-switch */ "components/cc-switch/cc-switch").then(__webpack_require__.bind(null, /*! @/components/cc-switch/cc-switch.vue */ 933))
+    },
+    ccButton: function() {
+      return __webpack_require__.e(/*! import() | components/cc-button/cc-button */ "components/cc-button/cc-button").then(__webpack_require__.bind(null, /*! @/components/cc-button/cc-button.vue */ 546))
     }
   }
 } catch (e) {
@@ -205,6 +214,11 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
 var _default =
 {
   components: {},
@@ -258,7 +272,6 @@ var _default =
     close: function close(val) {
       console.log('close');
     } },
-
 
   mounted: function mounted() {},
   onLoad: function onLoad() {},

@@ -189,7 +189,7 @@ var _cloneDeep = _interopRequireDefault(__webpack_require__(/*! lodash/cloneDeep
 //
 //
 //
-var _default = { components: {}, props: { // 当前选中联系人
+var _default = { components: {}, props: { // 当前选中联系人的 id
     value: { type: [Number, String], default: '' }, // 联系人列表
     list: { type: Array, required: true }, // 添加按钮文案
     addText: { type: String, default: '新建联系人' }, // 添加按钮颜色
@@ -221,12 +221,14 @@ var _default = { components: {}, props: { // 当前选中联系人
     clickItem: function clickItem(item, index) {
       if (item.disabled) return;
       this.currentValue = item.id;
-      this.$emit('click', { item: item, index: index });
-      if (item.value === this.value) this.$emit('select', { item: item, index: index });
+      this.$emit('select', { item: item, index: index });
     },
     edit: function edit(item, index) {
       if (item.disabled) return;
       this.$emit('edit', { item: item, index: index });
+    },
+    add: function add() {
+      this.$emit('add');
     } },
 
   mounted: function mounted() {

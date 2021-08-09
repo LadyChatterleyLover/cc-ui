@@ -140,7 +140,19 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _props;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -159,8 +171,8 @@ var _default =
 {
   name: 'cc-image-preview',
   components: {},
-  props: (_props = {
-    // 是否显示预览图标
+  props: {
+    // 是否显示预览图片
     value: {
       type: Boolean,
       default: false },
@@ -175,8 +187,8 @@ var _default =
       type: Array,
       required: true },
 
+    // 当前图片下标
     current: {
-      // 当前图片下标
       type: [Number, String],
       default: 0 },
 
@@ -198,76 +210,57 @@ var _default =
     // 指示点模式
     mode: {
       type: String,
-      default: 'circle' } }, _defineProperty(_props, "current",
+      default: 'circle' },
 
+    // 是否采用衔接滑动
+    circular: {
+      type: Boolean,
+      default: true },
 
-  {
-    type: [String, Number],
-    default: 0 }), _defineProperty(_props, "duration",
+    // 图片模式
+    imgMode: {
+      type: String,
+      default: 'aspectFill' },
 
+    // 轮播图组件高度
+    height: {
+      type: [String, Number],
+      default: 300 },
 
-  {
-    type: [String, Number],
-    default: 500 }), _defineProperty(_props, "circular",
+    // 指示点距离底部位置
+    bottom: {
+      type: [String, Number],
+      default: 20 },
 
+    // 指示点距离右边位置
+    right: {
+      type: [String, Number],
+      default: '' },
 
-  {
-    type: Boolean,
-    default: true }), _defineProperty(_props, "imgMode",
+    // 当前选中的指示点颜色
+    indicatorActiveColor: {
+      type: String,
+      default: '#ccc' },
 
+    // 指示点激活时颜色
+    activeColor: {
+      type: String,
+      default: '#fff' },
 
-  {
-    type: String,
-    default: 'aspectFill' }), _defineProperty(_props, "height",
+    // 是否显示关闭图标
+    closeable: {
+      type: Boolean,
+      default: false },
 
+    // 是否在点击遮罩层后关闭
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true },
 
-  {
-    type: [String, Number],
-    default: 300 }), _defineProperty(_props, "bottom",
-
-
-  {
-    type: [String, Number],
-    default: 20 }), _defineProperty(_props, "right",
-
-
-  {
-    type: [String, Number],
-    default: '' }), _defineProperty(_props, "indicatorActiveColor",
-
-
-  {
-    type: String,
-    default: '#ccc' }), _defineProperty(_props, "activeColor",
-
-
-  {
-    type: String,
-    default: '#fff' }), _defineProperty(_props, "dotStyle",
-
-
-  {
-    type: Object }), _defineProperty(_props, "closeable",
-
-
-  {
-    type: Boolean,
-    default: false }), _defineProperty(_props, "closeIcon",
-
-
-  {
-    type: String,
-    default: 'close' }), _defineProperty(_props, "closeOnClickOverlay",
-
-
-  {
-    type: Boolean,
-    default: true }), _defineProperty(_props, "closeOnImage",
-
-
-  {
-    type: Boolean,
-    default: true }), _props),
+    // 是否在点击图片后关闭
+    closeOnImage: {
+      type: Boolean,
+      default: true } },
 
 
   data: function data() {
@@ -298,7 +291,7 @@ var _default =
       }
     },
     handleSelect: function handleSelect(val) {
-      this.$emit('select');
+      this.$emit('select', val);
       this.$emit('update:value', !this.value);
     } },
 

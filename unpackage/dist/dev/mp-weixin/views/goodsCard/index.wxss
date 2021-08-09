@@ -28,9 +28,9 @@
   padding: 20rpx;
 }
 .demo-item.data-v-74e56a6c {
-  margin-bottom: 60rpx;
+  margin-bottom: 60rpx .demo-item;
 }
-.demo-item.data-v-74e56a6c:last-child {
+.demo-item.data-v-74e56a6c :last-child {
   margin-bottom: 0;
 }
 

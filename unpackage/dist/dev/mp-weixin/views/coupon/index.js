@@ -164,7 +164,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
 //
 //
 //
@@ -212,19 +212,8 @@ var _default =
         description: '描述信息' }],
 
 
-      disabledCoupons: [
-      {
-        available: 1,
-        condition: '无使用门槛\n最多优惠12元',
-        reason: '',
-        value: 150,
-        name: '优惠券名称',
-        startAt: 1489104000,
-        endAt: 1514592000,
-        valueDesc: '1.5',
-        unitDesc: '元' },
+      disabledCoupons: [_defineProperty({
 
-      {
         available: 1,
         condition: '无使用门槛\n最多优惠12元',
         reason: '',
@@ -233,7 +222,20 @@ var _default =
         startAt: 1489104000,
         endAt: 1514592000,
         valueDesc: '1.5',
-        unitDesc: '元' }] };
+        unitDesc: '元' }, "reason",
+      '优惠券不可用描述信息'), _defineProperty({
+
+
+        available: 1,
+        condition: '无使用门槛\n最多优惠12元',
+        reason: '',
+        value: 150,
+        name: '优惠券名称',
+        startAt: 1489104000,
+        endAt: 1514592000,
+        valueDesc: '1.5',
+        unitDesc: '元' }, "reason",
+      '优惠券不可用描述信息')] };
 
 
 

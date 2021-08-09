@@ -89,7 +89,7 @@ try {
       return __webpack_require__.e(/*! import() | components/cc-field/cc-field */ "components/cc-field/cc-field").then(__webpack_require__.bind(null, /*! @/components/cc-field/cc-field.vue */ 567))
     },
     ccSwitch: function() {
-      return __webpack_require__.e(/*! import() | components/cc-switch/cc-switch */ "components/cc-switch/cc-switch").then(__webpack_require__.bind(null, /*! @/components/cc-switch/cc-switch.vue */ 1010))
+      return __webpack_require__.e(/*! import() | components/cc-switch/cc-switch */ "components/cc-switch/cc-switch").then(__webpack_require__.bind(null, /*! @/components/cc-switch/cc-switch.vue */ 933))
     },
     ccButton: function() {
       return __webpack_require__.e(/*! import() | components/cc-button/cc-button */ "components/cc-button/cc-button").then(__webpack_require__.bind(null, /*! @/components/cc-button/cc-button.vue */ 546))
@@ -149,7 +149,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _props;function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
 //
 //
 //
@@ -175,18 +175,18 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   components: {},
-  props: (_props = {
+  props: {
     // 联系人信息
     contactInfo: {
       type: Object,
       required: true },
 
-    // 收货人姓名占位符
+    // 联系人姓名占位符
     userPlaceholder: {
       type: String,
       default: '请输入姓名' },
 
-    // 收货人电话占位符
+    // 联系人电话占位符
     telPlaceholder: {
       type: String,
       default: '请输入电话' },
@@ -219,27 +219,22 @@ var _default =
     // 删除按钮颜色
     deleteButtonColor: {
       type: String,
-      default: '' } }, _defineProperty(_props, "showSetDefault",
+      default: '' },
 
+    // 是否显示删除按钮
+    showDelete: {
+      type: Boolean,
+      default: true },
 
-  {
-    type: Boolean,
-    default: true }), _defineProperty(_props, "showDelete",
+    // 保存按钮文字
+    saveButtonText: {
+      type: String,
+      default: '保存' },
 
-
-  {
-    type: Boolean,
-    default: true }), _defineProperty(_props, "saveButtonText",
-
-
-  {
-    type: String,
-    default: '保存' }), _defineProperty(_props, "deleteButtonText",
-
-
-  {
-    type: String,
-    default: '删除' }), _props),
+    // 删除按钮文字
+    deleteButtonText: {
+      type: String,
+      default: '删除' } },
 
 
   data: function data() {
@@ -249,7 +244,7 @@ var _default =
         name: [
         {
           required: true,
-          message: '收货人姓名不能为空',
+          message: '联系人姓名不能为空',
           trigger: 'blur' }],
 
 
@@ -257,7 +252,7 @@ var _default =
         {
           validator: function validator(rule, value, callback) {
             if (value === '') {
-              callback(new Error('收货人电话不能为空'));
+              callback(new Error('联系人电话不能为空'));
             } else if (!/^(?:(?:\+|00)86)?1(?:(?:3[\d])|(?:4[5-79])|(?:5[0-35-9])|(?:6[5-7])|(?:7[0-8])|(?:8[\d])|(?:9[189]))\d{8}$/.test(value)) {
               callback(new Error('请输入正确的手机号码'));
             } else {

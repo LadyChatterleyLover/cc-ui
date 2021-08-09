@@ -18,9 +18,7 @@
       </view>
 
       <view class="demo">
-        <cc-row>
-          <cc-col offset="12" span="12">offset: 12, span: 12</cc-col>
-        </cc-row>
+        <cc-row><cc-col offset="12" span="12">offset: 12, span: 12</cc-col></cc-row>
       </view>
     </view>
 
@@ -82,6 +80,7 @@
         </cc-row>
       </view>
     </view>
+  
   </view>
 </template>
 
@@ -99,9 +98,9 @@ export default {
     return {}
   },
   methods: {},
-  mounted() { },
-  onLoad() { },
-  onShow() { },
+  mounted() {},
+  onLoad() {},
+  onShow() {},
   filters: {},
   computed: {},
   watch: {}

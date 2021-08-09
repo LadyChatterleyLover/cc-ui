@@ -110,7 +110,7 @@ export default {
 }
 .container {
   height: 50px;
-  padding: 0 16px;
+  padding: 0 32rpx;
   font-size: 14px;
   position: relative;
   .price {
@@ -141,7 +141,7 @@ export default {
   }
 }
 .tip {
-  padding: 8px 12px;
+  padding: 16rpx 24rpx;
   color: #f56723;
   font-size: 12px;
   line-height: 1.5;

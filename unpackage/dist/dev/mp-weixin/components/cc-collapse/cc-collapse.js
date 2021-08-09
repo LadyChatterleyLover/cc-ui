@@ -182,7 +182,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
 var _cloneDeep = _interopRequireDefault(__webpack_require__(/*! lodash/cloneDeep */ 601));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -227,15 +243,7 @@ var _default = { name: 'cc-collapse', components: {}, props: { // 选项数组
     list: { type: Array, required: true }, // 默认展开选项
     current: { type: [String, Number], default: '' }, // 手风琴模式
     accordion: { type: Boolean, default: false } }, data: function data() {return { height: 0, cloneList: [], uid: '', active: 0 };}, methods: { // 初始化选项
-    init: function init() {var _this = this;this.$nextTick(function () {_this.cloneList.map(function (item, index) {if (item.show === undefined) {_this.$set(item, 'show', false);}if (item.arrow === undefined) {_this.$set(item, 'arrow', true);}if (item.border === undefined) {_this.$set(item, 'border', true);}if (!item.iconSize) {_this.$set(item, 'iconSize', '16');}
-          if (!item.arrowColor) {
-            _this.$set(item, 'arrowColor', '#969799');
-          }
-          if (!item.name) {
-            _this.$set(item, 'name', index);
-          }
-        });
-
+    init: function init() {var _this = this;this.$nextTick(function () {_this.cloneList.map(function (item, index) {if (item.show === undefined) {_this.$set(item, 'show', false);}if (item.arrow === undefined) {_this.$set(item, 'arrow', true);}if (item.border === undefined) {_this.$set(item, 'border', true);}if (!item.iconSize) {_this.$set(item, 'iconSize', '16');}if (!item.arrowColor) {_this.$set(item, 'arrowColor', '#969799');}if (!item.name) {_this.$set(item, 'name', index);}});
         if (!_this.current) {
           _this.active = '';
         } else {

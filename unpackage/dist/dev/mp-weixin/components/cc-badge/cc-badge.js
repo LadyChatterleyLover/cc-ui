@@ -179,7 +179,7 @@ var _default2 =
   computed: {
     showContent: function showContent() {
       if (this.max && typeof this.content === 'number') {
-        if (this.content < this.max) return this.content;else
+        if (this.content < Number(this.max)) return this.content;else
         return this.max + '+';
       } else {
         return this.content;

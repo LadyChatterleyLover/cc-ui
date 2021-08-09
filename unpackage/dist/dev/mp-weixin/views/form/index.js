@@ -183,10 +183,7 @@ var _default =
       model: {
         username: '',
         password: '',
-        checked: [],
-        radio: '',
-        code: '',
-        remember: false },
+        code: '' },
 
       rules: {
         username: [

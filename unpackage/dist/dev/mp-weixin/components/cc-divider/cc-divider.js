@@ -140,7 +140,7 @@ var _default =
       type: String,
       default: 'center' },
 
-    // 边框颜色
+    // 分割线颜色
     color: {
       type: String,
       default: '#ebedf0' } },

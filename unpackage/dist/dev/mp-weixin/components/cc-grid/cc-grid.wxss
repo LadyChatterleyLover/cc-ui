@@ -38,6 +38,7 @@
 .cc-grid .cc-grid-item.data-v-e10d99a8 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
 }
 .cc-grid .cc-grid-item-content.data-v-e10d99a8 {
   padding: 32rpx 16rpx;

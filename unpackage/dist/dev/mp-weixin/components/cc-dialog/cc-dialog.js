@@ -183,6 +183,7 @@ var _default =
     content: {
       type: String },
 
+    // 弹框宽度
     width: {
       type: [Number, String],
       default: 640 },

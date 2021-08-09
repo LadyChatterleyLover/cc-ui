@@ -237,8 +237,12 @@ var _default2 = { components: {}, props: { // 当前选中地址
     disabledList: { type: Array, default: function _default() {return [];} }, // 不可配送提示文案
     disabledText: { type: String, default: '' }, // 是否允许切换地址
     switchable: { type: Boolean, default: true }, // 底部按钮文字
-    addButtonText: { type: String, default: '新增地址' }, // 默认地址标签文字
-    defaultTagText: { type: String, default: '新增' } }, data: function data() {return { addressList: (0, _cloneDeep.default)(this.list), currentIndex: -1, currentValue: '' };}, methods: { clickItem: function clickItem(item, index) {this.$emit('click', { item: item, index: index });
+    addButtonText: { type: String, default: '新增地址' }, addButtonColor: { type: String, default: '#e54d42' }, // 默认地址标签文字
+    defaultTagText: { type: String, default: '' } }, data: function data() {return { addressList: (0, _cloneDeep.default)(this.list), currentIndex: -1, currentValue: '' };
+  },
+  methods: {
+    clickItem: function clickItem(item, index) {
+      this.$emit('click', { item: item, index: index });
       this.currentValue = item.id;
       if (this.currentValue === item.id) {
         this.$emit('select', { item: item, index: index });
@@ -251,6 +255,10 @@ var _default2 = { components: {}, props: { // 当前选中地址
       this.$emit('add');
     },
     editDisabled: function editDisabled(item, index) {
+      this.$emit('edit-disabled', { item: item, index: index });
+    },
+    clickDisabledItem: function clickDisabledItem(item, index) {
+      this.$emit('click', { item: item, index: index });
       this.$emit('select-disabled', { item: item, index: index });
     } },
 

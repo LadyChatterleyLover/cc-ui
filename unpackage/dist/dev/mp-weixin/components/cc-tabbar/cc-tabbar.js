@@ -193,7 +193,7 @@ var _default =
   props: {
     // 当前激活菜单索引
     value: {
-      type: [String, Number],
+      type: Number,
       default: 0 },
 
     // tabbar配置数组
@@ -234,7 +234,7 @@ var _default =
     // 导航栏高度
     height: {
       type: [String, Number],
-      default: 50 },
+      default: 100 },
 
     // 背景颜色
     bgColor: {
