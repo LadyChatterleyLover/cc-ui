@@ -9,9 +9,7 @@
           class="cc-tree-select-index-container"
           :class="{ 'cc-tree-select-index-active': currentIndex === index, 'cc-tree-select-disabled': item.disabled }"
         >
-          <cc-badge v-if="item.dot || item.badge" :dot='item.dot' :content="item.badge">
-            {{ item.text }}
-          </cc-badge>
+          <cc-badge v-if="item.dot || item.badge" :dot="item.dot" :content="item.badge">{{ item.text }}</cc-badge>
           <text v-else>{{ item.text }}</text>
         </view>
       </view>
@@ -33,9 +31,7 @@
           class="cc-tree-select-index-container"
           :class="{ 'cc-tree-select-index-active': currentIndex === index, 'cc-tree-select-disabled': item.disabled }"
         >
-          <cc-badge v-if="item.dot || item.badge" :dot='item.dot' :content="item.badge">
-            {{ item.text }}
-          </cc-badge>
+          <cc-badge v-if="item.dot || item.badge" :dot="item.dot" :content="item.badge">{{ item.text }}</cc-badge>
           <text v-else>{{ item.text }}</text>
         </view>
       </view>
@@ -96,14 +92,35 @@ export default {
   methods: {
     clickNav(item, index) {
       if (item.disabled) return
-      this.currentIndex = index
-      this.currentItem = this.list[this.currentIndex]
-      this.currentItem.index = index
+      if (this.isMultiple) {
+        this.currentIndex = index
+        this.currentItem = this.list[this.currentIndex]
+        this.list.map(item => {
+          if (this.activeId.includes(item.id)) {
+            item.checked = true
+          } else {
+            item.checked = false
+          }
+        })
+      } else {
+        this.currentIndex = index
+        this.currentItem = this.list[this.currentIndex]
+        this.currentItem.index = index
+      }
       this.$emit('clickNav', this.list)
     },
     clickItem(item, index) {
       if (item.disabled) return
       if (this.isMultiple) {
+        this.list.map(item1 => {
+          item1.children &&
+            item1.children &&
+            item1.children.map(item2 => {
+              if (item1.index !== this.currentIndex) {
+                item2.checked = false
+              }
+            })
+        })
         item.checked = !item.checked
         this.$emit('clickItem', this.list)
       } else {
@@ -125,6 +142,7 @@ export default {
         if (item.children && item.children.length) {
           item.children.map(item1 => {
             this.$set(item1, 'checked', false)
+            this.$set(item1, 'index', index)
             if (this.activeId.includes(item1.id)) this.$set(item1, 'checked', true)
           })
         }

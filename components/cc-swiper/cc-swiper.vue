@@ -12,7 +12,7 @@
       :disable-touch="disableTouch"
       @change="handleChange"
     >
-      <swiper-item @longpress='longpress(item, index, $event)' @click="clickItem(item, index)" class="cc-swiper-item" v-for="(item, index) in list" :key="index">
+      <swiper-item @longpress.prevent='longpress(item, index, $event)' @click="clickItem(item, index)" class="cc-swiper-item" v-for="(item, index) in list" :key="index">
         <view class="cc-swiper-item-img">
           <!-- #ifdef H5 -->
           <view v-if="$scopedSlots.default"><slot :current="currentIndex" :item="item" :index="index"></slot></view>
@@ -158,7 +158,6 @@ export default {
       this.$emit('longpress', {
         item,
         index,
-        e
       })
     }
   },

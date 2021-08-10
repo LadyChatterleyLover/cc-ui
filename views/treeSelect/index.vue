@@ -72,19 +72,19 @@ export default {
           text: '江苏',
           children: [
             {
-              id: 1,
+              id: 11,
               text: '南京'
             },
             {
-              id: 2,
+              id: 12,
               text: '无锡'
             },
             {
-              id: 3,
+              id: 13,
               text: '徐州'
             },
             {
-              id: 4,
+              id: 14,
               text: '苏州'
             }
           ]
