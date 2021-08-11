@@ -166,7 +166,7 @@ export default {
       else {
         setTimeout(() => {
           this.display = 'none'
-        }, 1500)
+        },100)
       }
     }
   }
