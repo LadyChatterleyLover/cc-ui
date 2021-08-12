@@ -2,10 +2,8 @@
   <view class="cc-cell" :class="[{ 'cc-cell-large': size }, { 'cc-cell-border': border }]" @click="onClick">
     <view>
       <view class="cc-cell-title">
-        <view class="cc-cell-left-icon">
-          <cc-icon v-if="icon"  :size="iconSize" :type="icon" color="#323233"></cc-icon>
-          <slot v-else name="left-icon"></slot>
-        </view>
+        <view v-if="icon" class="cc-cell-left-icon"><cc-icon :size="iconSize" :type="icon" color="#323233"></cc-icon></view>
+        <view v-else class="cc-cell-left-icon"><slot name="left-icon"></slot></view>
         <view>
           <slot name="title" v-if="!title"></slot>
           <text v-else>{{ title }}</text>
@@ -18,9 +16,7 @@
     </view>
     <view class="cc-cell-value">
       <view class="cc-cell-value-wrap">
-        <view v-if="!value" style="width: 100%;display: flex;align-items: center;">
-          <slot name="value" ></slot>
-        </view>
+        <view v-if="!value" style="width: 100%;display: flex;align-items: center;"><slot name="value"></slot></view>
         <text v-else>{{ value }}</text>
       </view>
       <view class="cc-cell-right-icon">
