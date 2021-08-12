@@ -16,7 +16,7 @@ cc-ui是uni-app生态组件库, 宗旨是一切为了简单。
 <img src='https://static-df19c143-c147-44fa-84a0-61752f5834cc.bspapp.com/static/erweima.jpg' width='300' height='300'>
 
 ### 版权信息
-cc-ui全部开源, 意味着您无需支付任何费用，也无需授权，即可将uView应用到您的产品中。
+cc-ui全部开源, 意味着您无需支付任何费用，也无需授权，即可将cc-ui应用到您的产品中。
 注意：这并不意味着您可以将cc-ui应用到非法的领域，比如涉及赌博，暴力等方面。如因此产生纠纷等法律问题, cc-ui不承担任何责任。
 
 ### 捐赠cc-ui的开发
