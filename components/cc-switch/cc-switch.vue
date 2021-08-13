@@ -3,6 +3,7 @@
     <view class="cc-switch-wrap" :class="{ disabled }" :style="{ background: value ? activeColor : inactiveColor, fontSize: size + 'px' }" @click="clickSwitch">
       <view class="cc-switch-wrap-node" :style="{ transform: `translateX(${move})` }"></view>
     </view>
+    
     <view v-if="activeText" class="cc-switch-text" :style="{ color: value ? activeTextColor : inactiveTextColor }">
       {{ value ? activeText : inactiveText ? inactiveText : activeText }}
     </view>

@@ -8,9 +8,21 @@
       </view>
     </view>
     <view class="cc-notify-bar-wrap" @click="onClick">
-      <view class="cc-notify-bar-wrap-content" :style="{ color, animationDuration }">
-        <slot v-if="$slots.default"></slot>
-        <view v-else>{{ text }}</view>
+      <view class="cc-notify-bar-wrap-content" :style="{ color, animationDuration }" v-if="!vertical">
+        <template v-if="list.length">
+          <view>{{ list.join(',') }}</view>
+        </template>
+        <template v-else>
+          <slot v-if="$slots.default"></slot>
+          <view v-else>{{ text }}</view>
+        </template>
+      </view>
+      <view v-else class="cc-notify-bar-wrap-content-vertical" :style="{ color}">
+        <swiper class="cc-notify-bar-wrap-content-vertical-swiper" vertical circular :indicator-dots="false" :autoplay="true" :interval="interval" :duration="500">
+          <swiper-item v-for="(item, index) in list" :key="index">
+            <view class="cc-notify-bar-wrap-content-vertical-swiper-item">{{item}}</view>
+          </swiper-item>
+        </swiper>
       </view>
     </view>
     <view class="cc-notify-bar-right" @click="clickRight">
@@ -23,7 +35,6 @@
         <cc-icon v-else :type="$slots.right"></cc-icon>
       </view>
     </view>
-  
   </view>
 </template>
 
@@ -32,6 +43,10 @@ export default {
   name: 'cc-notice-bar',
   components: {},
   props: {
+    list: {
+       type: Array,
+       default: () => []
+    },
     // 是否显示声音图标
     volume: {
       type: Boolean,
@@ -50,6 +65,16 @@ export default {
     // 通知文字
     text: {
       type: String
+    },
+    // 是否垂直滚动
+    vertical: {
+      type: Boolean,
+      default: false
+    },
+    // 滚动间隔时间 仅在垂直模式下生效
+    interval: {
+      type: [String, Number],
+      default: 2000
     },
     // 背景颜色
     bgColor: {
@@ -147,6 +172,21 @@ export default {
       position: absolute;
       padding-left: 100%;
       animation: loop 10s linear infinite both;
+      &-vertical {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        &-swiper {
+          width: 100%;
+          height: 100%;
+          &-item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
     }
   }
   &-right {

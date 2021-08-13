@@ -15,7 +15,21 @@
         <cc-notice-bar volume link>闭起双眼你最挂念谁,眼睛张开身边竟是谁,感激车站里,尚有月台能让我们满足到落泪</cc-notice-bar>
       </view>
     </view>
-
+    
+    <view class="demo">
+      <view class="title">多条数据</view>
+      <view class="content">
+        <cc-notice-bar volume link :list="list"></cc-notice-bar>
+      </view>
+    </view>
+    
+    <view class="demo">
+      <view class="title">垂直滚动</view>
+      <view class="content">
+        <cc-notice-bar volume link vertical :list="list"></cc-notice-bar>
+      </view>
+    </view>
+    
     <view class="demo">
       <view class="title">滚动速度</view>
       <view class="content">
@@ -65,7 +79,14 @@ export default {
   components: {},
   props: {},
   data() {
-    return {}
+    return {
+      list: [
+        '一起长大的约定',
+        '那样清晰 打过勾的我相信',
+        '说好要一起旅行',
+        '是你如今 唯一坚持的任性'
+      ]
+    }
   },
   methods: {
     clickBar() {
