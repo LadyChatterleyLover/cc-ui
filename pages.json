@@ -82,6 +82,7 @@
             }
           }
         },
+        
         {
           "path": "upload/index",
           "style": {
@@ -104,6 +105,15 @@
           "path": "countDown/index",
           "style": {
             "navigationBarTitleText": "countDown倒计时",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
+          "path": "timeLine/index",
+          "style": {
+            "navigationBarTitleText": "timeLine时间轴",
             "h5": {
               "titleNView": false
             }

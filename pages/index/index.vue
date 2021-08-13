@@ -203,6 +203,11 @@ export default {
               url: '/views/countup/index'
             },
             {
+              title: 'TimeLine',
+              label: '时间轴',
+              url: '/views/timeLine/index'
+            },
+            {
               title: 'Divider',
               label: '分割线',
               url: '/views/divider/index'
