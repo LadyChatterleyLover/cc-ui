@@ -138,6 +138,11 @@ export default {
               url: '/views/dialog/index'
             },
             {
+              title: 'Alert',
+              label: '警告提示',
+              url: '/views/alert/index'
+            },
+            {
               title: 'DropdownMenu',
               label: '下拉菜单',
               url: '/views/dropdown/index'

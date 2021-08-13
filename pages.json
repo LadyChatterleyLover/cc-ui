@@ -74,6 +74,15 @@
           }
         },
         {
+          "path": "alert/index",
+          "style": {
+            "navigationBarTitleText": "alert警告提示",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
           "path": "upload/index",
           "style": {
             "navigationBarTitleText": "upload上传",
