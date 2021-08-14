@@ -74,6 +74,15 @@
           }
         },
         {
+          "path": "pagination/index",
+          "style": {
+            "navigationBarTitleText": "pagination分页",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
           "path": "scrollBar/index",
           "style": {
             "navigationBarTitleText": "scrollBar滚动导航",

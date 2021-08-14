@@ -303,6 +303,11 @@ export default {
               url: '/views/navBar/index'
             },
             {
+              title: 'Pagination',
+              label: '分页',
+              url: '/views/pagination/index'
+            },
+            {
               title: 'Sidebar',
               label: '侧边导航',
               url: '/views/sidebar/index'
