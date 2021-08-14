@@ -91,7 +91,15 @@
             }
           }
         },
-        
+        {
+          "path": "slideVerify/index",
+          "style": {
+            "navigationBarTitleText": "slideVerify滑动验证码",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
         {
           "path": "upload/index",
           "style": {

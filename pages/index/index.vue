@@ -148,6 +148,11 @@ export default {
               url: '/views/dropdown/index'
             },
             {
+              title: 'SlideVerify',
+              label: '滑动验证码',
+              url: '/views/slideVerify/index'
+            },
+            {
               title: 'Loading',
               label: '加载',
               url: '/views/loading/index'
