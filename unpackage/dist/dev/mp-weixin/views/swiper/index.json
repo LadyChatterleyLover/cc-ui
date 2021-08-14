@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "swiper轮播图",
-  "usingComponents": {
-    "cc-swiper": "/components/cc-swiper/cc-swiper"
-  }
-}

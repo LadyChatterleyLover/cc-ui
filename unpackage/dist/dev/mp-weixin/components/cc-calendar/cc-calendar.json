@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "cc-popup": "/components/cc-popup/cc-popup",
-    "cc-icon": "/components/cc-icon/cc-icon",
-    "cc-button": "/components/cc-button/cc-button"
-  }
-}

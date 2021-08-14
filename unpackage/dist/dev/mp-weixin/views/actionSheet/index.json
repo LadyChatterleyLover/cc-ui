@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "actionSheet动作面板",
-  "usingComponents": {
-    "cc-action-sheet": "/components/cc-action-sheet/cc-action-sheet",
-    "cc-button": "/components/cc-button/cc-button"
-  }
-}

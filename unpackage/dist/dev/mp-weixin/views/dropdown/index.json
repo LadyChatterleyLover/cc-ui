@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "dropdown下拉菜单",
-  "usingComponents": {
-    "cc-dropdown": "/components/cc-dropdown/cc-dropdown",
-    "cc-cell": "/components/cc-cell/cc-cell",
-    "cc-switch": "/components/cc-switch/cc-switch",
-    "cc-button": "/components/cc-button/cc-button"
-  }
-}

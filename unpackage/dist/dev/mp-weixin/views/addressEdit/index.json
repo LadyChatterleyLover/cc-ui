@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "addressEdit地址编辑",
-  "usingComponents": {
-    "cc-address-edit": "/components/cc-address-edit/cc-address-edit"
-  }
-}

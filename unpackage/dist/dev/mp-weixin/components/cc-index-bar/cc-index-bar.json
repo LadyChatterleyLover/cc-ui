@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "cc-index-anchor": "/components/cc-index-anchor/cc-index-anchor"
-  }
-}

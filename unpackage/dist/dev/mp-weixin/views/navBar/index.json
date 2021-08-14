@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "navBar导航栏",
-  "usingComponents": {
-    "cc-nav-bar": "/components/cc-nav-bar/cc-nav-bar",
-    "cc-tag": "/components/cc-tag/cc-tag",
-    "cc-rate": "/components/cc-rate/cc-rate"
-  }
-}

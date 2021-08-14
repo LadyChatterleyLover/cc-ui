@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "countup数字滚动",
-  "usingComponents": {
-    "cc-countup": "/components/cc-countup/cc-countup",
-    "cc-button": "/components/cc-button/cc-button"
-  }
-}

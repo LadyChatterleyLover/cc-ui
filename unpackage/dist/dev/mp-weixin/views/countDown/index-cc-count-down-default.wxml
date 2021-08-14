@@ -1,1 +1,0 @@
-<label class="block _span data-v-fe473056">{{timeData.hours}}</label><label class="colon _span data-v-fe473056">:</label><label class="block _span data-v-fe473056">{{timeData.minutes}}</label><label class="colon _span data-v-fe473056">:</label><label class="block _span data-v-fe473056">{{timeData.seconds}}</label>

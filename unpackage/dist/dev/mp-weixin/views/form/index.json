@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "form表单",
-  "usingComponents": {
-    "cc-form": "/components/cc-form/cc-form",
-    "cc-form-item": "/components/cc-form-item/cc-form-item",
-    "cc-field": "/components/cc-field/cc-field",
-    "cc-button": "/components/cc-button/cc-button"
-  }
-}

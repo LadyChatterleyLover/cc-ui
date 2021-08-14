@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "timeLine时间轴",
-  "usingComponents": {
-    "cc-time-line": "/components/cc-time-line/cc-time-line",
-    "cc-time-line-item": "/components/cc-time-line-item/cc-time-line-item",
-    "cc-icon": "/components/cc-icon/cc-icon"
-  }
-}

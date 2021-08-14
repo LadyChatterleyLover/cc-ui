@@ -1,1 +1,0 @@
-<view class="cc-coupon-cell data-v-5292f078"><cc-cell vue-id="001af1c2-1" title="{{cellTitle}}" value="{{cellValue}}" isLink="{{true}}" data-event-opts="{{[['^click',[['clickCell']]]]}}" bind:click="__e" class="data-v-5292f078" bind:__l="__l"></cc-cell><slot></slot></view>

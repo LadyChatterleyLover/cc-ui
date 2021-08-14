@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "toast轻提示",
-  "usingComponents": {
-    "cc-toast": "/components/cc-toast/cc-toast",
-    "cc-button": "/components/cc-button/cc-button"
-  }
-}

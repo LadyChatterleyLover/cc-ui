@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "cc-cell": "/components/cc-cell/cc-cell",
-    "cc-icon": "/components/cc-icon/cc-icon"
-  }
-}

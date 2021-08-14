@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "button按钮",
-  "usingComponents": {
-    "cc-button": "/components/cc-button/cc-button"
-  }
-}

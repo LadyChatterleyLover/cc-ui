@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "tabs标签页",
-  "usingComponents": {
-    "cc-tabs": "/components/cc-tabs/cc-tabs"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "index-cc-count-down-default": "/views/countDown/index-cc-count-down-default",
-    "cc-count-down": "/components/cc-count-down/cc-count-down"
-  }
-}

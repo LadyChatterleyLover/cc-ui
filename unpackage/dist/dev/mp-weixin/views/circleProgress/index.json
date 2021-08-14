@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "circleProgress圆形进度条",
-  "usingComponents": {
-    "cc-circle-progress": "/components/cc-circleProgress/cc-circleProgress"
-  }
-}

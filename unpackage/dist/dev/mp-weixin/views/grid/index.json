@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "grid宫格布局",
-  "usingComponents": {
-    "cc-grid": "/components/cc-grid/cc-grid"
-  }
-}

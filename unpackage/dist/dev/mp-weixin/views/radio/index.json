@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "radio单选框",
-  "usingComponents": {
-    "cc-radio": "/components/cc-radio/cc-radio"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "avatar头像",
-  "usingComponents": {
-    "cc-avatar": "/components/cc-avatar/cc-avatar"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "verifyButton验证码按钮",
-  "usingComponents": {
-    "cc-verify-button": "/components/cc-verify-button/cc-verify-button"
-  }
-}

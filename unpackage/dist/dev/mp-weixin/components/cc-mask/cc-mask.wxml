@@ -1,1 +1,0 @@
-<view data-event-opts="{{[['tap',[['handleClick',['$event']]]]]}}" class="{{['cc-mask','data-v-37019e78',(show)?'cc-mask-show':'',(!show)?'cc-mask-hide':'']}}" style="{{'z-index:'+(zIndex)+';'+('background:'+(bgColor)+';')+('top:'+(top)+';')+('display:'+(display)+';')+('animation-duration:'+(duration+'s')+';')}}" bindtap="__e"><slot></slot></view>

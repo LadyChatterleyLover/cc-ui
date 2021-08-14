@@ -1,1 +1,0 @@
-<view class="cc-sticky data-v-aac0509c" style="{{'top:'+(offsetTop+'rpx')+';'}}"><view class="cc-sticky-content data-v-aac0509c"><slot></slot></view></view>

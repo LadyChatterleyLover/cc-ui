@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "checkbox复选框",
-  "usingComponents": {
-    "cc-checkbox": "/components/cc-checkbox/cc-checkbox",
-    "cc-checkbox-group": "/components/cc-checkbox-group/cc-checkbox-group"
-  }
-}

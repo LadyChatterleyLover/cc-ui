@@ -1,9 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "cc-icon": "/components/cc-icon/cc-icon",
-    "cc-tag": "/components/cc-tag/cc-tag",
-    "cc-radio": "/components/cc-radio/cc-radio",
-    "cc-button": "/components/cc-button/cc-button"
-  }
-}

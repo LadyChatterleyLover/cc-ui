@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "sidebar侧边栏",
-  "usingComponents": {
-    "cc-sidebar": "/components/cc-sidebar/cc-sidebar"
-  }
-}

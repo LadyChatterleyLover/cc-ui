@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "imagePreview图片预览",
-  "usingComponents": {
-    "cc-button": "/components/cc-button/cc-button",
-    "cc-image-preview": "/components/cc-image-preview/cc-image-preview"
-  }
-}

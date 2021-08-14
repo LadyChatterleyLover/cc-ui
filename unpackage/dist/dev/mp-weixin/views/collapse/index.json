@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "collapse折叠面板",
-  "usingComponents": {
-    "cc-collapse": "/components/cc-collapse/cc-collapse",
-    "cc-icon": "/components/cc-icon/cc-icon"
-  }
-}

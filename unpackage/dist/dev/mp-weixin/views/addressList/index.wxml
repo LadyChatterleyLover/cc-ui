@@ -1,1 +1,0 @@
-<view style="background:#f7f7f7;height:100vh;" class="data-v-9ca08e94"><cc-address-list vue-id="f77041e0-1" value="{{chosenAddressId}}" list="{{list}}" disabled-list="{{disabledList}}" disabled-text="以下地址超出配送范围" default-tag-text="默认" class="data-v-9ca08e94" bind:__l="__l"></cc-address-list></view>

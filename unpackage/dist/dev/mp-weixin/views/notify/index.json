@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "notify顶部通知",
-  "usingComponents": {
-    "cc-notify": "/components/cc-notify/cc-notify",
-    "cc-button": "/components/cc-button/cc-button"
-  }
-}

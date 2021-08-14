@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "progress进度条",
-  "usingComponents": {
-    "cc-progress": "/components/cc-progress/cc-progress"
-  }
-}

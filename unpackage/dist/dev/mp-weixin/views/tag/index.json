@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "tag标签",
-  "usingComponents": {
-    "cc-tag": "/components/cc-tag/cc-tag"
-  }
-}

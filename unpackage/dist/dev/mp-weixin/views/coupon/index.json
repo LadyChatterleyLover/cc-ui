@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "Coupon优惠券",
-  "usingComponents": {
-    "cc-coupon-cell": "/components/cc-coupon-cell/cc-coupon-cell",
-    "cc-popup": "/components/cc-popup/cc-popup",
-    "cc-coupon-list": "/components/cc-coupon-list/cc-coupon-list"
-  }
-}

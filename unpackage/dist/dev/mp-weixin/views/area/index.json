@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "area省市区选择",
-  "usingComponents": {
-    "cc-area": "/components/cc-area/cc-area"
-  }
-}

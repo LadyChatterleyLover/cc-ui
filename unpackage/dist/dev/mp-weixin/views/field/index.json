@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "field输入框",
-  "usingComponents": {
-    "cc-field": "/components/cc-field/cc-field",
-    "cc-button": "/components/cc-button/cc-button"
-  }
-}

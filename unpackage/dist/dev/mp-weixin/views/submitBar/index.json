@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "submitBar订单提交栏",
-  "usingComponents": {
-    "cc-submit-bar": "/components/cc-submit-bar/cc-submit-bar"
-  }
-}

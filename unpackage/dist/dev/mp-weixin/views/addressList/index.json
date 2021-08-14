@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "addressList地址列表",
-  "usingComponents": {
-    "cc-address-list": "/components/cc-address-list/cc-address-list"
-  }
-}

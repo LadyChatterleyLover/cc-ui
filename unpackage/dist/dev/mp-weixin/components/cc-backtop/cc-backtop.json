@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "cc-icon": "/components/cc-icon/cc-icon"
-  }
-}

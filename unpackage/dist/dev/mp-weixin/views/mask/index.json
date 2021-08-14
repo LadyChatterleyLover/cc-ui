@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "mask遮罩层",
-  "usingComponents": {
-    "cc-mask": "/components/cc-mask/cc-mask",
-    "cc-button": "/components/cc-button/cc-button"
-  }
-}
