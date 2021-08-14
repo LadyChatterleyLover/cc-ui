@@ -74,6 +74,15 @@
           }
         },
         {
+          "path": "scrollBar/index",
+          "style": {
+            "navigationBarTitleText": "scrollBar滚动导航",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
           "path": "alert/index",
           "style": {
             "navigationBarTitleText": "alert警告提示",

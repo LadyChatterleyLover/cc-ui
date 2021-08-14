@@ -1,13 +1,16 @@
 {
-  "name": "cc-ui-vue2",
+  "name": "cc-ui-uni-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "cc-ui, uni-app组件库, 一切为了简单",
   "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": {
+    "name": "lp"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["cc-ui", "uni-app", "vue", "组件库"],
+  "homepage": "https://github.com/LadyChatterleyLover/cc-ui",
+  "scripts": {
+    
+  },
   "license": "ISC",
   "dependencies": {
     "async-validator": "^3.5.2",

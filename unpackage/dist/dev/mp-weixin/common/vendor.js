@@ -2059,7 +2059,59 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 1076:
+/***/ 11:
+/*!****************************************************!*\
+  !*** /Users/lp1/Desktop/cc-ui-vue2/utils/index.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  // 生成id
+  genID: function genID(length) {
+    return Number(Math.random().toString().substr(3, length) + Date.now()).toString(36);
+  },
+  // 获取dom
+  getDom: function getDom(selector, all) {var _this = this;
+    return new Promise(function (resolve) {
+      uni.createSelectorQuery().in(_this)[all ? 'selectAll' : 'select'](selector).boundingClientRect().exec(function (rect) {
+        if (all && Array.isArray(rect) && rect.length) {
+          resolve(rect);
+        }
+        if (!all && rect) {
+          resolve(rect);
+        }
+      });
+    });
+  },
+  // 获取属性结构最大层级
+  getMaxlevel: function getMaxlevel(treeData) {var attr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'children';
+    var level = 0;
+    var v = this;
+    var maxLevel = 0;
+
+    function loop(data, level) {
+      data.forEach(function (item) {
+        item.level = level;
+        if (level > maxLevel) {
+          maxLevel = level;
+        }
+        if (attr in item) {
+          if (item.children.length > 0) {
+            loop(item.children, level + 1);
+          }
+        }
+      });
+    }
+    loop(treeData, 1);
+    return maxLevel;
+  } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 1127:
 /*!****************************************************************!*\
   !*** /Users/lp1/Desktop/cc-ui-vue2/components/cc-area/area.js ***!
   \****************************************************************/
@@ -15320,59 +15372,7 @@ areaData;exports.default = _default;
 
 /***/ }),
 
-/***/ 11:
-/*!****************************************************!*\
-  !*** /Users/lp1/Desktop/cc-ui-vue2/utils/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
-  // 生成id
-  genID: function genID(length) {
-    return Number(Math.random().toString().substr(3, length) + Date.now()).toString(36);
-  },
-  // 获取dom
-  getDom: function getDom(selector, all) {var _this = this;
-    return new Promise(function (resolve) {
-      uni.createSelectorQuery().in(_this)[all ? 'selectAll' : 'select'](selector).boundingClientRect().exec(function (rect) {
-        if (all && Array.isArray(rect) && rect.length) {
-          resolve(rect);
-        }
-        if (!all && rect) {
-          resolve(rect);
-        }
-      });
-    });
-  },
-  // 获取属性结构最大层级
-  getMaxlevel: function getMaxlevel(treeData) {var attr = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'children';
-    var level = 0;
-    var v = this;
-    var maxLevel = 0;
-
-    function loop(data, level) {
-      data.forEach(function (item) {
-        item.level = level;
-        if (level > maxLevel) {
-          maxLevel = level;
-        }
-        if (attr in item) {
-          if (item.children.length > 0) {
-            loop(item.children, level + 1);
-          }
-        }
-      });
-    }
-    loop(treeData, 1);
-    return maxLevel;
-  } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 1126:
+/***/ 1177:
 /*!***********************************************************************************!*\
   !*** /Users/lp1/Desktop/cc-ui-vue2/node_modules/_dayjs@1.10.6@dayjs/dayjs.min.js ***!
   \***********************************************************************************/
@@ -21474,7 +21474,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 529:
+/***/ 552:
 /*!*****************************************************************!*\
   !*** /Users/lp1/Desktop/cc-ui-vue2/components/cc-icon/icons.js ***!
   \*****************************************************************/
@@ -21616,7 +21616,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 584:
+/***/ 607:
 /*!************************************************************************************!*\
   !*** /Users/lp1/Desktop/cc-ui-vue2/node_modules/async-validator/dist-web/index.js ***!
   \************************************************************************************/
@@ -23064,11 +23064,11 @@ Schema.messages = messages;
 Schema.validators = validators;var _default =
 
 Schema;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 585)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 608)))
 
 /***/ }),
 
-/***/ 585:
+/***/ 608:
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -23099,7 +23099,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 586);
+        if (!path) path = __webpack_require__(/*! path */ 609);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -23113,7 +23113,7 @@ exports.features = {};
 
 /***/ }),
 
-/***/ 586:
+/***/ 609:
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -23423,18 +23423,18 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 585)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 608)))
 
 /***/ }),
 
-/***/ 601:
+/***/ 617:
 /*!******************************************!*\
   !*** ./node_modules/lodash/cloneDeep.js ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseClone = __webpack_require__(/*! ./_baseClone */ 602);
+var baseClone = __webpack_require__(/*! ./_baseClone */ 618);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1,
@@ -23467,34 +23467,34 @@ module.exports = cloneDeep;
 
 /***/ }),
 
-/***/ 602:
+/***/ 618:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_baseClone.js ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(/*! ./_Stack */ 603),
-    arrayEach = __webpack_require__(/*! ./_arrayEach */ 647),
-    assignValue = __webpack_require__(/*! ./_assignValue */ 648),
-    baseAssign = __webpack_require__(/*! ./_baseAssign */ 651),
-    baseAssignIn = __webpack_require__(/*! ./_baseAssignIn */ 674),
-    cloneBuffer = __webpack_require__(/*! ./_cloneBuffer */ 678),
-    copyArray = __webpack_require__(/*! ./_copyArray */ 679),
-    copySymbols = __webpack_require__(/*! ./_copySymbols */ 680),
-    copySymbolsIn = __webpack_require__(/*! ./_copySymbolsIn */ 684),
-    getAllKeys = __webpack_require__(/*! ./_getAllKeys */ 688),
-    getAllKeysIn = __webpack_require__(/*! ./_getAllKeysIn */ 690),
-    getTag = __webpack_require__(/*! ./_getTag */ 691),
-    initCloneArray = __webpack_require__(/*! ./_initCloneArray */ 696),
-    initCloneByTag = __webpack_require__(/*! ./_initCloneByTag */ 697),
-    initCloneObject = __webpack_require__(/*! ./_initCloneObject */ 704),
-    isArray = __webpack_require__(/*! ./isArray */ 659),
-    isBuffer = __webpack_require__(/*! ./isBuffer */ 660),
-    isMap = __webpack_require__(/*! ./isMap */ 706),
-    isObject = __webpack_require__(/*! ./isObject */ 627),
-    isSet = __webpack_require__(/*! ./isSet */ 708),
-    keys = __webpack_require__(/*! ./keys */ 653);
+var Stack = __webpack_require__(/*! ./_Stack */ 619),
+    arrayEach = __webpack_require__(/*! ./_arrayEach */ 663),
+    assignValue = __webpack_require__(/*! ./_assignValue */ 664),
+    baseAssign = __webpack_require__(/*! ./_baseAssign */ 667),
+    baseAssignIn = __webpack_require__(/*! ./_baseAssignIn */ 690),
+    cloneBuffer = __webpack_require__(/*! ./_cloneBuffer */ 694),
+    copyArray = __webpack_require__(/*! ./_copyArray */ 695),
+    copySymbols = __webpack_require__(/*! ./_copySymbols */ 696),
+    copySymbolsIn = __webpack_require__(/*! ./_copySymbolsIn */ 700),
+    getAllKeys = __webpack_require__(/*! ./_getAllKeys */ 704),
+    getAllKeysIn = __webpack_require__(/*! ./_getAllKeysIn */ 706),
+    getTag = __webpack_require__(/*! ./_getTag */ 707),
+    initCloneArray = __webpack_require__(/*! ./_initCloneArray */ 712),
+    initCloneByTag = __webpack_require__(/*! ./_initCloneByTag */ 713),
+    initCloneObject = __webpack_require__(/*! ./_initCloneObject */ 720),
+    isArray = __webpack_require__(/*! ./isArray */ 675),
+    isBuffer = __webpack_require__(/*! ./isBuffer */ 676),
+    isMap = __webpack_require__(/*! ./isMap */ 722),
+    isObject = __webpack_require__(/*! ./isObject */ 643),
+    isSet = __webpack_require__(/*! ./isSet */ 724),
+    keys = __webpack_require__(/*! ./keys */ 669);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1,
@@ -23643,19 +23643,19 @@ module.exports = baseClone;
 
 /***/ }),
 
-/***/ 603:
+/***/ 619:
 /*!***************************************!*\
   !*** ./node_modules/lodash/_Stack.js ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ListCache = __webpack_require__(/*! ./_ListCache */ 604),
-    stackClear = __webpack_require__(/*! ./_stackClear */ 612),
-    stackDelete = __webpack_require__(/*! ./_stackDelete */ 613),
-    stackGet = __webpack_require__(/*! ./_stackGet */ 614),
-    stackHas = __webpack_require__(/*! ./_stackHas */ 615),
-    stackSet = __webpack_require__(/*! ./_stackSet */ 616);
+var ListCache = __webpack_require__(/*! ./_ListCache */ 620),
+    stackClear = __webpack_require__(/*! ./_stackClear */ 628),
+    stackDelete = __webpack_require__(/*! ./_stackDelete */ 629),
+    stackGet = __webpack_require__(/*! ./_stackGet */ 630),
+    stackHas = __webpack_require__(/*! ./_stackHas */ 631),
+    stackSet = __webpack_require__(/*! ./_stackSet */ 632);
 
 /**
  * Creates a stack cache object to store key-value pairs.
@@ -23681,18 +23681,18 @@ module.exports = Stack;
 
 /***/ }),
 
-/***/ 604:
+/***/ 620:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_ListCache.js ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var listCacheClear = __webpack_require__(/*! ./_listCacheClear */ 605),
-    listCacheDelete = __webpack_require__(/*! ./_listCacheDelete */ 606),
-    listCacheGet = __webpack_require__(/*! ./_listCacheGet */ 609),
-    listCacheHas = __webpack_require__(/*! ./_listCacheHas */ 610),
-    listCacheSet = __webpack_require__(/*! ./_listCacheSet */ 611);
+var listCacheClear = __webpack_require__(/*! ./_listCacheClear */ 621),
+    listCacheDelete = __webpack_require__(/*! ./_listCacheDelete */ 622),
+    listCacheGet = __webpack_require__(/*! ./_listCacheGet */ 625),
+    listCacheHas = __webpack_require__(/*! ./_listCacheHas */ 626),
+    listCacheSet = __webpack_require__(/*! ./_listCacheSet */ 627);
 
 /**
  * Creates an list cache object.
@@ -23724,7 +23724,7 @@ module.exports = ListCache;
 
 /***/ }),
 
-/***/ 605:
+/***/ 621:
 /*!************************************************!*\
   !*** ./node_modules/lodash/_listCacheClear.js ***!
   \************************************************/
@@ -23748,14 +23748,14 @@ module.exports = listCacheClear;
 
 /***/ }),
 
-/***/ 606:
+/***/ 622:
 /*!*************************************************!*\
   !*** ./node_modules/lodash/_listCacheDelete.js ***!
   \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 607);
+var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 623);
 
 /** Used for built-in method references. */
 var arrayProto = Array.prototype;
@@ -23794,14 +23794,14 @@ module.exports = listCacheDelete;
 
 /***/ }),
 
-/***/ 607:
+/***/ 623:
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_assocIndexOf.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var eq = __webpack_require__(/*! ./eq */ 608);
+var eq = __webpack_require__(/*! ./eq */ 624);
 
 /**
  * Gets the index at which the `key` is found in `array` of key-value pairs.
@@ -23826,7 +23826,7 @@ module.exports = assocIndexOf;
 
 /***/ }),
 
-/***/ 608:
+/***/ 624:
 /*!***********************************!*\
   !*** ./node_modules/lodash/eq.js ***!
   \***********************************/
@@ -23874,14 +23874,14 @@ module.exports = eq;
 
 /***/ }),
 
-/***/ 609:
+/***/ 625:
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_listCacheGet.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 607);
+var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 623);
 
 /**
  * Gets the list cache value for `key`.
@@ -23904,14 +23904,14 @@ module.exports = listCacheGet;
 
 /***/ }),
 
-/***/ 610:
+/***/ 626:
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_listCacheHas.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 607);
+var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 623);
 
 /**
  * Checks if a list cache value for `key` exists.
@@ -23931,14 +23931,14 @@ module.exports = listCacheHas;
 
 /***/ }),
 
-/***/ 611:
+/***/ 627:
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_listCacheSet.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 607);
+var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 623);
 
 /**
  * Sets the list cache `key` to `value`.
@@ -23968,14 +23968,14 @@ module.exports = listCacheSet;
 
 /***/ }),
 
-/***/ 612:
+/***/ 628:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_stackClear.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ListCache = __webpack_require__(/*! ./_ListCache */ 604);
+var ListCache = __webpack_require__(/*! ./_ListCache */ 620);
 
 /**
  * Removes all key-value entries from the stack.
@@ -23994,7 +23994,7 @@ module.exports = stackClear;
 
 /***/ }),
 
-/***/ 613:
+/***/ 629:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_stackDelete.js ***!
   \*********************************************/
@@ -24023,7 +24023,7 @@ module.exports = stackDelete;
 
 /***/ }),
 
-/***/ 614:
+/***/ 630:
 /*!******************************************!*\
   !*** ./node_modules/lodash/_stackGet.js ***!
   \******************************************/
@@ -24048,7 +24048,7 @@ module.exports = stackGet;
 
 /***/ }),
 
-/***/ 615:
+/***/ 631:
 /*!******************************************!*\
   !*** ./node_modules/lodash/_stackHas.js ***!
   \******************************************/
@@ -24073,16 +24073,16 @@ module.exports = stackHas;
 
 /***/ }),
 
-/***/ 616:
+/***/ 632:
 /*!******************************************!*\
   !*** ./node_modules/lodash/_stackSet.js ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ListCache = __webpack_require__(/*! ./_ListCache */ 604),
-    Map = __webpack_require__(/*! ./_Map */ 617),
-    MapCache = __webpack_require__(/*! ./_MapCache */ 632);
+var ListCache = __webpack_require__(/*! ./_ListCache */ 620),
+    Map = __webpack_require__(/*! ./_Map */ 633),
+    MapCache = __webpack_require__(/*! ./_MapCache */ 648);
 
 /** Used as the size to enable large array optimizations. */
 var LARGE_ARRAY_SIZE = 200;
@@ -24118,15 +24118,15 @@ module.exports = stackSet;
 
 /***/ }),
 
-/***/ 617:
+/***/ 633:
 /*!*************************************!*\
   !*** ./node_modules/lodash/_Map.js ***!
   \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 618),
-    root = __webpack_require__(/*! ./_root */ 623);
+var getNative = __webpack_require__(/*! ./_getNative */ 634),
+    root = __webpack_require__(/*! ./_root */ 639);
 
 /* Built-in method references that are verified to be native. */
 var Map = getNative(root, 'Map');
@@ -24136,15 +24136,15 @@ module.exports = Map;
 
 /***/ }),
 
-/***/ 618:
+/***/ 634:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_getNative.js ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsNative = __webpack_require__(/*! ./_baseIsNative */ 619),
-    getValue = __webpack_require__(/*! ./_getValue */ 631);
+var baseIsNative = __webpack_require__(/*! ./_baseIsNative */ 635),
+    getValue = __webpack_require__(/*! ./_getValue */ 647);
 
 /**
  * Gets the native function at `key` of `object`.
@@ -24164,17 +24164,17 @@ module.exports = getNative;
 
 /***/ }),
 
-/***/ 619:
+/***/ 635:
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_baseIsNative.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(/*! ./isFunction */ 620),
-    isMasked = __webpack_require__(/*! ./_isMasked */ 628),
-    isObject = __webpack_require__(/*! ./isObject */ 627),
-    toSource = __webpack_require__(/*! ./_toSource */ 630);
+var isFunction = __webpack_require__(/*! ./isFunction */ 636),
+    isMasked = __webpack_require__(/*! ./_isMasked */ 644),
+    isObject = __webpack_require__(/*! ./isObject */ 643),
+    toSource = __webpack_require__(/*! ./_toSource */ 646);
 
 /**
  * Used to match `RegExp`
@@ -24222,15 +24222,15 @@ module.exports = baseIsNative;
 
 /***/ }),
 
-/***/ 620:
+/***/ 636:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/isFunction.js ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 621),
-    isObject = __webpack_require__(/*! ./isObject */ 627);
+var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 637),
+    isObject = __webpack_require__(/*! ./isObject */ 643);
 
 /** `Object#toString` result references. */
 var asyncTag = '[object AsyncFunction]',
@@ -24270,16 +24270,16 @@ module.exports = isFunction;
 
 /***/ }),
 
-/***/ 621:
+/***/ 637:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_baseGetTag.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(/*! ./_Symbol */ 622),
-    getRawTag = __webpack_require__(/*! ./_getRawTag */ 625),
-    objectToString = __webpack_require__(/*! ./_objectToString */ 626);
+var Symbol = __webpack_require__(/*! ./_Symbol */ 638),
+    getRawTag = __webpack_require__(/*! ./_getRawTag */ 641),
+    objectToString = __webpack_require__(/*! ./_objectToString */ 642);
 
 /** `Object#toString` result references. */
 var nullTag = '[object Null]',
@@ -24309,14 +24309,14 @@ module.exports = baseGetTag;
 
 /***/ }),
 
-/***/ 622:
+/***/ 638:
 /*!****************************************!*\
   !*** ./node_modules/lodash/_Symbol.js ***!
   \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(/*! ./_root */ 623);
+var root = __webpack_require__(/*! ./_root */ 639);
 
 /** Built-in value references. */
 var Symbol = root.Symbol;
@@ -24326,14 +24326,14 @@ module.exports = Symbol;
 
 /***/ }),
 
-/***/ 623:
+/***/ 639:
 /*!**************************************!*\
   !*** ./node_modules/lodash/_root.js ***!
   \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(/*! ./_freeGlobal */ 624);
+var freeGlobal = __webpack_require__(/*! ./_freeGlobal */ 640);
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -24346,7 +24346,7 @@ module.exports = root;
 
 /***/ }),
 
-/***/ 624:
+/***/ 640:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_freeGlobal.js ***!
   \********************************************/
@@ -24362,14 +24362,14 @@ module.exports = freeGlobal;
 
 /***/ }),
 
-/***/ 625:
+/***/ 641:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_getRawTag.js ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(/*! ./_Symbol */ 622);
+var Symbol = __webpack_require__(/*! ./_Symbol */ 638);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -24419,7 +24419,7 @@ module.exports = getRawTag;
 
 /***/ }),
 
-/***/ 626:
+/***/ 642:
 /*!************************************************!*\
   !*** ./node_modules/lodash/_objectToString.js ***!
   \************************************************/
@@ -24452,7 +24452,7 @@ module.exports = objectToString;
 
 /***/ }),
 
-/***/ 627:
+/***/ 643:
 /*!*****************************************!*\
   !*** ./node_modules/lodash/isObject.js ***!
   \*****************************************/
@@ -24494,14 +24494,14 @@ module.exports = isObject;
 
 /***/ }),
 
-/***/ 628:
+/***/ 644:
 /*!******************************************!*\
   !*** ./node_modules/lodash/_isMasked.js ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var coreJsData = __webpack_require__(/*! ./_coreJsData */ 629);
+var coreJsData = __webpack_require__(/*! ./_coreJsData */ 645);
 
 /** Used to detect methods masquerading as native. */
 var maskSrcKey = (function() {
@@ -24525,14 +24525,14 @@ module.exports = isMasked;
 
 /***/ }),
 
-/***/ 629:
+/***/ 645:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_coreJsData.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(/*! ./_root */ 623);
+var root = __webpack_require__(/*! ./_root */ 639);
 
 /** Used to detect overreaching core-js shims. */
 var coreJsData = root['__core-js_shared__'];
@@ -24542,7 +24542,7 @@ module.exports = coreJsData;
 
 /***/ }),
 
-/***/ 630:
+/***/ 646:
 /*!******************************************!*\
   !*** ./node_modules/lodash/_toSource.js ***!
   \******************************************/
@@ -24579,7 +24579,7 @@ module.exports = toSource;
 
 /***/ }),
 
-/***/ 631:
+/***/ 647:
 /*!******************************************!*\
   !*** ./node_modules/lodash/_getValue.js ***!
   \******************************************/
@@ -24603,18 +24603,18 @@ module.exports = getValue;
 
 /***/ }),
 
-/***/ 632:
+/***/ 648:
 /*!******************************************!*\
   !*** ./node_modules/lodash/_MapCache.js ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var mapCacheClear = __webpack_require__(/*! ./_mapCacheClear */ 633),
-    mapCacheDelete = __webpack_require__(/*! ./_mapCacheDelete */ 641),
-    mapCacheGet = __webpack_require__(/*! ./_mapCacheGet */ 644),
-    mapCacheHas = __webpack_require__(/*! ./_mapCacheHas */ 645),
-    mapCacheSet = __webpack_require__(/*! ./_mapCacheSet */ 646);
+var mapCacheClear = __webpack_require__(/*! ./_mapCacheClear */ 649),
+    mapCacheDelete = __webpack_require__(/*! ./_mapCacheDelete */ 657),
+    mapCacheGet = __webpack_require__(/*! ./_mapCacheGet */ 660),
+    mapCacheHas = __webpack_require__(/*! ./_mapCacheHas */ 661),
+    mapCacheSet = __webpack_require__(/*! ./_mapCacheSet */ 662);
 
 /**
  * Creates a map cache object to store key-value pairs.
@@ -24646,16 +24646,16 @@ module.exports = MapCache;
 
 /***/ }),
 
-/***/ 633:
+/***/ 649:
 /*!***********************************************!*\
   !*** ./node_modules/lodash/_mapCacheClear.js ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Hash = __webpack_require__(/*! ./_Hash */ 634),
-    ListCache = __webpack_require__(/*! ./_ListCache */ 604),
-    Map = __webpack_require__(/*! ./_Map */ 617);
+var Hash = __webpack_require__(/*! ./_Hash */ 650),
+    ListCache = __webpack_require__(/*! ./_ListCache */ 620),
+    Map = __webpack_require__(/*! ./_Map */ 633);
 
 /**
  * Removes all key-value entries from the map.
@@ -24678,18 +24678,18 @@ module.exports = mapCacheClear;
 
 /***/ }),
 
-/***/ 634:
+/***/ 650:
 /*!**************************************!*\
   !*** ./node_modules/lodash/_Hash.js ***!
   \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hashClear = __webpack_require__(/*! ./_hashClear */ 635),
-    hashDelete = __webpack_require__(/*! ./_hashDelete */ 637),
-    hashGet = __webpack_require__(/*! ./_hashGet */ 638),
-    hashHas = __webpack_require__(/*! ./_hashHas */ 639),
-    hashSet = __webpack_require__(/*! ./_hashSet */ 640);
+var hashClear = __webpack_require__(/*! ./_hashClear */ 651),
+    hashDelete = __webpack_require__(/*! ./_hashDelete */ 653),
+    hashGet = __webpack_require__(/*! ./_hashGet */ 654),
+    hashHas = __webpack_require__(/*! ./_hashHas */ 655),
+    hashSet = __webpack_require__(/*! ./_hashSet */ 656);
 
 /**
  * Creates a hash object.
@@ -24721,14 +24721,14 @@ module.exports = Hash;
 
 /***/ }),
 
-/***/ 635:
+/***/ 651:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_hashClear.js ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 636);
+var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 652);
 
 /**
  * Removes all key-value entries from the hash.
@@ -24747,14 +24747,14 @@ module.exports = hashClear;
 
 /***/ }),
 
-/***/ 636:
+/***/ 652:
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_nativeCreate.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 618);
+var getNative = __webpack_require__(/*! ./_getNative */ 634);
 
 /* Built-in method references that are verified to be native. */
 var nativeCreate = getNative(Object, 'create');
@@ -24764,7 +24764,7 @@ module.exports = nativeCreate;
 
 /***/ }),
 
-/***/ 637:
+/***/ 653:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_hashDelete.js ***!
   \********************************************/
@@ -24792,14 +24792,14 @@ module.exports = hashDelete;
 
 /***/ }),
 
-/***/ 638:
+/***/ 654:
 /*!*****************************************!*\
   !*** ./node_modules/lodash/_hashGet.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 636);
+var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 652);
 
 /** Used to stand-in for `undefined` hash values. */
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -24833,14 +24833,14 @@ module.exports = hashGet;
 
 /***/ }),
 
-/***/ 639:
+/***/ 655:
 /*!*****************************************!*\
   !*** ./node_modules/lodash/_hashHas.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 636);
+var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 652);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -24867,14 +24867,14 @@ module.exports = hashHas;
 
 /***/ }),
 
-/***/ 640:
+/***/ 656:
 /*!*****************************************!*\
   !*** ./node_modules/lodash/_hashSet.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 636);
+var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 652);
 
 /** Used to stand-in for `undefined` hash values. */
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -24901,14 +24901,14 @@ module.exports = hashSet;
 
 /***/ }),
 
-/***/ 641:
+/***/ 657:
 /*!************************************************!*\
   !*** ./node_modules/lodash/_mapCacheDelete.js ***!
   \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(/*! ./_getMapData */ 642);
+var getMapData = __webpack_require__(/*! ./_getMapData */ 658);
 
 /**
  * Removes `key` and its value from the map.
@@ -24930,14 +24930,14 @@ module.exports = mapCacheDelete;
 
 /***/ }),
 
-/***/ 642:
+/***/ 658:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_getMapData.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isKeyable = __webpack_require__(/*! ./_isKeyable */ 643);
+var isKeyable = __webpack_require__(/*! ./_isKeyable */ 659);
 
 /**
  * Gets the data for `map`.
@@ -24959,7 +24959,7 @@ module.exports = getMapData;
 
 /***/ }),
 
-/***/ 643:
+/***/ 659:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_isKeyable.js ***!
   \*******************************************/
@@ -24985,14 +24985,14 @@ module.exports = isKeyable;
 
 /***/ }),
 
-/***/ 644:
+/***/ 660:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_mapCacheGet.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(/*! ./_getMapData */ 642);
+var getMapData = __webpack_require__(/*! ./_getMapData */ 658);
 
 /**
  * Gets the map value for `key`.
@@ -25012,14 +25012,14 @@ module.exports = mapCacheGet;
 
 /***/ }),
 
-/***/ 645:
+/***/ 661:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_mapCacheHas.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(/*! ./_getMapData */ 642);
+var getMapData = __webpack_require__(/*! ./_getMapData */ 658);
 
 /**
  * Checks if a map value for `key` exists.
@@ -25039,14 +25039,14 @@ module.exports = mapCacheHas;
 
 /***/ }),
 
-/***/ 646:
+/***/ 662:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_mapCacheSet.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(/*! ./_getMapData */ 642);
+var getMapData = __webpack_require__(/*! ./_getMapData */ 658);
 
 /**
  * Sets the map `key` to `value`.
@@ -25072,7 +25072,7 @@ module.exports = mapCacheSet;
 
 /***/ }),
 
-/***/ 647:
+/***/ 663:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_arrayEach.js ***!
   \*******************************************/
@@ -25105,15 +25105,15 @@ module.exports = arrayEach;
 
 /***/ }),
 
-/***/ 648:
+/***/ 664:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_assignValue.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ 649),
-    eq = __webpack_require__(/*! ./eq */ 608);
+var baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ 665),
+    eq = __webpack_require__(/*! ./eq */ 624);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -25144,14 +25144,14 @@ module.exports = assignValue;
 
 /***/ }),
 
-/***/ 649:
+/***/ 665:
 /*!*************************************************!*\
   !*** ./node_modules/lodash/_baseAssignValue.js ***!
   \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var defineProperty = __webpack_require__(/*! ./_defineProperty */ 650);
+var defineProperty = __webpack_require__(/*! ./_defineProperty */ 666);
 
 /**
  * The base implementation of `assignValue` and `assignMergeValue` without
@@ -25180,14 +25180,14 @@ module.exports = baseAssignValue;
 
 /***/ }),
 
-/***/ 650:
+/***/ 666:
 /*!************************************************!*\
   !*** ./node_modules/lodash/_defineProperty.js ***!
   \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 618);
+var getNative = __webpack_require__(/*! ./_getNative */ 634);
 
 var defineProperty = (function() {
   try {
@@ -25202,15 +25202,15 @@ module.exports = defineProperty;
 
 /***/ }),
 
-/***/ 651:
+/***/ 667:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_baseAssign.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var copyObject = __webpack_require__(/*! ./_copyObject */ 652),
-    keys = __webpack_require__(/*! ./keys */ 653);
+var copyObject = __webpack_require__(/*! ./_copyObject */ 668),
+    keys = __webpack_require__(/*! ./keys */ 669);
 
 /**
  * The base implementation of `_.assign` without support for multiple sources
@@ -25230,15 +25230,15 @@ module.exports = baseAssign;
 
 /***/ }),
 
-/***/ 652:
+/***/ 668:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_copyObject.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assignValue = __webpack_require__(/*! ./_assignValue */ 648),
-    baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ 649);
+var assignValue = __webpack_require__(/*! ./_assignValue */ 664),
+    baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ 665);
 
 /**
  * Copies properties of `source` to `object`.
@@ -25281,16 +25281,16 @@ module.exports = copyObject;
 
 /***/ }),
 
-/***/ 653:
+/***/ 669:
 /*!*************************************!*\
   !*** ./node_modules/lodash/keys.js ***!
   \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(/*! ./_arrayLikeKeys */ 654),
-    baseKeys = __webpack_require__(/*! ./_baseKeys */ 669),
-    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 673);
+var arrayLikeKeys = __webpack_require__(/*! ./_arrayLikeKeys */ 670),
+    baseKeys = __webpack_require__(/*! ./_baseKeys */ 685),
+    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 689);
 
 /**
  * Creates an array of the own enumerable property names of `object`.
@@ -25329,19 +25329,19 @@ module.exports = keys;
 
 /***/ }),
 
-/***/ 654:
+/***/ 670:
 /*!***********************************************!*\
   !*** ./node_modules/lodash/_arrayLikeKeys.js ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseTimes = __webpack_require__(/*! ./_baseTimes */ 655),
-    isArguments = __webpack_require__(/*! ./isArguments */ 656),
-    isArray = __webpack_require__(/*! ./isArray */ 659),
-    isBuffer = __webpack_require__(/*! ./isBuffer */ 660),
-    isIndex = __webpack_require__(/*! ./_isIndex */ 663),
-    isTypedArray = __webpack_require__(/*! ./isTypedArray */ 664);
+var baseTimes = __webpack_require__(/*! ./_baseTimes */ 671),
+    isArguments = __webpack_require__(/*! ./isArguments */ 672),
+    isArray = __webpack_require__(/*! ./isArray */ 675),
+    isBuffer = __webpack_require__(/*! ./isBuffer */ 676),
+    isIndex = __webpack_require__(/*! ./_isIndex */ 679),
+    isTypedArray = __webpack_require__(/*! ./isTypedArray */ 680);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -25389,7 +25389,7 @@ module.exports = arrayLikeKeys;
 
 /***/ }),
 
-/***/ 655:
+/***/ 671:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_baseTimes.js ***!
   \*******************************************/
@@ -25420,15 +25420,15 @@ module.exports = baseTimes;
 
 /***/ }),
 
-/***/ 656:
+/***/ 672:
 /*!********************************************!*\
   !*** ./node_modules/lodash/isArguments.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsArguments = __webpack_require__(/*! ./_baseIsArguments */ 657),
-    isObjectLike = __webpack_require__(/*! ./isObjectLike */ 658);
+var baseIsArguments = __webpack_require__(/*! ./_baseIsArguments */ 673),
+    isObjectLike = __webpack_require__(/*! ./isObjectLike */ 674);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -25467,15 +25467,15 @@ module.exports = isArguments;
 
 /***/ }),
 
-/***/ 657:
+/***/ 673:
 /*!*************************************************!*\
   !*** ./node_modules/lodash/_baseIsArguments.js ***!
   \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 621),
-    isObjectLike = __webpack_require__(/*! ./isObjectLike */ 658);
+var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 637),
+    isObjectLike = __webpack_require__(/*! ./isObjectLike */ 674);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]';
@@ -25496,7 +25496,7 @@ module.exports = baseIsArguments;
 
 /***/ }),
 
-/***/ 658:
+/***/ 674:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/isObjectLike.js ***!
   \*********************************************/
@@ -25536,7 +25536,7 @@ module.exports = isObjectLike;
 
 /***/ }),
 
-/***/ 659:
+/***/ 675:
 /*!****************************************!*\
   !*** ./node_modules/lodash/isArray.js ***!
   \****************************************/
@@ -25573,15 +25573,15 @@ module.exports = isArray;
 
 /***/ }),
 
-/***/ 660:
+/***/ 676:
 /*!*****************************************!*\
   !*** ./node_modules/lodash/isBuffer.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(/*! ./_root */ 623),
-    stubFalse = __webpack_require__(/*! ./stubFalse */ 662);
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(/*! ./_root */ 639),
+    stubFalse = __webpack_require__(/*! ./stubFalse */ 678);
 
 /** Detect free variable `exports`. */
 var freeExports =  true && exports && !exports.nodeType && exports;
@@ -25619,11 +25619,11 @@ var isBuffer = nativeIsBuffer || stubFalse;
 
 module.exports = isBuffer;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ 661)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ 677)(module)))
 
 /***/ }),
 
-/***/ 661:
+/***/ 677:
 /*!***********************************!*\
   !*** (webpack)/buildin/module.js ***!
   \***********************************/
@@ -25656,7 +25656,7 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 662:
+/***/ 678:
 /*!******************************************!*\
   !*** ./node_modules/lodash/stubFalse.js ***!
   \******************************************/
@@ -25685,7 +25685,7 @@ module.exports = stubFalse;
 
 /***/ }),
 
-/***/ 663:
+/***/ 679:
 /*!*****************************************!*\
   !*** ./node_modules/lodash/_isIndex.js ***!
   \*****************************************/
@@ -25721,16 +25721,1096 @@ module.exports = isIndex;
 
 /***/ }),
 
-/***/ 664:
+/***/ 68:
+/*!*************************************************************!*\
+  !*** /Users/lp1/Desktop/cc-ui-vue2/views/scrollBar/data.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = [
+{
+  "name": "女装",
+  "goods": [{
+    "name": "A字裙",
+    "key": "A字裙",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/1.jpg",
+    "cat": 10 },
+
+  {
+    "name": "T恤",
+    "key": "T恤",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/2.jpg",
+    "cat": 10 },
+
+  {
+    "name": "半身裙",
+    "key": "半身裙",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/3.jpg",
+    "cat": 10 },
+
+  {
+    "name": "衬衫",
+    "key": "衬衫",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/4.jpg",
+    "cat": 10 },
+
+  {
+    "name": "短裙",
+    "key": "短裙",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/5.jpg",
+    "cat": 10 },
+
+  {
+    "name": "阔腿裤",
+    "key": "阔腿裤",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/6.jpg",
+    "cat": 10 },
+
+  {
+    "name": "连衣裙",
+    "key": "连衣裙",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/7.jpg",
+    "cat": 10 },
+
+  {
+    "name": "妈妈装",
+    "key": "妈妈装",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/8.jpg",
+    "cat": 10 },
+
+  {
+    "name": "牛仔裤",
+    "key": "牛仔裤",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/9.jpg",
+    "cat": 10 },
+
+  {
+    "name": "情侣装",
+    "key": "情侣装",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/10.jpg",
+    "cat": 10 },
+
+  {
+    "name": "休闲裤",
+    "key": "休闲裤",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/11.jpg",
+    "cat": 10 },
+
+  {
+    "name": "雪纺衫",
+    "key": "雪纺衫",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/12.jpg",
+    "cat": 10 },
+
+  {
+    "name": "防晒衣",
+    "key": "防晒衣",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/13.jpg",
+    "cat": 10 },
+
+  {
+    "name": "礼服/婚纱",
+    "key": "礼服婚纱",
+    "img": "https://cdn.uviewui.com/uview/common/classify/1/14.jpg",
+    "cat": 10 }] },
+
+
+
+{
+  "name": "美食",
+  "goods": [{
+    "name": "火锅",
+    "key": "火锅",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/1.jpg",
+    "cat": 6 },
+
+  {
+    "name": "糕点饼干",
+    "key": "糕点饼干",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/2.jpg",
+    "cat": 6 },
+
+  {
+    "name": "坚果果干",
+    "key": "坚果果干",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/3.jpg",
+    "cat": 6 },
+
+  {
+    "name": "酒类",
+    "key": "酒类",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/4.jpg",
+    "cat": 6 },
+
+  {
+    "name": "辣条",
+    "key": "辣条",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/5.jpg",
+    "cat": 6 },
+
+  {
+    "name": "大礼包",
+    "key": "大礼包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/6.jpg",
+    "cat": 6 },
+
+  {
+    "name": "精品茗茶",
+    "key": "茶",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/7.jpg",
+    "cat": 6 },
+
+  {
+    "name": "休闲食品",
+    "key": "休闲食品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/8.jpg",
+    "cat": 6 },
+
+  {
+    "name": "糖果巧克力",
+    "key": "糖果巧克力",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/9.jpg",
+    "cat": 6 },
+
+  {
+    "name": "方便速食",
+    "key": "方便速食",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/10.jpg",
+    "cat": 6 },
+
+  {
+    "name": "营养代餐",
+    "key": "营养代餐",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/11.jpg",
+    "cat": 6 },
+
+  {
+    "name": "粮油副食",
+    "key": "粮油",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/12.jpg",
+    "cat": 6 },
+
+  {
+    "name": "生鲜水果",
+    "key": "水果",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/13.jpg",
+    "cat": 6 },
+
+  {
+    "name": "饮品",
+    "key": "饮品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/2/14.jpg",
+    "cat": 6 }] },
+
+
+
+{
+  "name": "美妆",
+  "goods": [{
+    "name": "化妆刷",
+    "key": "化妆刷",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/1.jpg",
+    "cat": 3 },
+
+  {
+    "name": "粉底",
+    "key": "粉底",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/2.jpg",
+    "cat": 3 },
+
+  {
+    "name": "洗发护发",
+    "key": "洗发护发",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/3.jpg",
+    "cat": 3 },
+
+  {
+    "name": "美容工具",
+    "key": "美容工具",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/4.jpg",
+    "cat": 3 },
+
+  {
+    "name": "眼部护理",
+    "key": "眼部护理",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/5.jpg",
+    "cat": 3 },
+
+  {
+    "name": "眉妆",
+    "key": "眉妆",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/6.jpg",
+    "cat": 3 },
+
+  {
+    "name": "卸妆品",
+    "key": "卸妆品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/7.jpg",
+    "cat": 3 },
+
+  {
+    "name": "基础护肤",
+    "key": "基础护肤",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/8.jpg",
+    "cat": 3 },
+
+  {
+    "name": "眼妆",
+    "key": "眼妆",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/9.jpg",
+    "cat": 3 },
+
+  {
+    "name": "唇妆",
+    "key": "唇妆",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/10.jpg",
+    "cat": 3 },
+
+  {
+    "name": "面膜",
+    "key": "面膜",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/11.jpg",
+    "cat": 3 },
+
+  {
+    "name": "沐浴用品",
+    "key": "沐浴用品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/12.jpg",
+    "cat": 3 },
+
+  {
+    "name": "护肤套装",
+    "key": "护肤套装",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/13.jpg",
+    "cat": 3 },
+
+  {
+    "name": "防晒品",
+    "key": "防晒品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/14.jpg",
+    "cat": 3 },
+
+  {
+    "name": "美甲",
+    "key": "美甲",
+    "img": "https://cdn.uviewui.com/uview/common/classify/3/15.jpg",
+    "cat": 3 }] },
+
+
+
+
+{
+  "name": "居家日用",
+  "goods": [{
+    "name": "垃圾袋",
+    "key": "垃圾袋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/1.jpg",
+    "cat": 4 },
+
+  {
+    "name": "纸巾",
+    "key": "纸巾",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/2.jpg",
+    "cat": 4 },
+
+  {
+    "name": "驱蚊用品",
+    "key": "驱蚊用品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/3.jpg",
+    "cat": 4 },
+
+  {
+    "name": "收纳神器",
+    "key": "收纳神器",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/4.jpg",
+    "cat": 4 },
+
+  {
+    "name": "厨房用品",
+    "key": "厨房用品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/5.jpg",
+    "cat": 4 },
+
+  {
+    "name": "厨房烹饪",
+    "key": "烹饪",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/6.jpg",
+    "cat": 4 },
+
+  {
+    "name": "衣物晾晒",
+    "key": "衣物晾晒",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/7.jpg",
+    "cat": 4 },
+
+  {
+    "name": "衣物护理",
+    "key": "衣物护理",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/8.jpg",
+    "cat": 4 },
+
+  {
+    "name": "宠物用品",
+    "key": "宠物用品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/9.jpg",
+    "cat": 4 },
+
+  {
+    "name": "医药保健",
+    "key": "医药",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/10.jpg",
+    "cat": 4 },
+
+  {
+    "name": "日用百货",
+    "key": "百货",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/11.jpg",
+    "cat": 4 },
+
+  {
+    "name": "清洁用品",
+    "key": "清洁",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/12.jpg",
+    "cat": 4 },
+
+  {
+    "name": "绿植园艺",
+    "key": "绿植",
+    "img": "https://cdn.uviewui.com/uview/common/classify/4/13.jpg",
+    "cat": 4 }] },
+
+
+
+{
+  "name": "男装",
+  "goods": [{
+    "name": "爸爸装",
+    "key": "爸爸装",
+    "img": "https://cdn.uviewui.com/uview/common/classify/5/1.jpg",
+    "cat": 12 },
+
+  {
+    "name": "牛仔裤",
+    "key": "牛仔裤",
+    "img": "https://cdn.uviewui.com/uview/common/classify/5/2.jpg",
+    "cat": 12 },
+
+  {
+    "name": "衬衫",
+    "key": "衬衫",
+    "img": "https://cdn.uviewui.com/uview/common/classify/5/3.jpg",
+    "cat": 12 },
+
+  {
+    "name": "休闲裤",
+    "key": "休闲裤",
+    "img": "https://cdn.uviewui.com/uview/common/classify/5/4.jpg",
+    "cat": 12 },
+
+  {
+    "name": "外套",
+    "key": "外套",
+    "img": "https://cdn.uviewui.com/uview/common/classify/5/5.jpg",
+    "cat": 12 },
+
+  {
+    "name": "T恤",
+    "key": "T恤",
+    "img": "https://cdn.uviewui.com/uview/common/classify/5/6.jpg",
+    "cat": 12 },
+
+  {
+    "name": "套装",
+    "key": "套装",
+    "img": "https://cdn.uviewui.com/uview/common/classify/5/7.jpg",
+    "cat": 12 },
+
+  {
+    "name": "运动裤",
+    "key": "运动裤",
+    "img": "https://cdn.uviewui.com/uview/common/classify/5/8.jpg",
+    "cat": 12 },
+
+  {
+    "name": "马甲/背心",
+    "key": "马甲背心",
+    "img": "https://cdn.uviewui.com/uview/common/classify/5/9.jpg",
+    "cat": 12 },
+
+  {
+    "name": "POLO衫",
+    "key": "POLO衫",
+    "img": "https://cdn.uviewui.com/uview/common/classify/5/10.jpg",
+    "cat": 12 },
+
+  {
+    "name": "商务装",
+    "key": "商务装",
+    "img": "https://cdn.uviewui.com/uview/common/classify/5/11.jpg",
+    "cat": 12 }] },
+
+
+
+{
+  "name": "鞋品",
+  "goods": [{
+    "name": "单鞋",
+    "key": "单鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/6/1.jpg",
+    "cat": 5 },
+
+  {
+    "name": "皮鞋",
+    "key": "皮鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/6/2.jpg",
+    "cat": 5 },
+
+  {
+    "name": "帆布鞋",
+    "key": "帆布鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/6/3.jpg",
+    "cat": 5 },
+
+  {
+    "name": "北京老布鞋",
+    "key": "北京老布鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/6/4.jpg",
+    "cat": 5 },
+
+  {
+    "name": "运动鞋",
+    "key": "运动鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/6/5.jpg",
+    "cat": 5 },
+
+  {
+    "name": "拖鞋",
+    "key": "拖鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/6/6.jpg",
+    "cat": 5 },
+
+  {
+    "name": "凉鞋",
+    "key": "凉鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/6/7.jpg",
+    "cat": 5 },
+
+  {
+    "name": "休闲鞋",
+    "key": "休闲鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/6/8.jpg",
+    "cat": 5 },
+
+  {
+    "name": "高跟鞋",
+    "key": "高跟鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/6/9.jpg",
+    "cat": 5 },
+
+  {
+    "name": "老人鞋",
+    "key": "老人鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/6/10.jpg",
+    "cat": 5 },
+
+  {
+    "name": "懒人鞋",
+    "key": "懒人鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/6/11.jpg",
+    "cat": 5 }] },
+
+
+
+{
+  "name": "数码家电",
+  "goods": [{
+    "name": "数据线",
+    "key": "数据线",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/1.jpg",
+    "cat": 8 },
+
+  {
+    "name": "耳机",
+    "key": "耳机",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/2.jpg",
+    "cat": 8 },
+
+  {
+    "name": "生活家电",
+    "key": "家电",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/3.jpg",
+    "cat": 8 },
+
+  {
+    "name": "电风扇",
+    "key": "电风扇",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/4.jpg",
+    "cat": 8 },
+
+  {
+    "name": "电吹风",
+    "key": "电吹风",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/5.jpg",
+    "cat": 8 },
+
+  {
+    "name": "手机壳",
+    "key": "手机壳",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/6.jpg",
+    "cat": 8 },
+
+  {
+    "name": "榨汁机",
+    "key": "榨汁机",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/7.jpg",
+    "cat": 8 },
+
+  {
+    "name": "小家电",
+    "key": "小家电",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/8.jpg",
+    "cat": 8 },
+
+  {
+    "name": "数码电子",
+    "key": "数码",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/9.jpg",
+    "cat": 8 },
+
+  {
+    "name": "电饭锅",
+    "key": "电饭锅",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/10.jpg",
+    "cat": 8 },
+
+  {
+    "name": "手机支架",
+    "key": "手机支架",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/11.jpg",
+    "cat": 8 },
+
+  {
+    "name": "剃须刀",
+    "key": "剃须刀",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/12.jpg",
+    "cat": 8 },
+
+  {
+    "name": "充电宝",
+    "key": "充电宝",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/13.jpg",
+    "cat": 8 },
+
+  {
+    "name": "手机配件",
+    "key": "手机配件",
+    "img": "https://cdn.uviewui.com/uview/common/classify/7/14.jpg",
+    "cat": 8 }] },
+
+
+
+{
+  "name": "母婴",
+  "goods": [{
+    "name": "婴童服饰",
+    "key": "衣服",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/1.jpg",
+    "cat": 2 },
+
+  {
+    "name": "玩具乐器",
+    "key": "玩具乐器",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/2.jpg",
+    "cat": 2 },
+
+  {
+    "name": "尿不湿",
+    "key": "尿不湿",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/3.jpg",
+    "cat": 2 },
+
+  {
+    "name": "安抚牙胶",
+    "key": "安抚牙胶",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/4.jpg",
+    "cat": 2 },
+
+  {
+    "name": "奶瓶奶嘴",
+    "key": "奶瓶奶嘴",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/5.jpg",
+    "cat": 2 },
+
+  {
+    "name": "孕妈用品",
+    "key": "孕妈用品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/6.jpg",
+    "cat": 2 },
+
+  {
+    "name": "宝宝用品",
+    "key": "宝宝用品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/7.jpg",
+    "cat": 2 },
+
+  {
+    "name": "婴童湿巾",
+    "key": "湿巾",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/8.jpg",
+    "cat": 2 },
+
+  {
+    "name": "喂养洗护",
+    "key": "洗护",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/9.jpg",
+    "cat": 2 },
+
+  {
+    "name": "婴童鞋靴",
+    "key": "童鞋",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/10.jpg",
+    "cat": 2 },
+
+  {
+    "name": "口水巾",
+    "key": "口水巾",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/11.jpg",
+    "cat": 2 },
+
+  {
+    "name": "营养辅食",
+    "key": "营养",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/12.jpg",
+    "cat": 2 },
+
+  {
+    "name": "婴幼书籍",
+    "key": "书籍",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/13.jpg",
+    "cat": 2 },
+
+  {
+    "name": "婴儿车",
+    "key": "婴儿车",
+    "img": "https://cdn.uviewui.com/uview/common/classify/8/14.jpg",
+    "cat": 2 }] },
+
+
+
+{
+  "name": "箱包",
+  "goods": [{
+    "name": "单肩包",
+    "key": "单肩包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/9/1.jpg",
+    "cat": 0 },
+
+  {
+    "name": "斜挎包",
+    "key": "斜挎包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/9/2.jpg",
+    "cat": 0 },
+
+  {
+    "name": "女包",
+    "key": "女包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/9/3.jpg",
+    "cat": 0 },
+
+  {
+    "name": "男包",
+    "key": "男包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/9/4.jpg",
+    "cat": 0 },
+
+  {
+    "name": "双肩包",
+    "key": "双肩包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/9/5.jpg",
+    "cat": 0 },
+
+  {
+    "name": "小方包",
+    "key": "小方包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/9/6.jpg",
+    "cat": 0 },
+
+  {
+    "name": "钱包",
+    "key": "钱包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/9/7.jpg",
+    "cat": 0 },
+
+  {
+    "name": "旅行箱包",
+    "key": "旅行箱包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/9/8.jpg",
+    "cat": 0 },
+
+  {
+    "name": "零钱包",
+    "key": "零钱包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/9/9.jpg",
+    "cat": 0 },
+
+  {
+    "name": "手提包",
+    "key": "手提包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/9/10.jpg",
+    "cat": 0 },
+
+  {
+    "name": "胸包",
+    "key": "胸包",
+    "img": "https://cdn.uviewui.com/uview/common/classify/9/11.jpg",
+    "cat": 0 }] },
+
+
+
+{
+  "name": "内衣",
+  "goods": [{
+    "name": "袜子",
+    "key": "袜子",
+    "img": "https://cdn.uviewui.com/uview/common/classify/10/1.jpg",
+    "cat": 11 },
+
+  {
+    "name": "吊带背心",
+    "key": "吊带背心",
+    "img": "https://cdn.uviewui.com/uview/common/classify/10/2.jpg",
+    "cat": 11 },
+
+  {
+    "name": "抹胸",
+    "key": "抹胸",
+    "img": "https://cdn.uviewui.com/uview/common/classify/10/3.jpg",
+    "cat": 11 },
+
+  {
+    "name": "内裤",
+    "key": "内裤",
+    "img": "https://cdn.uviewui.com/uview/common/classify/10/4.jpg",
+    "cat": 11 },
+
+  {
+    "name": "文胸",
+    "key": "文胸",
+    "img": "https://cdn.uviewui.com/uview/common/classify/10/5.jpg",
+    "cat": 11 },
+
+  {
+    "name": "文胸套装",
+    "key": "文胸套装",
+    "img": "https://cdn.uviewui.com/uview/common/classify/10/6.jpg",
+    "cat": 11 },
+
+  {
+    "name": "打底塑身",
+    "key": "打底塑身",
+    "img": "https://cdn.uviewui.com/uview/common/classify/10/7.jpg",
+    "cat": 11 },
+
+  {
+    "name": "家居服",
+    "key": "家居服",
+    "img": "https://cdn.uviewui.com/uview/common/classify/10/8.jpg",
+    "cat": 11 },
+
+  {
+    "name": "船袜",
+    "key": "船袜",
+    "img": "https://cdn.uviewui.com/uview/common/classify/10/9.jpg",
+    "cat": 11 },
+
+  {
+    "name": "情侣睡衣",
+    "key": "情侣睡衣",
+    "img": "https://cdn.uviewui.com/uview/common/classify/10/10.jpg",
+    "cat": 11 },
+
+  {
+    "name": "丝袜",
+    "key": "丝袜",
+    "img": "https://cdn.uviewui.com/uview/common/classify/10/11.jpg",
+    "cat": 11 }] },
+
+
+
+{
+  "name": "文娱车品",
+  "goods": [{
+    "name": "车市车品",
+    "key": "车市车品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/11/1.jpg",
+    "cat": 7 },
+
+  {
+    "name": "办公文具",
+    "key": "办公文具",
+    "img": "https://cdn.uviewui.com/uview/common/classify/11/2.jpg",
+    "cat": 7 },
+
+  {
+    "name": "考试必备",
+    "key": "考试必备",
+    "img": "https://cdn.uviewui.com/uview/common/classify/11/3.jpg",
+    "cat": 7 },
+
+  {
+    "name": "笔记本",
+    "key": "笔记本",
+    "img": "https://cdn.uviewui.com/uview/common/classify/11/4.jpg",
+    "cat": 7 },
+
+  {
+    "name": "艺术礼品",
+    "key": "礼品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/11/5.jpg",
+    "cat": 7 },
+
+  {
+    "name": "书写工具",
+    "key": "书写工具",
+    "img": "https://cdn.uviewui.com/uview/common/classify/11/6.jpg",
+    "cat": 7 },
+
+  {
+    "name": "车载电器",
+    "key": "车载电器",
+    "img": "https://cdn.uviewui.com/uview/common/classify/11/7.jpg",
+    "cat": 7 },
+
+  {
+    "name": "图书音像",
+    "key": "图书音像",
+    "img": "https://cdn.uviewui.com/uview/common/classify/11/8.jpg",
+    "cat": 7 },
+
+  {
+    "name": "画具画材",
+    "key": "画具画材",
+    "img": "https://cdn.uviewui.com/uview/common/classify/11/9.jpg",
+    "cat": 7 }] },
+
+
+
+{
+  "name": "配饰",
+  "goods": [{
+    "name": "太阳镜",
+    "key": "太阳镜",
+    "img": "https://cdn.uviewui.com/uview/common/classify/12/1.jpg",
+    "cat": 0 },
+
+  {
+    "name": "皮带",
+    "key": "皮带",
+    "img": "https://cdn.uviewui.com/uview/common/classify/12/2.jpg",
+    "cat": 0 },
+
+  {
+    "name": "棒球帽",
+    "key": "棒球帽",
+    "img": "https://cdn.uviewui.com/uview/common/classify/12/3.jpg",
+    "cat": 0 },
+
+  {
+    "name": "手表",
+    "key": "手表",
+    "img": "https://cdn.uviewui.com/uview/common/classify/12/4.jpg",
+    "cat": 0 },
+
+  {
+    "name": "发饰",
+    "key": "发饰",
+    "img": "https://cdn.uviewui.com/uview/common/classify/12/5.jpg",
+    "cat": 0 },
+
+  {
+    "name": "项链",
+    "key": "项链",
+    "img": "https://cdn.uviewui.com/uview/common/classify/12/6.jpg",
+    "cat": 0 },
+
+  {
+    "name": "手饰",
+    "key": "手饰",
+    "img": "https://cdn.uviewui.com/uview/common/classify/12/7.jpg",
+    "cat": 0 },
+
+  {
+    "name": "耳环",
+    "key": "耳环",
+    "img": "https://cdn.uviewui.com/uview/common/classify/12/8.jpg",
+    "cat": 0 },
+
+  {
+    "name": "帽子丝巾",
+    "key": "帽子丝巾",
+    "img": "https://cdn.uviewui.com/uview/common/classify/12/9.jpg",
+    "cat": 0 },
+
+  {
+    "name": "眼镜墨镜",
+    "key": "眼镜墨镜",
+    "img": "https://cdn.uviewui.com/uview/common/classify/12/10.jpg",
+    "cat": 0 },
+
+  {
+    "name": "发带发箍",
+    "key": "发带发箍",
+    "img": "https://cdn.uviewui.com/uview/common/classify/12/11.jpg",
+    "cat": 0 }] },
+
+
+
+{
+  "name": "家装家纺",
+  "goods": [{
+    "name": "家居饰品",
+    "key": "家居饰品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/1.jpg",
+    "cat": 0 },
+
+  {
+    "name": "凉席",
+    "key": "凉席",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/2.jpg",
+    "cat": 0 },
+
+  {
+    "name": "背枕靠枕",
+    "key": "靠枕",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/3.jpg",
+    "cat": 0 },
+
+  {
+    "name": "床上用品",
+    "key": "床上用品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/4.jpg",
+    "cat": 0 },
+
+  {
+    "name": "摆件",
+    "key": "摆件",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/5.jpg",
+    "cat": 0 },
+
+  {
+    "name": "四件套",
+    "key": "四件套",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/6.jpg",
+    "cat": 0 },
+
+  {
+    "name": "装饰品",
+    "key": "装饰品",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/7.jpg",
+    "cat": 0 },
+
+  {
+    "name": "卫浴用品",
+    "key": "卫浴",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/8.jpg",
+    "cat": 0 },
+
+  {
+    "name": "家居家装",
+    "key": "家具",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/9.jpg",
+    "cat": 0 },
+
+  {
+    "name": "蚊帐",
+    "key": "蚊帐",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/10.jpg",
+    "cat": 0 },
+
+  {
+    "name": "墙纸贴纸",
+    "key": "墙纸",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/11.jpg",
+    "cat": 0 },
+
+  {
+    "name": "空调被",
+    "key": "空调被",
+    "img": "https://cdn.uviewui.com/uview/common/classify/13/12.jpg",
+    "cat": 0 }] },
+
+
+
+{
+  "name": "户外运动",
+  "goods": [{
+    "name": "游泳装备",
+    "key": "游泳",
+    "img": "https://cdn.uviewui.com/uview/common/classify/14/1.jpg",
+    "cat": 0 },
+
+  {
+    "name": "泳镜",
+    "key": "泳镜",
+    "img": "https://cdn.uviewui.com/uview/common/classify/14/2.jpg",
+    "cat": 0 },
+
+  {
+    "name": "户外装备",
+    "key": "户外",
+    "img": "https://cdn.uviewui.com/uview/common/classify/14/3.jpg",
+    "cat": 0 },
+
+  {
+    "name": "健身服饰",
+    "key": "健身",
+    "img": "https://cdn.uviewui.com/uview/common/classify/14/4.jpg",
+    "cat": 0 },
+
+  {
+    "name": "泳衣",
+    "key": "泳衣",
+    "img": "https://cdn.uviewui.com/uview/common/classify/14/5.jpg",
+    "cat": 0 },
+
+  {
+    "name": "瑜伽垫",
+    "key": "瑜伽垫",
+    "img": "https://cdn.uviewui.com/uview/common/classify/14/6.jpg",
+    "cat": 0 },
+
+  {
+    "name": "瑜伽用品",
+    "key": "瑜伽",
+    "img": "https://cdn.uviewui.com/uview/common/classify/14/7.jpg",
+    "cat": 0 },
+
+  {
+    "name": "健身装备",
+    "key": "健身",
+    "img": "https://cdn.uviewui.com/uview/common/classify/14/8.jpg",
+    "cat": 0 },
+
+  {
+    "name": "球迷用品",
+    "key": "球迷",
+    "img": "https://cdn.uviewui.com/uview/common/classify/14/9.jpg",
+    "cat": 0 }] }];exports.default = _default;
+
+/***/ }),
+
+/***/ 680:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/isTypedArray.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsTypedArray = __webpack_require__(/*! ./_baseIsTypedArray */ 665),
-    baseUnary = __webpack_require__(/*! ./_baseUnary */ 667),
-    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 668);
+var baseIsTypedArray = __webpack_require__(/*! ./_baseIsTypedArray */ 681),
+    baseUnary = __webpack_require__(/*! ./_baseUnary */ 683),
+    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 684);
 
 /* Node.js helper references. */
 var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
@@ -25759,16 +26839,16 @@ module.exports = isTypedArray;
 
 /***/ }),
 
-/***/ 665:
+/***/ 681:
 /*!**************************************************!*\
   !*** ./node_modules/lodash/_baseIsTypedArray.js ***!
   \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 621),
-    isLength = __webpack_require__(/*! ./isLength */ 666),
-    isObjectLike = __webpack_require__(/*! ./isObjectLike */ 658);
+var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 637),
+    isLength = __webpack_require__(/*! ./isLength */ 682),
+    isObjectLike = __webpack_require__(/*! ./isObjectLike */ 674);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]',
@@ -25830,7 +26910,7 @@ module.exports = baseIsTypedArray;
 
 /***/ }),
 
-/***/ 666:
+/***/ 682:
 /*!*****************************************!*\
   !*** ./node_modules/lodash/isLength.js ***!
   \*****************************************/
@@ -25876,7 +26956,7 @@ module.exports = isLength;
 
 /***/ }),
 
-/***/ 667:
+/***/ 683:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_baseUnary.js ***!
   \*******************************************/
@@ -25901,14 +26981,14 @@ module.exports = baseUnary;
 
 /***/ }),
 
-/***/ 668:
+/***/ 684:
 /*!******************************************!*\
   !*** ./node_modules/lodash/_nodeUtil.js ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(/*! ./_freeGlobal */ 624);
+/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(/*! ./_freeGlobal */ 640);
 
 /** Detect free variable `exports`. */
 var freeExports =  true && exports && !exports.nodeType && exports;
@@ -25939,19 +27019,19 @@ var nodeUtil = (function() {
 
 module.exports = nodeUtil;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ 661)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ 677)(module)))
 
 /***/ }),
 
-/***/ 669:
+/***/ 685:
 /*!******************************************!*\
   !*** ./node_modules/lodash/_baseKeys.js ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isPrototype = __webpack_require__(/*! ./_isPrototype */ 670),
-    nativeKeys = __webpack_require__(/*! ./_nativeKeys */ 671);
+var isPrototype = __webpack_require__(/*! ./_isPrototype */ 686),
+    nativeKeys = __webpack_require__(/*! ./_nativeKeys */ 687);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -25984,7 +27064,7 @@ module.exports = baseKeys;
 
 /***/ }),
 
-/***/ 670:
+/***/ 686:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_isPrototype.js ***!
   \*********************************************/
@@ -26013,14 +27093,14 @@ module.exports = isPrototype;
 
 /***/ }),
 
-/***/ 671:
+/***/ 687:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_nativeKeys.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(/*! ./_overArg */ 672);
+var overArg = __webpack_require__(/*! ./_overArg */ 688);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeKeys = overArg(Object.keys, Object);
@@ -26030,7 +27110,7 @@ module.exports = nativeKeys;
 
 /***/ }),
 
-/***/ 672:
+/***/ 688:
 /*!*****************************************!*\
   !*** ./node_modules/lodash/_overArg.js ***!
   \*****************************************/
@@ -26056,15 +27136,15 @@ module.exports = overArg;
 
 /***/ }),
 
-/***/ 673:
+/***/ 689:
 /*!********************************************!*\
   !*** ./node_modules/lodash/isArrayLike.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(/*! ./isFunction */ 620),
-    isLength = __webpack_require__(/*! ./isLength */ 666);
+var isFunction = __webpack_require__(/*! ./isFunction */ 636),
+    isLength = __webpack_require__(/*! ./isLength */ 682);
 
 /**
  * Checks if `value` is array-like. A value is considered array-like if it's
@@ -26100,15 +27180,15 @@ module.exports = isArrayLike;
 
 /***/ }),
 
-/***/ 674:
+/***/ 690:
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_baseAssignIn.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var copyObject = __webpack_require__(/*! ./_copyObject */ 652),
-    keysIn = __webpack_require__(/*! ./keysIn */ 675);
+var copyObject = __webpack_require__(/*! ./_copyObject */ 668),
+    keysIn = __webpack_require__(/*! ./keysIn */ 691);
 
 /**
  * The base implementation of `_.assignIn` without support for multiple sources
@@ -26128,16 +27208,16 @@ module.exports = baseAssignIn;
 
 /***/ }),
 
-/***/ 675:
+/***/ 691:
 /*!***************************************!*\
   !*** ./node_modules/lodash/keysIn.js ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(/*! ./_arrayLikeKeys */ 654),
-    baseKeysIn = __webpack_require__(/*! ./_baseKeysIn */ 676),
-    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 673);
+var arrayLikeKeys = __webpack_require__(/*! ./_arrayLikeKeys */ 670),
+    baseKeysIn = __webpack_require__(/*! ./_baseKeysIn */ 692),
+    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 689);
 
 /**
  * Creates an array of the own and inherited enumerable property names of `object`.
@@ -26171,16 +27251,16 @@ module.exports = keysIn;
 
 /***/ }),
 
-/***/ 676:
+/***/ 692:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_baseKeysIn.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(/*! ./isObject */ 627),
-    isPrototype = __webpack_require__(/*! ./_isPrototype */ 670),
-    nativeKeysIn = __webpack_require__(/*! ./_nativeKeysIn */ 677);
+var isObject = __webpack_require__(/*! ./isObject */ 643),
+    isPrototype = __webpack_require__(/*! ./_isPrototype */ 686),
+    nativeKeysIn = __webpack_require__(/*! ./_nativeKeysIn */ 693);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -26215,7 +27295,7 @@ module.exports = baseKeysIn;
 
 /***/ }),
 
-/***/ 677:
+/***/ 693:
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_nativeKeysIn.js ***!
   \**********************************************/
@@ -26246,14 +27326,14 @@ module.exports = nativeKeysIn;
 
 /***/ }),
 
-/***/ 678:
+/***/ 694:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_cloneBuffer.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(/*! ./_root */ 623);
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(/*! ./_root */ 639);
 
 /** Detect free variable `exports`. */
 var freeExports =  true && exports && !exports.nodeType && exports;
@@ -26289,11 +27369,11 @@ function cloneBuffer(buffer, isDeep) {
 
 module.exports = cloneBuffer;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ 661)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ 677)(module)))
 
 /***/ }),
 
-/***/ 679:
+/***/ 695:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_copyArray.js ***!
   \*******************************************/
@@ -26324,15 +27404,15 @@ module.exports = copyArray;
 
 /***/ }),
 
-/***/ 680:
+/***/ 696:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_copySymbols.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var copyObject = __webpack_require__(/*! ./_copyObject */ 652),
-    getSymbols = __webpack_require__(/*! ./_getSymbols */ 681);
+var copyObject = __webpack_require__(/*! ./_copyObject */ 668),
+    getSymbols = __webpack_require__(/*! ./_getSymbols */ 697);
 
 /**
  * Copies own symbols of `source` to `object`.
@@ -26351,15 +27431,15 @@ module.exports = copySymbols;
 
 /***/ }),
 
-/***/ 681:
+/***/ 697:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_getSymbols.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayFilter = __webpack_require__(/*! ./_arrayFilter */ 682),
-    stubArray = __webpack_require__(/*! ./stubArray */ 683);
+var arrayFilter = __webpack_require__(/*! ./_arrayFilter */ 698),
+    stubArray = __webpack_require__(/*! ./stubArray */ 699);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -26392,7 +27472,7 @@ module.exports = getSymbols;
 
 /***/ }),
 
-/***/ 682:
+/***/ 698:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_arrayFilter.js ***!
   \*********************************************/
@@ -26428,7 +27508,7 @@ module.exports = arrayFilter;
 
 /***/ }),
 
-/***/ 683:
+/***/ 699:
 /*!******************************************!*\
   !*** ./node_modules/lodash/stubArray.js ***!
   \******************************************/
@@ -26462,15 +27542,15 @@ module.exports = stubArray;
 
 /***/ }),
 
-/***/ 684:
+/***/ 700:
 /*!***********************************************!*\
   !*** ./node_modules/lodash/_copySymbolsIn.js ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var copyObject = __webpack_require__(/*! ./_copyObject */ 652),
-    getSymbolsIn = __webpack_require__(/*! ./_getSymbolsIn */ 685);
+var copyObject = __webpack_require__(/*! ./_copyObject */ 668),
+    getSymbolsIn = __webpack_require__(/*! ./_getSymbolsIn */ 701);
 
 /**
  * Copies own and inherited symbols of `source` to `object`.
@@ -26489,17 +27569,17 @@ module.exports = copySymbolsIn;
 
 /***/ }),
 
-/***/ 685:
+/***/ 701:
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_getSymbolsIn.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(/*! ./_arrayPush */ 686),
-    getPrototype = __webpack_require__(/*! ./_getPrototype */ 687),
-    getSymbols = __webpack_require__(/*! ./_getSymbols */ 681),
-    stubArray = __webpack_require__(/*! ./stubArray */ 683);
+var arrayPush = __webpack_require__(/*! ./_arrayPush */ 702),
+    getPrototype = __webpack_require__(/*! ./_getPrototype */ 703),
+    getSymbols = __webpack_require__(/*! ./_getSymbols */ 697),
+    stubArray = __webpack_require__(/*! ./stubArray */ 699);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeGetSymbols = Object.getOwnPropertySymbols;
@@ -26525,7 +27605,7 @@ module.exports = getSymbolsIn;
 
 /***/ }),
 
-/***/ 686:
+/***/ 702:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_arrayPush.js ***!
   \*******************************************/
@@ -26556,14 +27636,14 @@ module.exports = arrayPush;
 
 /***/ }),
 
-/***/ 687:
+/***/ 703:
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_getPrototype.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(/*! ./_overArg */ 672);
+var overArg = __webpack_require__(/*! ./_overArg */ 688);
 
 /** Built-in value references. */
 var getPrototype = overArg(Object.getPrototypeOf, Object);
@@ -26573,16 +27653,16 @@ module.exports = getPrototype;
 
 /***/ }),
 
-/***/ 688:
+/***/ 704:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_getAllKeys.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(/*! ./_baseGetAllKeys */ 689),
-    getSymbols = __webpack_require__(/*! ./_getSymbols */ 681),
-    keys = __webpack_require__(/*! ./keys */ 653);
+var baseGetAllKeys = __webpack_require__(/*! ./_baseGetAllKeys */ 705),
+    getSymbols = __webpack_require__(/*! ./_getSymbols */ 697),
+    keys = __webpack_require__(/*! ./keys */ 669);
 
 /**
  * Creates an array of own enumerable property names and symbols of `object`.
@@ -26600,15 +27680,15 @@ module.exports = getAllKeys;
 
 /***/ }),
 
-/***/ 689:
+/***/ 705:
 /*!************************************************!*\
   !*** ./node_modules/lodash/_baseGetAllKeys.js ***!
   \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(/*! ./_arrayPush */ 686),
-    isArray = __webpack_require__(/*! ./isArray */ 659);
+var arrayPush = __webpack_require__(/*! ./_arrayPush */ 702),
+    isArray = __webpack_require__(/*! ./isArray */ 675);
 
 /**
  * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
@@ -26631,16 +27711,16 @@ module.exports = baseGetAllKeys;
 
 /***/ }),
 
-/***/ 690:
+/***/ 706:
 /*!**********************************************!*\
   !*** ./node_modules/lodash/_getAllKeysIn.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(/*! ./_baseGetAllKeys */ 689),
-    getSymbolsIn = __webpack_require__(/*! ./_getSymbolsIn */ 685),
-    keysIn = __webpack_require__(/*! ./keysIn */ 675);
+var baseGetAllKeys = __webpack_require__(/*! ./_baseGetAllKeys */ 705),
+    getSymbolsIn = __webpack_require__(/*! ./_getSymbolsIn */ 701),
+    keysIn = __webpack_require__(/*! ./keysIn */ 691);
 
 /**
  * Creates an array of own and inherited enumerable property names and
@@ -26659,20 +27739,20 @@ module.exports = getAllKeysIn;
 
 /***/ }),
 
-/***/ 691:
+/***/ 707:
 /*!****************************************!*\
   !*** ./node_modules/lodash/_getTag.js ***!
   \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DataView = __webpack_require__(/*! ./_DataView */ 692),
-    Map = __webpack_require__(/*! ./_Map */ 617),
-    Promise = __webpack_require__(/*! ./_Promise */ 693),
-    Set = __webpack_require__(/*! ./_Set */ 694),
-    WeakMap = __webpack_require__(/*! ./_WeakMap */ 695),
-    baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 621),
-    toSource = __webpack_require__(/*! ./_toSource */ 630);
+var DataView = __webpack_require__(/*! ./_DataView */ 708),
+    Map = __webpack_require__(/*! ./_Map */ 633),
+    Promise = __webpack_require__(/*! ./_Promise */ 709),
+    Set = __webpack_require__(/*! ./_Set */ 710),
+    WeakMap = __webpack_require__(/*! ./_WeakMap */ 711),
+    baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 637),
+    toSource = __webpack_require__(/*! ./_toSource */ 646);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]',
@@ -26728,15 +27808,15 @@ module.exports = getTag;
 
 /***/ }),
 
-/***/ 692:
+/***/ 708:
 /*!******************************************!*\
   !*** ./node_modules/lodash/_DataView.js ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 618),
-    root = __webpack_require__(/*! ./_root */ 623);
+var getNative = __webpack_require__(/*! ./_getNative */ 634),
+    root = __webpack_require__(/*! ./_root */ 639);
 
 /* Built-in method references that are verified to be native. */
 var DataView = getNative(root, 'DataView');
@@ -26746,15 +27826,15 @@ module.exports = DataView;
 
 /***/ }),
 
-/***/ 693:
+/***/ 709:
 /*!*****************************************!*\
   !*** ./node_modules/lodash/_Promise.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 618),
-    root = __webpack_require__(/*! ./_root */ 623);
+var getNative = __webpack_require__(/*! ./_getNative */ 634),
+    root = __webpack_require__(/*! ./_root */ 639);
 
 /* Built-in method references that are verified to be native. */
 var Promise = getNative(root, 'Promise');
@@ -26764,15 +27844,15 @@ module.exports = Promise;
 
 /***/ }),
 
-/***/ 694:
+/***/ 710:
 /*!*************************************!*\
   !*** ./node_modules/lodash/_Set.js ***!
   \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 618),
-    root = __webpack_require__(/*! ./_root */ 623);
+var getNative = __webpack_require__(/*! ./_getNative */ 634),
+    root = __webpack_require__(/*! ./_root */ 639);
 
 /* Built-in method references that are verified to be native. */
 var Set = getNative(root, 'Set');
@@ -26782,15 +27862,15 @@ module.exports = Set;
 
 /***/ }),
 
-/***/ 695:
+/***/ 711:
 /*!*****************************************!*\
   !*** ./node_modules/lodash/_WeakMap.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 618),
-    root = __webpack_require__(/*! ./_root */ 623);
+var getNative = __webpack_require__(/*! ./_getNative */ 634),
+    root = __webpack_require__(/*! ./_root */ 639);
 
 /* Built-in method references that are verified to be native. */
 var WeakMap = getNative(root, 'WeakMap');
@@ -26800,7 +27880,7 @@ module.exports = WeakMap;
 
 /***/ }),
 
-/***/ 696:
+/***/ 712:
 /*!************************************************!*\
   !*** ./node_modules/lodash/_initCloneArray.js ***!
   \************************************************/
@@ -26837,18 +27917,18 @@ module.exports = initCloneArray;
 
 /***/ }),
 
-/***/ 697:
+/***/ 713:
 /*!************************************************!*\
   !*** ./node_modules/lodash/_initCloneByTag.js ***!
   \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 698),
-    cloneDataView = __webpack_require__(/*! ./_cloneDataView */ 700),
-    cloneRegExp = __webpack_require__(/*! ./_cloneRegExp */ 701),
-    cloneSymbol = __webpack_require__(/*! ./_cloneSymbol */ 702),
-    cloneTypedArray = __webpack_require__(/*! ./_cloneTypedArray */ 703);
+var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 714),
+    cloneDataView = __webpack_require__(/*! ./_cloneDataView */ 716),
+    cloneRegExp = __webpack_require__(/*! ./_cloneRegExp */ 717),
+    cloneSymbol = __webpack_require__(/*! ./_cloneSymbol */ 718),
+    cloneTypedArray = __webpack_require__(/*! ./_cloneTypedArray */ 719);
 
 /** `Object#toString` result references. */
 var boolTag = '[object Boolean]',
@@ -26925,14 +28005,14 @@ module.exports = initCloneByTag;
 
 /***/ }),
 
-/***/ 698:
+/***/ 714:
 /*!**************************************************!*\
   !*** ./node_modules/lodash/_cloneArrayBuffer.js ***!
   \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Uint8Array = __webpack_require__(/*! ./_Uint8Array */ 699);
+var Uint8Array = __webpack_require__(/*! ./_Uint8Array */ 715);
 
 /**
  * Creates a clone of `arrayBuffer`.
@@ -26952,14 +28032,14 @@ module.exports = cloneArrayBuffer;
 
 /***/ }),
 
-/***/ 699:
+/***/ 715:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_Uint8Array.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(/*! ./_root */ 623);
+var root = __webpack_require__(/*! ./_root */ 639);
 
 /** Built-in value references. */
 var Uint8Array = root.Uint8Array;
@@ -26969,14 +28049,14 @@ module.exports = Uint8Array;
 
 /***/ }),
 
-/***/ 700:
+/***/ 716:
 /*!***********************************************!*\
   !*** ./node_modules/lodash/_cloneDataView.js ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 698);
+var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 714);
 
 /**
  * Creates a clone of `dataView`.
@@ -26996,7 +28076,7 @@ module.exports = cloneDataView;
 
 /***/ }),
 
-/***/ 701:
+/***/ 717:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_cloneRegExp.js ***!
   \*********************************************/
@@ -27024,14 +28104,14 @@ module.exports = cloneRegExp;
 
 /***/ }),
 
-/***/ 702:
+/***/ 718:
 /*!*********************************************!*\
   !*** ./node_modules/lodash/_cloneSymbol.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(/*! ./_Symbol */ 622);
+var Symbol = __webpack_require__(/*! ./_Symbol */ 638);
 
 /** Used to convert symbols to primitives and strings. */
 var symbolProto = Symbol ? Symbol.prototype : undefined,
@@ -27053,14 +28133,14 @@ module.exports = cloneSymbol;
 
 /***/ }),
 
-/***/ 703:
+/***/ 719:
 /*!*************************************************!*\
   !*** ./node_modules/lodash/_cloneTypedArray.js ***!
   \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 698);
+var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 714);
 
 /**
  * Creates a clone of `typedArray`.
@@ -27080,16 +28160,16 @@ module.exports = cloneTypedArray;
 
 /***/ }),
 
-/***/ 704:
+/***/ 720:
 /*!*************************************************!*\
   !*** ./node_modules/lodash/_initCloneObject.js ***!
   \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseCreate = __webpack_require__(/*! ./_baseCreate */ 705),
-    getPrototype = __webpack_require__(/*! ./_getPrototype */ 687),
-    isPrototype = __webpack_require__(/*! ./_isPrototype */ 670);
+var baseCreate = __webpack_require__(/*! ./_baseCreate */ 721),
+    getPrototype = __webpack_require__(/*! ./_getPrototype */ 703),
+    isPrototype = __webpack_require__(/*! ./_isPrototype */ 686);
 
 /**
  * Initializes an object clone.
@@ -27109,14 +28189,14 @@ module.exports = initCloneObject;
 
 /***/ }),
 
-/***/ 705:
+/***/ 721:
 /*!********************************************!*\
   !*** ./node_modules/lodash/_baseCreate.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(/*! ./isObject */ 627);
+var isObject = __webpack_require__(/*! ./isObject */ 643);
 
 /** Built-in value references. */
 var objectCreate = Object.create;
@@ -27150,16 +28230,16 @@ module.exports = baseCreate;
 
 /***/ }),
 
-/***/ 706:
+/***/ 722:
 /*!**************************************!*\
   !*** ./node_modules/lodash/isMap.js ***!
   \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsMap = __webpack_require__(/*! ./_baseIsMap */ 707),
-    baseUnary = __webpack_require__(/*! ./_baseUnary */ 667),
-    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 668);
+var baseIsMap = __webpack_require__(/*! ./_baseIsMap */ 723),
+    baseUnary = __webpack_require__(/*! ./_baseUnary */ 683),
+    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 684);
 
 /* Node.js helper references. */
 var nodeIsMap = nodeUtil && nodeUtil.isMap;
@@ -27188,15 +28268,15 @@ module.exports = isMap;
 
 /***/ }),
 
-/***/ 707:
+/***/ 723:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_baseIsMap.js ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getTag = __webpack_require__(/*! ./_getTag */ 691),
-    isObjectLike = __webpack_require__(/*! ./isObjectLike */ 658);
+var getTag = __webpack_require__(/*! ./_getTag */ 707),
+    isObjectLike = __webpack_require__(/*! ./isObjectLike */ 674);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]';
@@ -27217,16 +28297,16 @@ module.exports = baseIsMap;
 
 /***/ }),
 
-/***/ 708:
+/***/ 724:
 /*!**************************************!*\
   !*** ./node_modules/lodash/isSet.js ***!
   \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsSet = __webpack_require__(/*! ./_baseIsSet */ 709),
-    baseUnary = __webpack_require__(/*! ./_baseUnary */ 667),
-    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 668);
+var baseIsSet = __webpack_require__(/*! ./_baseIsSet */ 725),
+    baseUnary = __webpack_require__(/*! ./_baseUnary */ 683),
+    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 684);
 
 /* Node.js helper references. */
 var nodeIsSet = nodeUtil && nodeUtil.isSet;
@@ -27255,15 +28335,15 @@ module.exports = isSet;
 
 /***/ }),
 
-/***/ 709:
+/***/ 725:
 /*!*******************************************!*\
   !*** ./node_modules/lodash/_baseIsSet.js ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getTag = __webpack_require__(/*! ./_getTag */ 691),
-    isObjectLike = __webpack_require__(/*! ./isObjectLike */ 658);
+var getTag = __webpack_require__(/*! ./_getTag */ 707),
+    isObjectLike = __webpack_require__(/*! ./isObjectLike */ 674);
 
 /** `Object#toString` result references. */
 var setTag = '[object Set]';
@@ -27284,7 +28364,7 @@ module.exports = baseIsSet;
 
 /***/ }),
 
-/***/ 848:
+/***/ 899:
 /*!************************************************************************!*\
   !*** /Users/lp1/Desktop/cc-ui-vue2/components/cc-countup/wxCountup.js ***!
   \************************************************************************/

@@ -104,7 +104,7 @@ var components
 try {
   components = {
     ccIcon: function() {
-      return Promise.all(/*! import() | components/cc-icon/cc-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/cc-icon/cc-icon")]).then(__webpack_require__.bind(null, /*! @/components/cc-icon/cc-icon.vue */ 524))
+      return Promise.all(/*! import() | components/cc-icon/cc-icon */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/cc-icon/cc-icon")]).then(__webpack_require__.bind(null, /*! @/components/cc-icon/cc-icon.vue */ 547))
     }
   }
 } catch (e) {
@@ -299,6 +299,11 @@ var _default =
           url: '/views/dialog/index' },
 
         {
+          title: 'Alert',
+          label: '警告提示',
+          url: '/views/alert/index' },
+
+        {
           title: 'DropdownMenu',
           label: '下拉菜单',
           url: '/views/dropdown/index' },
@@ -357,6 +362,11 @@ var _default =
           title: 'Countup',
           label: '数字滚动',
           url: '/views/countup/index' },
+
+        {
+          title: 'TimeLine',
+          label: '时间轴',
+          url: '/views/timeLine/index' },
 
         {
           title: 'Divider',
@@ -521,7 +531,12 @@ var _default =
         {
           title: 'Coupon',
           label: '优惠券',
-          url: '/views/coupon/index' }] }] };
+          url: '/views/coupon/index' },
+
+        {
+          title: 'ScrollBar',
+          label: '滚动导航',
+          url: '/views/scrollBar/index' }] }] };
 
 
 

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "alert警告提示",
+  "usingComponents": {
+    "cc-alert": "/components/cc-alert/cc-alert",
+    "cc-button": "/components/cc-button/cc-button"
+  }
+}

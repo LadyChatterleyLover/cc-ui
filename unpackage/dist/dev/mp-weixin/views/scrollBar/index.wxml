@@ -1,0 +1,1 @@
+<view class="data-v-4d52cd4a"><cc-scroll-bar vue-id="5d075cfc-1" list="{{list}}" class="data-v-4d52cd4a" bind:__l="__l"></cc-scroll-bar></view>

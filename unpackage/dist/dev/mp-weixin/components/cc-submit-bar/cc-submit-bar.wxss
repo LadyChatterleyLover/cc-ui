@@ -59,7 +59,7 @@
 }
 .container.data-v-3bcfdb48 {
   height: 50px;
-  padding: 0 16px;
+  padding: 0 32rpx;
   font-size: 14px;
   position: relative;
 }
@@ -90,7 +90,7 @@
   font-size: 16px;
 }
 .tip.data-v-3bcfdb48 {
-  padding: 8px 12px;
+  padding: 16rpx 24rpx;
   color: #f56723;
   font-size: 12px;
   line-height: 1.5;

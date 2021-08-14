@@ -59,6 +59,27 @@
   -webkit-animation: loop-data-v-727a6fdc 10s linear infinite both;
           animation: loop-data-v-727a6fdc 10s linear infinite both;
 }
+.cc-notify-bar-wrap-content-vertical.data-v-727a6fdc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.cc-notify-bar-wrap-content-vertical-swiper.data-v-727a6fdc {
+  width: 100%;
+  height: 100%;
+}
+.cc-notify-bar-wrap-content-vertical-swiper-item.data-v-727a6fdc {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
 .cc-notify-bar-right.data-v-727a6fdc {
   position: relative;
   left: 16rpx;

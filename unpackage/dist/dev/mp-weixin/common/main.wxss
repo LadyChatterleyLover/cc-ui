@@ -74,7 +74,8 @@ button::after {
   padding: 0 !important;
   min-height: 0 !important;
 }
-.cc-tabs-scroll-view .uni-scroll-view, .cc-tabs-scroll-view .uni-scroll-view-content {
+.cc-tabs-scroll-view .uni-scroll-view,
+.cc-tabs-scroll-view .uni-scroll-view-content {
   height: auto !important;
 }
 

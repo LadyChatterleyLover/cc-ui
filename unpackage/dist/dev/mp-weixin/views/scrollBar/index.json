@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "scrollBar滚动导航",
+  "usingComponents": {
+    "cc-scroll-bar": "/components/cc-scroll-bar/cc-scroll-bar"
+  }
+}

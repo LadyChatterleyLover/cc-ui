@@ -1,0 +1,1 @@
+<view class="cc-time-line-item data-v-6fc94090"><view class="cc-time-line-item-node data-v-6fc94090"><block wx:if="{{$slots.node}}"><slot name="node"></slot></block><block wx:else><view class="cc-time-line-item-node-dot data-v-6fc94090"></view></block></view><view class="cc-time-line-item-content data-v-6fc94090"><slot name="content"></slot></view></view>

@@ -25,6 +25,10 @@
 /* 透明度 */
 /* 文章场景相关 */
 .cc-swipe-cell.data-v-e30654ec {
+  position: relative;
+  overflow: hidden;
+}
+.cc-swipe-cell-wrap.data-v-e30654ec {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -33,12 +37,12 @@
           align-items: center;
   position: relative;
 }
-.cc-swipe-cell-content.data-v-e30654ec {
+.cc-swipe-cell-wrap-content.data-v-e30654ec {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
 }
-.cc-swipe-cell-left.data-v-e30654ec {
+.cc-swipe-cell-wrap-left.data-v-e30654ec {
   position: absolute;
   left: 0;
   -webkit-transform: translateX(-100%);
@@ -50,7 +54,7 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.cc-swipe-cell-right.data-v-e30654ec {
+.cc-swipe-cell-wrap-right.data-v-e30654ec {
   position: absolute;
   right: 0;
   -webkit-transform: translateX(100%);

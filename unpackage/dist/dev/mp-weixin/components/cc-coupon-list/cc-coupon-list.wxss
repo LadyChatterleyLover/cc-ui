@@ -108,7 +108,7 @@
   right: 50rpx;
 }
 .cc-coupon-list-content-enable-label.data-v-aea12f78 {
-  padding: 8px 16px;
+  padding: 16rpx 32rpx;
   font-size: 12px;
   border-top: 1px dashed #ebedf0;
   color: #323233;

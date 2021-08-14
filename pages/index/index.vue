@@ -371,6 +371,11 @@ export default {
               title: 'Coupon',
               label: '优惠券',
               url: '/views/coupon/index'
+            },
+            {
+              title: 'ScrollBar',
+              label: '滚动导航',
+              url: '/views/scrollBar/index'
             }
           ]
         }
