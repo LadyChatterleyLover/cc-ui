@@ -181,6 +181,11 @@ export default {
               title: 'Avatar',
               label: '头像',
               url: '/views/avatar/index'
+            },
+            {
+              title: 'Qrcode',
+              label: '生成二维码',
+              url: '/views/qrcode/index'
             }
           ]
         },

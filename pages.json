@@ -56,6 +56,15 @@
           }
         },
         {
+          "path": "qrcode/index",
+          "style": {
+            "navigationBarTitleText": "qrcode生成二维码",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
           "path": "field/index",
           "style": {
             "navigationBarTitleText": "field输入框",

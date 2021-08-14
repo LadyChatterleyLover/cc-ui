@@ -6,11 +6,14 @@
   "author": {
     "name": "lp"
   },
-  "keywords": ["cc-ui", "uni-app", "vue", "组件库"],
+  "keywords": [
+    "cc-ui",
+    "uni-app",
+    "vue",
+    "组件库"
+  ],
   "homepage": "https://github.com/LadyChatterleyLover/cc-ui",
-  "scripts": {
-    
-  },
+  "scripts": {},
   "license": "ISC",
   "dependencies": {
     "async-validator": "^3.5.2",
