@@ -101,6 +101,15 @@
           }
         },
         {
+          "path": "rotateVerify/index",
+          "style": {
+            "navigationBarTitleText": "rotateVerify旋转验证",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
           "path": "upload/index",
           "style": {
             "navigationBarTitleText": "upload上传",

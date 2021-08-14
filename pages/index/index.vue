@@ -153,6 +153,11 @@ export default {
               url: '/views/slideVerify/index'
             },
             {
+              title: 'rotateVerify',
+              label: '旋转验证',
+              url: '/views/rotateVerify/index'
+            },
+            {
               title: 'Loading',
               label: '加载',
               url: '/views/loading/index'
