@@ -13,8 +13,7 @@
           </view>
         </template>
       </cc-time-line-item>
-
-      <cc-time-line-item  node-top="4">
+      <cc-time-line-item >
         <template #content>
           <view>
             <view class="order-title">待取件</view>
@@ -23,7 +22,6 @@
           </view>
         </template>
       </cc-time-line-item>
-      
     </cc-time-line>
   </view>
 </template>

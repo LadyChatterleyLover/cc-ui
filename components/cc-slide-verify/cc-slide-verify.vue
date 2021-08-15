@@ -64,6 +64,7 @@ export default {
       type: [Number, String],
       default: 14
     },
+    // 字体大小
     fontSize: {
       type: [Number, String],
       default: 14

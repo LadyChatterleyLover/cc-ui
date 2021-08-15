@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App'
-import utils from './utils/index.js'
+import $cc from './utils/index.js'
 
-Vue.prototype.$utils = utils
+Vue.prototype.$cc = $cc
 Vue.config.productionTip = false
 
 App.mpType = 'app'

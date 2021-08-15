@@ -105,15 +105,20 @@ export default {
         })
       }
       if (!this.simple) {
-        if (this.activeIndex <= 3) return arr.slice(0, 5)
-        else if (this.activeIndex > Number(this.total) - 2) {
-          return arr.slice(Number(this.total) - 5, Number(this.total))
+        let total = Number(this.total)
+        let showPageSize = Number(this.showPageSize)
+        let half = Math.ceil(showPageSize / 2)
+        let diff = showPageSize - half 
+        
+        if (this.activeIndex <= half) return arr.slice(0, showPageSize)
+        else if (this.activeIndex > total - diff) {
+          return arr.slice(total - showPageSize, total)
         }
         else {
           if (!this.forceEllipses) {
-            return arr.slice(this.activeIndex - 3, this.activeIndex + 2)
+            return arr.slice(this.activeIndex - half, this.activeIndex + diff)
           } else {
-            let arr1 = arr.slice(this.activeIndex - 3, this.activeIndex + 2)
+            let arr1 = arr.slice(this.activeIndex - half, this.activeIndex + diff)
             arr1[0].text = '...'
             arr1[arr1.length - 1].text = '...'
             return arr1

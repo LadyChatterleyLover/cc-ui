@@ -30,7 +30,7 @@ export default {
     // 返回按钮距离底部距离
     bottom: {
       type: [Number, String],
-      default: 200
+      default: 400
     },
     // 返回按钮距离右侧距离
     right: {
@@ -57,7 +57,7 @@ export default {
   },
   watch: {
     scrollTop(val) {
-      if (Number(val) >= Number(this.top)) {
+      if (Number(val) >= uni.upx2px(Number(this.top))) {
         this.show = true
       } else {
         this.show = false

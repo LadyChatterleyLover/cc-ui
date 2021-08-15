@@ -1,6 +1,8 @@
 <template>
   <view>
-    <view class="container"></view>
+    <view class="container">
+      我是顶部的内容
+    </view>
     <cc-backtop :scrollTop="scrollTop"></cc-backtop>
     <cc-backtop :scrollTop="scrollTop" top="50" bottom="100" right="100"><view class="demo">UP</view></cc-backtop>
   </view>

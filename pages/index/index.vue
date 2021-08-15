@@ -308,6 +308,11 @@ export default {
               url: '/views/navBar/index'
             },
             {
+              title: 'BackTop',
+              label: '回到顶部',
+              url: '/views/backTop/index'
+            },
+            {
               title: 'Pagination',
               label: '分页',
               url: '/views/pagination/index'
@@ -403,7 +408,9 @@ export default {
       
     }
   },
-  onLoad() {},
+  onLoad() {
+    
+  },
   methods: {
     clickItem(item) {
       uni.navigateTo({

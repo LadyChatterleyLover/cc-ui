@@ -29,7 +29,6 @@
             {{text}}
           </template>
         </cc-pagination>
-      
       </view>
     </view>
   </view>

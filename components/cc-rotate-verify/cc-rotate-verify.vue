@@ -77,6 +77,7 @@ export default {
       type: String,
       default: 'closeempty'
     },
+    // 点击遮罩层是否可关闭
     closeOnClickOverlay: {
       type: Boolean,
       default: true
@@ -112,12 +113,12 @@ export default {
       type: Number,
       default: 5
     },
-    // 成功提示
+    // 验证成功提示
     successMsg: {
       type: String,
       default: '验证成功'
     },
-    // 错误提示
+    // 验证失败提示
     errMsg: {
       type: String,
       default: '验证失败, 请重新验证'
