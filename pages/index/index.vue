@@ -403,6 +403,21 @@ export default {
               url: '/views/scrollBar/index'
             }
           ]
+        },
+        {
+          title: '项目模板',
+          item: [
+            {
+              title: 'ScrollBar',
+              label: '滚动导航(左右联动)',
+              url: '/views/scrollBarLinkage/index'
+            },
+            {
+              title: 'ScrollBar',
+              label: '滚动导航(左右独立)',
+              url: '/views/scrollBar/index'
+            }
+          ]
         }
       ]
       
