@@ -416,6 +416,11 @@ export default {
               title: 'ScrollBar',
               label: '滚动导航(左右独立)',
               url: '/views/scrollBar/index'
+            },
+            {
+              title: 'ChooseCity',
+              label: '城市选择',
+              url: '/views/chooseCity/index'
             }
           ]
         }

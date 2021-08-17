@@ -110,6 +110,15 @@
           }
         },
         {
+          "path": "chooseCity/index",
+          "style": {
+            "navigationBarTitleText": "chooseCity城市选择",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
           "path": "alert/index",
           "style": {
             "navigationBarTitleText": "alert警告提示",
