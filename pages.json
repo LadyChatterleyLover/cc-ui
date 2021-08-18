@@ -92,6 +92,15 @@
           }
         },
         {
+          "path": "fullTabs/index",
+          "style": {
+            "navigationBarTitleText": "fullTabs全屏选项卡",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
           "path": "pagination/index",
           "style": {
             "navigationBarTitleText": "pagination分页",

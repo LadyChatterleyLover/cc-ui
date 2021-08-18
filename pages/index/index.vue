@@ -333,6 +333,11 @@ export default {
               url: '/views/tabs/index'
             },
             {
+              title: 'FullTabs',
+              label: '全屏选项卡',
+              url: '/views/fullTabs/index'
+            },
+            {
               title: 'Tabbar',
               label: '标签栏',
               url: '/views/tabbar/index'

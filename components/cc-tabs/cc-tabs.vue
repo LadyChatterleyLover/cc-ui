@@ -3,7 +3,10 @@
     <scroll-view scroll-x :scroll-left="scrollLeft" scroll-with-animation>
       <view class="cc-tabs-wrap">
         <view @click="clickItem(item, index)" class="cc-tabs-content" v-for="(item, index) in list" :key="index">
-          <view class="cc-tabs-content-title" :style="{ color: active === index ? activeColor : inactiveColor }">{{ item.title }}</view>
+          <view class="cc-tabs-content-title" :style="{ color: active === index ? activeColor : inactiveColor }">
+              <view>{{ item.title }}</view>
+              <view class="cc-tabs-content-title-badge">{{item.badge}}</view>
+          </view>
         </view>
         <view
           class="cc-tabs-content-line"
@@ -92,6 +95,7 @@ export default {
       this.initLine()
     },
     initLine() {
+      console.log(111)
       uni
         .createSelectorQuery()
         .in(this)
@@ -125,7 +129,11 @@ export default {
   computed: {},
   watch: {
     active(val) {
+      this.initLine()
       this.$emit('change', val)
+    },
+    current(val) {
+      this.active = val
     }
   }
 }
@@ -153,10 +161,26 @@ scroll-view ::v-deep ::-webkit-scrollbar {
       padding: 0px 20rpx;
       font-size: 12px;
       margin-bottom: 20rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      min-height: 50rpx;
+      &-badge {
+        position: absolute;
+        padding: 0 4px;
+        border-radius: 100%;
+        z-index: 99;
+        font-size: 12px;
+        background: #ee0a24;
+        color: #fff;
+        top: 0rpx;
+        right: 60rpx;
+      }
     }
     &-line {
       position: absolute;
-      bottom: 0;
+      bottom: 10rpx;
       transition: all 0.6s;
     }
   }
