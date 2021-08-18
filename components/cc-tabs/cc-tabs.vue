@@ -140,8 +140,8 @@ scroll-view ::v-deep ::-webkit-scrollbar {
   background: transparent;
 }
 .cc-tabs {
-  position: relative;
   &-wrap {
+    position: relative;
     flex: 1;
     display: flex;
     align-items: center;
