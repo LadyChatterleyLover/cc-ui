@@ -173,6 +173,11 @@ export default {
               url: '/views/mask/index'
             },
             {
+              title: 'PullRefresh',
+              label: '下拉刷新',
+              url: '/views/pullRefresh/index'
+            },
+            {
               title: 'SwipeCell',
               label: '滑动单元格',
               url: '/views/swipeCell/index'

@@ -74,6 +74,15 @@
           }
         },
         {
+          "path": "pullRefresh/index",
+          "style": {
+            "navigationBarTitleText": "pullRefresh下拉刷新",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
           "path": "form/index",
           "style": {
             "navigationBarTitleText": "form表单",
