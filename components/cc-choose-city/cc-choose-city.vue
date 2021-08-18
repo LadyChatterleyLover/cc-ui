@@ -9,33 +9,33 @@
       </view>
       <view class="cc-choose-city-container" :style="{ transform: `translateX(${-translateX}%)`, height: height + 'px' }">
         
-        <scroll-view class="cc-choose-city-city" :scroll-top="0">
+        <view class="cc-choose-city-city" :scroll-top="0">
           <view class="cc-choose-city-city-item" v-for="(item, index) in area" :key="index" @click="clickItem(item, index, 0)">
             <view class="cc-choose-city-city-item-name" :class="{ 'cc-choose-city-city-item-active': currentIndex1 === index }">{{ item.name }}</view>
             <cc-icon type="checkmarkempty" color="#0081ff" size="18" v-if="currentIndex1 === index"></cc-icon>
           </view>
-        </scroll-view>
+        </view>
 
-        <scroll-view class="cc-choose-city-city" :scroll-top="0">
+        <view class="cc-choose-city-city" :scroll-top="0">
           <view class="cc-choose-city-city-item" v-for="(item, index) in currentItem1.children" :key="index" @click="clickItem(item, index, 1)">
             <view class="cc-choose-city-city-item-name" :class="{ 'cc-choose-city-city-item-active': currentIndex2 === index }">{{ item.name }}</view>
             <cc-icon type="checkmarkempty" color="#0081ff" size="18" v-if="currentIndex2 === index"></cc-icon>
           </view>
-        </scroll-view>
+        </view>
 
-        <scroll-view class="cc-choose-city-city" :scroll-top="0" v-if="currentItem2">
+        <view class="cc-choose-city-city" :scroll-top="0" v-if="currentItem2">
           <view class="cc-choose-city-city-item" v-for="(item, index) in currentItem2.children" :key="index" @click="clickItem(item, index, 2)">
             <view class="cc-choose-city-city-item-name" :class="{ 'cc-choose-city-city-item-active': currentIndex3 === index }">{{ item.name }}</view>
             <cc-icon type="checkmarkempty" color="#0081ff" size="18" v-if="currentIndex3 === index"></cc-icon>
           </view>
-        </scroll-view>
+        </view>
 
-        <scroll-view class="cc-choose-city-city" :scroll-top="0"  v-if="currentItem3">
+        <view class="cc-choose-city-city" :scroll-top="0"  v-if="currentItem3">
           <view class="cc-choose-city-city-item" v-for="(item, index) in currentItem3.children" :key="index" @click="clickItem(item, index, 3)">
             <view class="cc-choose-city-city-item-name" :class="{ 'cc-choose-city-city-item-active': currentIndex4 === index }">{{ item.name }}</view>
             <cc-icon type="checkmarkempty" color="#0081ff" size="18" v-if="currentIndex4 === index"></cc-icon>
           </view>
-        </scroll-view>
+        </view>
       
       
       
@@ -69,7 +69,7 @@ export default {
       currentItem1: area[0],
       currentItem2: null,
       currentItem3: null,
-      currentIndex1: 0,
+      currentIndex1: -1,
       currentIndex2: -1,
       currentIndex3: -1,
       currentIndex4: -1,

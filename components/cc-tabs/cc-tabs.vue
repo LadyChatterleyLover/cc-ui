@@ -2,14 +2,13 @@
   <view class="cc-tabs cc-tabs-scroll-view">
     <scroll-view scroll-x :scroll-left="scrollLeft" scroll-with-animation>
       <view class="cc-tabs-wrap">
-        <view 
-        @click="clickItem(item, index)" 
-        class="cc-tabs-content" 
-        v-for="(item, index) in list" :key="index">
-          <view class="cc-tabs-content-title" 
-          :style="{ color: active === index ? activeColor : inactiveColor}">{{ item.title }}</view>
-          <view v-if="active === index" class="cc-tabs-content-line" :style="{width: lineWidth + 'rpx', height: lineHeight + 'rpx', background: lineColor}"></view>
+        <view @click="clickItem(item, index)" class="cc-tabs-content" v-for="(item, index) in list" :key="index">
+          <view class="cc-tabs-content-title" :style="{ color: active === index ? activeColor : inactiveColor }">{{ item.title }}</view>
         </view>
+        <view
+          class="cc-tabs-content-line"
+          :style="{ width: lineWidth + 'rpx', height: lineHeight + 'rpx', background: lineColor, transform: `translateX(${translateX}px)` }"
+        ></view>
       </view>
     </scroll-view>
     <slot></slot>
@@ -59,7 +58,11 @@ export default {
   data() {
     return {
       active: 0,
-      scrollLeft: 0
+      scrollLeft: 0,
+      translateX: 0,
+      titleWidth: 0,
+      titleLeft: 0,
+      lineDomWidth: 0
     }
   },
   methods: {
@@ -86,10 +89,35 @@ export default {
           let left = offsetLeft - (width - this.lineWidth) / 2
           this.scrollLeft = left < 0 ? 0 : left
         })
+      this.initLine()
+    },
+    initLine() {
+      uni
+        .createSelectorQuery()
+        .in(this)
+        .selectAll('.cc-tabs-content-title')
+        .boundingClientRect(res => {
+          this.titleLeft = 0
+          for (let i = 0; i < this.active; i++) {
+            this.titleLeft += res[i].width
+          }
+          this.titleWidth = res[this.active].width
+          uni
+            .createSelectorQuery()
+            .in(this)
+            .select('.cc-tabs-content-line')
+            .boundingClientRect(r => {
+              this.lineDomWidth = r.width
+              this.translateX = this.titleLeft + this.titleWidth / 2 - this.lineDomWidth / 2
+            })
+            .exec()
+        })
+        .exec()
     }
   },
   mounted() {
     this.init()
+    this.initLine()
   },
   onLoad() {},
   onShow() {},
@@ -103,7 +131,7 @@ export default {
 }
 </script>
 
-<style  lang="scss">
+<style lang="scss">
 scroll-view ::v-deep ::-webkit-scrollbar {
   display: none;
   width: 0 !important;
@@ -113,7 +141,6 @@ scroll-view ::v-deep ::-webkit-scrollbar {
 }
 .cc-tabs {
   position: relative;
-
   &-wrap {
     flex: 1;
     display: flex;
@@ -121,8 +148,6 @@ scroll-view ::v-deep ::-webkit-scrollbar {
   }
   &-content {
     flex: 1 0 auto;
-    display: flex;
-    justify-content: center;
     position: relative;
     &-title {
       padding: 0px 20rpx;
@@ -132,8 +157,8 @@ scroll-view ::v-deep ::-webkit-scrollbar {
     &-line {
       position: absolute;
       bottom: 0;
+      transition: all 0.6s;
     }
   }
 }
-
 </style>
