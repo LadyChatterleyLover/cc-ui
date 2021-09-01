@@ -1,5 +1,5 @@
 <template>
-  <view class="cc-sticky" :style="{top: offsetTop + 'rpx'}">
+  <view class="cc-sticky" >
     <view class="cc-sticky-content"><slot></slot></view>
   </view>
 </template>
@@ -13,6 +13,10 @@ export default {
     offsetTop: {
       type: [String, Number],
       default: 0
+    },
+    position: {
+      type: String,
+      default: 'top'
     }
   },
   data() {
@@ -21,19 +25,20 @@ export default {
   },
   methods: {
   },
-  mounted() {
-  },
+  mounted() {},
   onLoad() {},
   onShow() {},
   filters: {},
-  computed: {},
+  computed: {
+ 
+  },
   watch: {}
 }
 </script>
 
 <style scoped lang="scss">
-.cc-sticky {
-  position: sticky;
-  z-index: 99;
-}
+  .cc-sticky {
+    position: sticky;
+    z-index: 999;
+  }
 </style>

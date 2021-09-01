@@ -5,7 +5,7 @@
     :loading="loading"
     :class="[`${typeClass}`, `${sizeClass}`, `${isPlain}`, { 'cc-button-block': block }, { 'cc-button-disabled': disabled }, { 'cc-button-round': round }]"
     :style="[{ background: color, customColor }, customStyle]"
-    @click="handleClick"
+    @click="handleClick($event)"
   >
     <view class="cc-button-content">
       <cc-icon v-if="icon" class="cc-button-icon" :color="iconColor" :type="icon" :size="iconSize"></cc-icon>
@@ -100,8 +100,8 @@ export default {
     }
   },
   methods: {
-    handleClick() {
-      this.$emit('click')
+    handleClick(e) {
+      this.$emit('click', e)
     }
   },
   mounted() {
@@ -308,5 +308,4 @@ export default {
     color: #fff;
   }
 }
-
 </style>

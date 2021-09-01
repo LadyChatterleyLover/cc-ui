@@ -6,7 +6,7 @@
       <view class="cc-form-item-label-text">{{ label }}</view>
     </view>
     <view class="cc-form-item-content" :style="{ justifyContent: contentAlignValue }"><slot></slot></view>
-    <view class="cc-form-item-error">{{ error }}</view>
+    <view class="cc-form-item-error" :style="{left: label ? '164rpx': '0'}">{{ error }}</view>
   </view>
 </template>
 
@@ -238,7 +238,6 @@ export default {
     position: absolute;
     font-size: 12px;
     bottom: 0;
-    left: 164rpx;
     margin-top: 20rpx;
   }
 }

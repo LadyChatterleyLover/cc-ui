@@ -74,6 +74,15 @@
           }
         },
         {
+          "path": "fab/index",
+          "style": {
+            "navigationBarTitleText": "fab悬浮按钮",
+            "h5": {
+              "titleNView": false
+            }
+          }
+        },
+        {
           "path": "pullRefresh/index",
           "style": {
             "navigationBarTitleText": "pullRefresh下拉刷新",

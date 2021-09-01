@@ -291,6 +291,11 @@ export default {
               title: 'Gap',
               label: '间隔槽',
               url: '/views/gap/index'
+            },
+            {
+              title: 'Fab',
+              label: '悬浮按钮',
+              url: '/views/fab/index'
             }
           ]
         },
