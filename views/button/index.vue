@@ -4,7 +4,7 @@
       <view class="title">按钮类型</view>
       <view class="item">
         <view class="item-content">
-          <cc-button @click="handleClick({e: $event, count: 3})">暗战</cc-button>
+          <cc-button @click="handleClick($event, {count: 3})">暗战</cc-button>
         </view>
         <view class="item-content">
           <cc-button type="primary">真心英雄</cc-button>
@@ -190,8 +190,9 @@ export default {
     return {}
   },
   methods: {
-    handleClick(e) {
+    handleClick(e, val) {
       console.log('click', e)
+      console.log('click', val)
     }
   },
   mounted() { },

@@ -7,6 +7,7 @@
         <cc-checkbox @change="handleChange" :checked.sync="check1" :option="item1"></cc-checkbox>
       </view>
       <view>当前选中值: {{ check1 }}</view>
+      <cc-button @click='check1 = !check1'>按钮</cc-button>
     </view>
 
     <view class="demo">

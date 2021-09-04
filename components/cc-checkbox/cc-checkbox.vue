@@ -78,7 +78,11 @@ export default {
   onShow() {},
   filters: {},
   computed: {},
-  watch: {}
+  watch: {
+    checked(val) {
+      this.item.checked = val
+    }
+  }
 }
 </script>
 

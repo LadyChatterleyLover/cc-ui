@@ -91,6 +91,10 @@ export default {
     // 按钮点击时的样式
     hoverClass: {
       type: String
+    },
+    dataValue: {
+      type: Object,
+      default: () => {}
     }
   },
   data() {
