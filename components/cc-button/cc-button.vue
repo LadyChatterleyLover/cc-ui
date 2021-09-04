@@ -3,13 +3,33 @@
     class="cc-button"
     :hover-class="hoverClassName"
     :loading="loading"
-    :class="[`${typeClass}`, `${sizeClass}`, `${isPlain}`, { 'cc-button-block': block }, { 'cc-button-disabled': disabled }, { 'cc-button-round': round }]"
+    :class="[
+      `${typeClass}`,
+      `${sizeClass}`,
+      `${isPlain}`,
+      { 'cc-button-block': block },
+      { 'cc-button-disabled': disabled },
+      { 'cc-button-round': round },
+    ]"
     :style="[{ background: color, customColor }, customStyle]"
+    data-value="dataValue"
     @click="handleClick($event)"
   >
     <view class="cc-button-content">
-      <cc-icon v-if="icon" class="cc-button-icon" :color="iconColor" :type="icon" :size="iconSize"></cc-icon>
-      <text :class="{ 'cc-button-text': icon, 'cc-button-text-white': color && !plain }"><slot></slot></text>
+      <cc-icon
+        v-if="icon"
+        class="cc-button-icon"
+        :color="iconColor"
+        :type="icon"
+        :size="iconSize"
+      ></cc-icon>
+      <text
+        :class="{
+          'cc-button-text': icon,
+          'cc-button-text-white': color && !plain,
+        }"
+        ><slot></slot
+      ></text>
     </view>
   </button>
 </template>
@@ -17,76 +37,76 @@
 <script>
 let colorList = [
   {
-    type: 'primary',
-    color: '#0081ff'
+    type: "primary",
+    color: "#0081ff",
   },
   {
-    type: 'success',
-    color: '#39b54a'
+    type: "success",
+    color: "#39b54a",
   },
   {
-    type: 'error',
-    color: '#e54d42'
+    type: "error",
+    color: "#e54d42",
   },
   {
-    type: 'warning',
-    color: '#f37b1d'
+    type: "warning",
+    color: "#f37b1d",
   },
   {
-    type: 'info',
-    color: '#909399'
-  }
-]
+    type: "info",
+    color: "#909399",
+  },
+];
 
 export default {
-  name: 'cc-button',
+  name: "cc-button",
   components: {},
   props: {
     type: {
       type: String,
-      default: ''
+      default: "",
     },
     // 是否是朴素按钮
     plain: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // 圆形按钮
     round: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // 块级按钮
     block: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // 禁用状态
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // 尺寸
     size: {
       type: String,
-      default: ''
+      default: "",
     },
     loading: {
       type: Boolean,
-      default: false
+      default: false,
     },
     // 图标 和uni-icon一致
     icon: {
-      type: String
+      type: String,
     },
     // 自定义颜色
     color: {
       type: String,
-      default: ''
+      default: "",
     },
     // 自定义样式
     customStyle: {
-      type: Object
+      type: Object,
     },
     // 按钮点击时的样式
     hoverClass: {
@@ -100,26 +120,26 @@ export default {
   data() {
     return {
       // 自定义颜色时的朴素状态下边框和背景颜色
-      customColor: ''
-    }
+      customColor: "",
+    };
   },
   methods: {
     handleClick(e) {
-      this.$emit('click', e)
-    }
+      this.$emit("click", e);
+    },
   },
   mounted() {
     // 自定义颜色情况
     if (this.color) {
       this.customColor = {
-        color: '#fff'
-      }
+        color: "#fff",
+      };
       if (this.plain) {
         this.customColor = {
           color: this.color,
           border: `1px solid ${this.color}`,
-          background: '#fff'
-        }
+          background: "#fff",
+        };
       }
     }
   },
@@ -129,57 +149,57 @@ export default {
   computed: {
     // 是否是朴素按钮
     isPlain() {
-      if (this.plain) return `cc-button-${this.type}-plain`
-      else return ''
+      if (this.plain) return `cc-button-${this.type}-plain`;
+      else return "";
     },
     // 按钮类型
     typeClass() {
-      if (this.type) return `cc-button-${this.type}`
-      else return ''
+      if (this.type) return `cc-button-${this.type}`;
+      else return "";
     },
     // 尺寸
     sizeClass() {
-      if (this.size) return `cc-button-${this.size}`
-      else return ''
+      if (this.size) return `cc-button-${this.size}`;
+      else return "";
     },
     // hoverclass
     hoverClassName() {
-      if (this.hoverClass) return this.hoverClass
+      if (this.hoverClass) return this.hoverClass;
       else {
         if (!this.plain) {
-          return `cc-button-hover`
+          return `cc-button-hover`;
         } else {
-          return `cc-button-${this.type}-hover`
+          return `cc-button-${this.type}-hover`;
         }
       }
     },
     // 图标大小
     iconSize() {
-      if (this.size === 'large') {
-        return 28
-      } else if (this.size === '') {
-        return 24
-      } else if (this.size === 'small') {
-        return 20
+      if (this.size === "large") {
+        return 28;
+      } else if (this.size === "") {
+        return 24;
+      } else if (this.size === "small") {
+        return 20;
       } else {
-        return 16
+        return 16;
       }
     },
     // 图标颜色
     iconColor() {
       if (this.type) {
-        if (!this.plain) return '#fff'
+        if (!this.plain) return "#fff";
         else {
-          let item = colorList.find(item => item.type === this.type)
-          return item && item.color
+          let item = colorList.find((item) => item.type === this.type);
+          return item && item.color;
         }
       } else {
-        return '#000'
+        return "#000";
       }
-    }
+    },
   },
-  watch: {}
-}
+  watch: {},
+};
 </script>
 
 <style lang="scss" scoped>
