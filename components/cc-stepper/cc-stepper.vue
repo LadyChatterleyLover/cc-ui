@@ -132,7 +132,7 @@ export default {
   },
   data() {
     return {
-      activeValue: 0,
+      activeValue: this.value,
       minValue: 0,
       maxValue: 0
     }
@@ -216,6 +216,7 @@ export default {
       this.$emit('change', val * 1)
     },
     value(val) {
+      console.log(val)
       this.activeValue = val * 1
     }
   }

@@ -1,12 +1,13 @@
 <template>
   <view class="cc-form-item" :class="{ 'cc-form-item-haserror': error }">
     <view v-if="label" class="cc-form-item-label" :style="{ width: labelWidth + 'rpx', justifyContent: lebelAlignValue }">
-      <view class="cc-form-item-label-required" v-if="required || (rules[prop] &&  rules[prop].find(rule => rule.required))">*</view>
+      <view class="cc-form-item-label-required" 
+      v-if="isRequired">*</view>
       <view class="cc-form-item-label-icon" v-if="leftIcon"><cc-icon :type="leftIcon" size="14"></cc-icon></view>
       <view class="cc-form-item-label-text">{{ label }}</view>
     </view>
     <view class="cc-form-item-content" :style="{ justifyContent: contentAlignValue }"><slot></slot></view>
-    <view class="cc-form-item-error" :style="{left: label ? '164rpx': '0'}">{{ error }}</view>
+    <view class="cc-form-item-error" :style="{ left: label ? '164rpx' : '0' }">{{ error }}</view>
   </view>
 </template>
 
@@ -190,6 +191,14 @@ export default {
       if (this.contentAlign === 'left') return 'flex-start'
       else if (this.contentAlign === 'center') return 'center'
       else return 'flex-end'
+    },
+    // 是否必填 前面加上*号
+    isRequired() {
+      if (this.required) return true
+      if (!this.prop) return false
+      else {
+         return this.rules[this.prop] && this.rules[this.prop].find(rule => rule.required)
+      }
     }
   },
   watch: {}

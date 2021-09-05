@@ -3,11 +3,11 @@
     <view class="demo">
       <view class="demo-title">基础用法</view>
       <view class="demo-item">
-        <cc-stepper @minus="minus" @plus="plus" :value.sync="value"></cc-stepper>
+        <cc-stepper @minus="minus" @plus="plus" :value.sync="value" @change='handleChange'></cc-stepper>
       </view>
       <view>当前值: {{ value }}</view>
     </view>
-
+<!-- 
     <view class="demo">
       <view class="demo-title">设置步长</view>
       <view class="demo-item">
@@ -64,6 +64,7 @@
         <cc-stepper round :value.sync="value"></cc-stepper>
       </view>
     </view>
+  -->
   </view>
 </template>
 
@@ -83,9 +84,13 @@ export default {
     },
     plus() {
       console.log('plus')
+    },
+    handleChange(val) {
+      console.log(val)
     }
   },
-  mounted() { },
+  mounted() { 
+  },
   onLoad() { },
   onShow() { },
   filters: {},

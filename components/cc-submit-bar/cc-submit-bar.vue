@@ -68,8 +68,7 @@ export default {
   },
   data() {
     return {
-      leftPrice: 0,
-      rightPrice: 0
+      showPrice: this.price
     };
   },
   methods: {
@@ -80,10 +79,22 @@ export default {
     }
   },
   mounted() {
-    this.leftPrice = Math.floor(this.price / 100)
-    this.rightPrice = String((this.price / 100).toFixed(this.decimalLength)).split('.')[1]
+   
+  },
+  computed: {
+    leftPrice() {
+      return Math.floor(this.showPrice / 100)
+    },
+    rightPrice() {
+      return String((this.showPrice / 100).toFixed(this.decimalLength)).split('.')[1]
+    }
+  },
+  watch: {
+    price(val) {
+      this.showPrice = val
+    }
   }
-};
+}
 </script>
 
 <style scoped lang="scss">

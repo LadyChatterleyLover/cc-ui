@@ -3,7 +3,7 @@
     <cc-form :model.sync="model" :rules="rules" ref="form">
       <cc-form-item leftIcon="person" label="用户名" prop="username"><cc-field :value.sync="model.username" :border="false"></cc-field></cc-form-item>
       <cc-form-item label="密码" prop="password"><cc-field type="password" :value.sync="model.password" :border="false"></cc-field></cc-form-item>
-      <cc-form-item label="验证码"><cc-field type="password" :value.sync="model.code" :border="false"></cc-field></cc-form-item>
+      <cc-form-item  label="验证码"><cc-field type="password" :value.sync="model.code" :border="false"></cc-field></cc-form-item>
       <cc-form-item>
         <cc-button type="primary" @click="submit">提交</cc-button>
         <cc-button style="margin-left: 30rpx;" @click="reset">重置</cc-button>
