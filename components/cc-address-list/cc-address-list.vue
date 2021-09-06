@@ -127,7 +127,14 @@ export default {
   onShow() {},
   filters: {},
   computed: {},
-  watch: {}
+  watch: {
+    list: {
+      handler(val) {
+        this.addressList = val
+      },
+      deep: true
+    }
+  }
 }
 </script>
 

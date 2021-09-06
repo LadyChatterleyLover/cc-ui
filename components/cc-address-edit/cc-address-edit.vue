@@ -246,7 +246,14 @@ export default {
       set() { }
     }
   },
-  watch: {}
+  watch: {
+    addressInfo: {
+      handler(val) {
+        this.info = val
+      },
+      deep: true
+    }
+  }
 }
 </script>
 
