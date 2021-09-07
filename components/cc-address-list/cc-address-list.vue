@@ -1,8 +1,16 @@
 <template>
   <view class="cc-address-list">
-    <view class="cc-address-list-item" @click="clickItem(item, index)" v-for="(item, index) in addressList" :key="item.id">
+    <view
+      class="cc-address-list-item"
+      @click="clickItem(item, index)"
+      v-for="(item, index) in addressList"
+      :key="item.id"
+    >
       <view class="cc-address-list-item-content">
-        <view class="cc-address-list-item-content-radio" v-if="item.radioList && item.radioList.length">
+        <view
+          class="cc-address-list-item-content-radio"
+          v-if="item.radioList && item.radioList.length"
+        >
           <cc-radio :value.sync="currentValue" :list="item.radioList"></cc-radio>
         </view>
         <view class="cc-address-list-item-content-info">
@@ -15,13 +23,20 @@
           </view>
           <view class="cc-address-list-item-content-info-address">{{ item.address }}</view>
         </view>
-        <view class="cc-address-list-item-edit" @click.stop="edit(item, index)"><cc-icon type="paperclip" color="#969799"></cc-icon></view>
+        <view class="cc-address-list-item-edit" @click.stop="edit(item, index)">
+          <cc-icon type="paperclip" color="#969799"></cc-icon>
+        </view>
       </view>
     </view>
 
     <view class="cc-address-list-disabled-text">{{ disabledText }}</view>
 
-    <view class="cc-address-list-item cc-address-list-item-disabled" @click="clickDisabledItem(item, index)" v-for="(item, index) in disabledList" :key="item.id">
+    <view
+      class="cc-address-list-item cc-address-list-item-disabled"
+      @click="clickDisabledItem(item, index)"
+      v-for="(item, index) in disabledList"
+      :key="item.id"
+    >
       <view class="cc-address-list-item-content">
         <view class="cc-address-list-item-content-info">
           <view class="cc-address-list-item-content-info-top">
@@ -30,12 +45,14 @@
           </view>
           <view class="cc-address-list-item-content-info-address">{{ item.address }}</view>
         </view>
-        <view class="cc-address-list-item-edit" @click.stop="editDisabled(item, index)"><cc-icon type="paperclip" color="#969799"></cc-icon></view>
+        <view class="cc-address-list-item-edit" @click.stop="editDisabled(item, index)">
+          <cc-icon type="paperclip" color="#969799"></cc-icon>
+        </view>
       </view>
     </view>
 
     <view class="cc-address-list-btn" @click="add">
-      <cc-button :color='addButtonColor' round block>{{ addButtonText }}</cc-button>
+      <cc-button :color="addButtonColor" round block>{{ addButtonText }}</cc-button>
     </view>
   </view>
 </template>
@@ -97,7 +114,7 @@ export default {
       this.$emit('click', { item, index })
       this.currentValue = item.id
       if (this.currentValue === item.id) {
-        this.$emit('select', {item, index})
+        this.$emit('select', { item, index })
       }
     },
     edit(item, index) {
@@ -107,11 +124,11 @@ export default {
       this.$emit('add')
     },
     editDisabled(item, index) {
-      this.$emit('edit-disabled', {item, index})
+      this.$emit('edit-disabled', { item, index })
     },
     clickDisabledItem(item, index) {
       this.$emit('click', { item, index })
-      this.$emit('select-disabled', {item, index})
+      this.$emit('select-disabled', { item, index })
     }
   },
   mounted() {
@@ -123,14 +140,21 @@ export default {
       }
     })
   },
-  onLoad() {},
-  onShow() {},
+  onLoad() { },
+  onShow() { },
   filters: {},
   computed: {},
   watch: {
     list: {
       handler(val) {
         this.addressList = val
+        this.addressList.map((item, index) => {
+          this.$set(item, 'radioList', [{ value: item.id, checkedColor: '#e54d42' }])
+          if (this.value === item.id) {
+            this.currentIndex = index
+            this.currentValue = item.id
+          }
+        })
       },
       deep: true
     }

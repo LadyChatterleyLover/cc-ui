@@ -250,6 +250,7 @@ export default {
     addressInfo: {
       handler(val) {
         this.info = val
+        this.info.id = this.genID(20)
       },
       deep: true
     }
