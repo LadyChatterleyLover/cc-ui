@@ -51,6 +51,7 @@
 
 <script>
 export default {
+  name: 'cc-calendar',
   components: {},
   props: {
     // 是否显示日历

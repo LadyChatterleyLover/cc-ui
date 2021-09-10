@@ -69,8 +69,7 @@ export default {
     },
     // 地址列表
     list: {
-      type: Array,
-      default: () => []
+      type: Array
     },
     // 不可配送地址列表
     disabledList: {
@@ -131,7 +130,8 @@ export default {
       this.$emit('select-disabled', { item, index })
     }
   },
-  mounted() {
+  mounted() { 
+    this.addressList = this.list
     this.addressList.map((item, index) => {
       this.$set(item, 'radioList', [{ value: item.id, checkedColor: '#e54d42' }])
       if (this.value === item.id) {
@@ -145,18 +145,15 @@ export default {
   filters: {},
   computed: {},
   watch: {
-    list: {
-      handler(val) {
-        this.addressList = val
-        this.addressList.map((item, index) => {
-          this.$set(item, 'radioList', [{ value: item.id, checkedColor: '#e54d42' }])
-          if (this.value === item.id) {
-            this.currentIndex = index
-            this.currentValue = item.id
-          }
-        })
-      },
-      deep: true
+    list(val) {
+      this.addressList = val
+      this.addressList.map((item, index) => {
+        this.$set(item, 'radioList', [{ value: item.id, checkedColor: '#e54d42' }])
+        if (this.value === item.id) {
+          this.currentIndex = index
+          this.currentValue = item.id
+        }
+      })
     }
   }
 }

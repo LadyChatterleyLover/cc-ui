@@ -54,6 +54,7 @@
 <script>
 import cloneDeep from 'lodash/cloneDeep'
 export default {
+  name: 'cc-tree-select',
   components: {},
   props: {
     // 分类数据

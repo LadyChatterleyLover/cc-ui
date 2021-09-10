@@ -16,6 +16,7 @@
 
 <script>
 export default {
+  name: 'cc-subsection',
   components: {},
   props: {
     // 当前激活项

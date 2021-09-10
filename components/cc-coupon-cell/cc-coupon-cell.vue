@@ -8,6 +8,7 @@
 
 <script>
   export default {
+    name: 'cc-coupon-cell',
     components: {},
     props: {
       // 单元格标题

@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  name: 'cc-contact-card',
   components: {},
   props: {
     // 类型

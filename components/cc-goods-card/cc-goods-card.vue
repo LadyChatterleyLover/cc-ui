@@ -32,6 +32,7 @@
 
 <script>
 export default {
+  name: 'cc-goods-card',
   components: {},
   props: {
     // 左侧图片

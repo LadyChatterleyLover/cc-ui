@@ -22,6 +22,7 @@
 <script>
 import cloneDeep from 'lodash/cloneDeep'
 export default {
+  name: 'cc-contact-list',
   components: {},
   props: {
     // 当前选中联系人的 id

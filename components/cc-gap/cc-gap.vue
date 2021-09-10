@@ -5,6 +5,7 @@
 
 <script>
   export default {
+    name: 'cc-gap',
     components: {},
     props: {
       // 背景颜色

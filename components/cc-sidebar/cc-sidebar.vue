@@ -19,13 +19,7 @@
         :class="{ 'cc-sidebar-item-weight': active === index, disabled: item.disabled }"
         :style="{ color: active === index ? (item.activeColor ? item.activeColor : '#323233') : item.textColor ? item.textColor : '#323233' }"
       >
-        <!-- #ifndef MP-WEIXIN -->
-          <slot v-if="item.slots" :name="item.slots"></slot>
-          <view v-else>{{ item.title }}</view>
-        <!-- #endif -->
-        <!-- #ifdef MP-WEIXIN -->
-        {{item.title}}
-        <!-- #endif -->
+        {{ item.title }}
       </view>
       <view
         class="cc-sidebar-item-active"
@@ -46,25 +40,25 @@ export default {
   components: {},
   props: {
     // 当前选中项
-    current: {
-      type: [Number, String],
-      default: 0
-    },
-    // 侧边栏数据
-    list: {
-      type: Array,
-      required: true
-    },
-    // 侧边栏宽度
-    width: {
-      type: [Number, String],
-      default: 80
-    },
-    // 显示左侧线条
-    showLine: {
-      type: Boolean,
-      default: true
-    }
+      current: {
+        type: [Number, String],
+        default: 0
+      },
+      // 侧边栏数据
+      list: {
+        type: Array,
+        required: true
+      },
+      // 侧边栏宽度
+      width: {
+        type: [Number, String],
+        default: 80
+      },
+      // 显示左侧线条
+      showLine: {
+        type: Boolean,
+        default: true
+      }
   },
   data() {
     return {
@@ -73,7 +67,7 @@ export default {
   },
   methods: {
     clickItem(item, index) {
-      if (item.disabled) return
+      if (item.disabled) return 
       this.active = index
       this.$emit('change', {
         item,

@@ -23,6 +23,7 @@
 
 <script>
 export default {
+  name: 'cc-contact-edit',
   components: {},
   props: {
     // 联系人信息

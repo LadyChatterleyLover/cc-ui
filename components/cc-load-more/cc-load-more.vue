@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  name: 'cc-load-more',
   components: {},
   props: {
     // 加载文案

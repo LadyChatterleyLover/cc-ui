@@ -45,7 +45,7 @@
           />
           <view
             class="cc-search-content-input-close"
-            v-if="value"
+            v-if="value || !clearable"
             @click="clear"
             @mousedown="mousedown"
           >

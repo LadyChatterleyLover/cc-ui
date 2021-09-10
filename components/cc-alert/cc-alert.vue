@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'cc-alert',
   components: {},
   props: {
     // 是否显示警告提示

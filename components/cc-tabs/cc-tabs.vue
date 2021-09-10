@@ -2,16 +2,14 @@
   <view class="cc-tabs cc-tabs-scroll-view">
     <scroll-view scroll-x :scroll-left="scrollLeft" scroll-with-animation>
       <view class="cc-tabs-wrap">
-        <view @click="clickItem(item, index)" class="cc-tabs-content" v-for="(item, index) in list" :key="index">
-          <view class="cc-tabs-content-title" :style="{ color: active === index ? activeColor : inactiveColor }">
-              <view>{{ item.title }}</view>
-              <view class="cc-tabs-content-title-badge">{{item.badge}}</view>
-          </view>
+        <view 
+        @click="clickItem(item, index)" 
+        class="cc-tabs-content" 
+        v-for="(item, index) in list" :key="index">
+          <view class="cc-tabs-content-title" 
+          :style="{ color: active === index ? activeColor : inactiveColor}">{{ item.title }}</view>
+          <view v-if="active === index" class="cc-tabs-content-line" :style="{width: lineWidth + 'rpx', height: lineHeight + 'rpx', background: lineColor}"></view>
         </view>
-        <view
-          class="cc-tabs-content-line"
-          :style="{ width: lineWidth + 'rpx', height: lineHeight + 'rpx', background: lineColor, transform: `translateX(${translateX}px)` }"
-        ></view>
       </view>
     </scroll-view>
     <slot></slot>
@@ -61,11 +59,7 @@ export default {
   data() {
     return {
       active: 0,
-      scrollLeft: 0,
-      translateX: 0,
-      titleWidth: 0,
-      titleLeft: 0,
-      lineDomWidth: 0
+      scrollLeft: 0
     }
   },
   methods: {
@@ -92,36 +86,10 @@ export default {
           let left = offsetLeft - (width - this.lineWidth) / 2
           this.scrollLeft = left < 0 ? 0 : left
         })
-      this.initLine()
-    },
-    initLine() {
-      console.log(111)
-      uni
-        .createSelectorQuery()
-        .in(this)
-        .selectAll('.cc-tabs-content-title')
-        .boundingClientRect(res => {
-          this.titleLeft = 0
-          for (let i = 0; i < this.active; i++) {
-            this.titleLeft += res[i].width
-          }
-          this.titleWidth = res[this.active].width
-          uni
-            .createSelectorQuery()
-            .in(this)
-            .select('.cc-tabs-content-line')
-            .boundingClientRect(r => {
-              this.lineDomWidth = r.width
-              this.translateX = this.titleLeft + this.titleWidth / 2 - this.lineDomWidth / 2
-            })
-            .exec()
-        })
-        .exec()
     }
   },
   mounted() {
     this.init()
-    this.initLine()
   },
   onLoad() {},
   onShow() {},
@@ -129,17 +97,13 @@ export default {
   computed: {},
   watch: {
     active(val) {
-      this.initLine()
       this.$emit('change', val)
-    },
-    current(val) {
-      this.active = val
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style  lang="scss">
 scroll-view ::v-deep ::-webkit-scrollbar {
   display: none;
   width: 0 !important;
@@ -148,41 +112,28 @@ scroll-view ::v-deep ::-webkit-scrollbar {
   background: transparent;
 }
 .cc-tabs {
+  position: relative;
+
   &-wrap {
-    position: relative;
     flex: 1;
     display: flex;
     align-items: center;
   }
   &-content {
     flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
     position: relative;
     &-title {
       padding: 0px 20rpx;
       font-size: 12px;
       margin-bottom: 20rpx;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      min-height: 50rpx;
-      &-badge {
-        position: absolute;
-        padding: 0 4px;
-        border-radius: 100%;
-        z-index: 99;
-        font-size: 12px;
-        background: #ee0a24;
-        color: #fff;
-        top: 0rpx;
-        right: 60rpx;
-      }
     }
     &-line {
       position: absolute;
-      bottom: 10rpx;
-      transition: all 0.6s;
+      bottom: 0;
     }
   }
 }
+
 </style>

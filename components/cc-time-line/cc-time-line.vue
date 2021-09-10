@@ -4,6 +4,7 @@
 
 <script>
 export default {
+  name: 'cc-time-line',
   components: {},
   props: {},
   data() {

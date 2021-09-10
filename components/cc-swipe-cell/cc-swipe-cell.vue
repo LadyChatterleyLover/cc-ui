@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: 'cc-swipe-cell',
   props: {},
   data() {
     return {

@@ -29,6 +29,7 @@
 
 <script>
 export default {
+  name: 'cc-pagination',
   components: {},
   props: {
     // 当前页码

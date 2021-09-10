@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: 'cc-time-line-item',
   components: {},
   props: {
   },

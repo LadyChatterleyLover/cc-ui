@@ -7,6 +7,7 @@
 
 <script>
 export default {
+  name: 'cc-link',
   components: {},
   props: {
     // 链接地址

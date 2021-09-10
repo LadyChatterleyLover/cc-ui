@@ -1,27 +1,13 @@
 <template>
   <view class="cc-address-edit">
     <view class="cc-address-edit-field">
-      <cc-form :model="addressInfo" :rules="rules">
+      <cc-form :model="info" :rules="rules">
         <cc-form-item prop="name">
-          <cc-field
-            style="width: 100%;"
-            :border="false"
-            clearable
-            label="姓名"
-            :placeholder="userPlaceholder"
-            :value.sync="info.name"
-          ></cc-field>
+          <cc-field style="width: 100%;" :border="false" clearable label="姓名" :placeholder="userPlaceholder" :value.sync="info.name"></cc-field>
         </cc-form-item>
 
         <cc-form-item prop="tel">
-          <cc-field
-            :border="false"
-            style="width: 100%;"
-            clearable
-            label="电话"
-            :placeholder="telPlaceholder"
-            :value.sync="info.tel"
-          ></cc-field>
+          <cc-field :border="false" style="width: 100%;" clearable label="电话" :placeholder="telPlaceholder" :value.sync="info.tel"></cc-field>
         </cc-form-item>
 
         <cc-form-item>
@@ -38,32 +24,16 @@
         </cc-form-item>
 
         <cc-form-item>
-          <cc-field
-            style="width: 100%;"
-            :border="false"
-            label="详细地址"
-            clearable
-            :placeholder="detailAddressPlaceholder"
-            :value.sync="info.addressDetail"
-          ></cc-field>
+          <cc-field style="width: 100%;" :border="false" label="详细地址" clearable :placeholder="detailAddressPlaceholder" :value.sync="info.addressDetail"></cc-field>
         </cc-form-item>
         <cc-form-item v-if="showPostal">
-          <cc-field
-            style="width: 100%;"
-            clearable
-            :border="false"
-            label="邮政编码"
-            :placeholder="postalPlaceholder"
-            :value.sync="info.postalCode"
-          ></cc-field>
+          <cc-field style="width: 100%;" clearable :border="false" label="邮政编码" :placeholder="postalPlaceholder" :value.sync="info.postalCode"></cc-field>
         </cc-form-item>
       </cc-form>
     </view>
     <view class="cc-address-edit-default">
       <view class="cc-address-edit-default-title">设置为默认地址</view>
-      <view class="cc-address-edit-default-check">
-        <cc-switch :value.sync="info.isDefault"></cc-switch>
-      </view>
+      <view class="cc-address-edit-default-check"><cc-switch :value.sync="info.isDefault"></cc-switch></view>
     </view>
     <view class="cc-address-edit-button-save" @click="save">
       <cc-button round block :color="saveButtonColor">{{ saveButtonText }}</cc-button>
@@ -72,9 +42,7 @@
       <cc-button round block :color="deleteButtonColor">{{ deleteButtonText }}</cc-button>
     </view>
 
-    <cc-popup @ mode="bottom" :show.sync="visible" height="600rpx">
-      <cc-area title=" " @confirm="confirm" @cancel="cancel"></cc-area>
-    </cc-popup>
+    <cc-popup @ mode="bottom" :show.sync="visible" height="600rpx"><cc-area title=" " @confirm="confirm" @cancel="cancel"></cc-area></cc-popup>
   </view>
 </template>
 
@@ -85,21 +53,7 @@ export default {
   props: {
     // 收货人信息
     addressInfo: {
-      type: Object,
-      default: () => {
-        return {
-          id: '',
-          name: '',
-          tel: '',
-          province: '',
-          city: '',
-          county: '',
-          addressDetail: '',
-          areaCode: '',
-          postalCode: '',
-          isDefault: false
-        }
-      }
+      type: Object
     },
     // 收货人姓名占位符
     userPlaceholder: {
@@ -174,7 +128,7 @@ export default {
   },
   data() {
     return {
-      info: this.addressInfo,
+      info: {},
       rules: {
         name: [
           {
@@ -227,7 +181,21 @@ export default {
     },
   },
   mounted() {
-    this.info.id = this.genID(20)
+    if (this.addressInfo) this.info = this.addressInfo
+    else {
+      let id = this.genID(20)
+      this.$set(this.info, 'id', id)
+      this.$set(this.info, 'name', '')
+      this.$set(this.info, 'tel', '')
+      this.$set(this.info, 'province', '')
+      this.$set(this.info, 'city', '')
+      this.$set(this.info, 'county', '')
+      this.$set(this.info, 'addressDetail', '')
+      this.$set(this.info, 'areaCode', '')
+      this.$set(this.info, 'postalCode', '')
+      this.$set(this.info, 'isDefault', false)
+    }
+    console.log(this.info)
   },
   onLoad() { },
   onShow() { },
@@ -247,12 +215,8 @@ export default {
     }
   },
   watch: {
-    addressInfo: {
-      handler(val) {
-        this.info = val
-        this.info.id = this.genID(20)
-      },
-      deep: true
+    addressInfo(val) {
+      console.log(val)
     }
   }
 }

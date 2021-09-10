@@ -34,6 +34,7 @@
 
 <script>
 export default {
+  name: 'cc-steps',
   components: {},
   props: {
     // 当前激活项

@@ -21,6 +21,7 @@
 
 <script>
 export default {
+  name: 'cc-count-down',
   components: {},
   props: {
     // 倒计时时间

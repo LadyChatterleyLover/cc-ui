@@ -22,6 +22,7 @@
 
 <script>
 export default {
+  name: 'cc-slide-verify',
   components: {},
   props: {
     // 提示文字

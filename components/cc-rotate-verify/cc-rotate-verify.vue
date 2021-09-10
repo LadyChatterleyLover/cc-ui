@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  name: 'cc-rotate-verify',
   components: {},
   props: {
     // 是否显示旋转验证

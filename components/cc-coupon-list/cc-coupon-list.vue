@@ -70,6 +70,7 @@
   import dayjs from 'dayjs'
   import cloneDeep from 'lodash/cloneDeep'
   export default {
+    name: 'cc-coupon-list',
     components: {},
     props: {
       // 当前输入的兑换码

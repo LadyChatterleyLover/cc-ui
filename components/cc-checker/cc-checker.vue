@@ -44,6 +44,7 @@
 <script>
 import cloneDeep from 'lodash/cloneDeep'
 export default {
+  name: 'cc-checker',
   components: {},
   props: {
     value: {

@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  name: 'cc-open-more',
   components: {},
   props: {
     // 文字首行缩进

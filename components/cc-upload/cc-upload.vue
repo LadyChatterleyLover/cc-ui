@@ -21,6 +21,7 @@
 
 <script>
 export default {
+  name: 'cc-upload',
   components: {},
   props: {
     // 服务器地址
