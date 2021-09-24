@@ -86,46 +86,52 @@ export default {
       timer: null,
       containerWidth: 0,
       contentWidth: 0
-    };
+    }
   },
   methods: {
     start() {
       if (this.isAnimate) {
         // #ifdef H5
         this.$nextTick(() => {
-          let progressContainer = this.$refs.progressContainer.$el;
-          let progressContent = this.$refs.progressContent.$el;
-          let style = window.getComputedStyle(progressContainer, null);
-          let width = style.width.replace('px', '') * ((this.percentage * 1) / 100);
-          progressContent.style.width = width.toFixed(2) + 'px';
-          progressContent.style.transition = `width ${this.duration / 1000}s ease`;
-        });
+          let progressContainer = this.$refs.progressContainer.$el
+          let progressContent = this.$refs.progressContent.$el
+          let style = window.getComputedStyle(progressContainer, null)
+          let width = style.width.replace('px', '') * ((this.percentage * 1) / 100)
+          progressContent.style.width = width.toFixed(2) + 'px'
+          progressContent.style.transition = `width ${this.duration / 1000}s ease`
+        })
         // #endif
         const container = uni
           .createSelectorQuery()
           .in(this)
-          .selectAll('#container');
+          .selectAll('#container')
         const content = uni
           .createSelectorQuery()
           .in(this)
-          .selectAll('#content');
+          .selectAll('#content')
         container.boundingClientRect().exec(res1 => {
-          this.contentWidth = res1[0][0].width * 1 * ((this.percentage * 1) / 100).toFixed(2) + 'px';
-        });
+          this.contentWidth = res1[0][0].width * 1 * ((this.percentage * 1) / 100).toFixed(2) + 'px'
+        })
       }
     }
   },
   mounted() {
     this.$nextTick(() => {
-      this.start();
-    });
+      this.start()
+    })
   },
   created() {},
   filters: {},
   computed: {},
-  watch: {},
+  watch: {
+    percentage() {
+      this.$nextTick(() => {
+        this.start()
+      })
+    }
+  },
   directives: {}
-};
+}
 </script>
 
 <style scoped lang="scss">
