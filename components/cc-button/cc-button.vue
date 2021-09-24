@@ -101,6 +101,7 @@ export default {
   },
   methods: {
     handleClick() {
+	  if (this.loading) return
       this.$emit('click')
     }
   },
@@ -196,6 +197,12 @@ export default {
   background: #fff;
   color: #000;
   border: 1px solid #ebedf0;
+  &:hover {
+	opacity: 0.75;
+  }
+  &:active {
+	  transform: translate(1upx,1upx);
+  }
   &-text-white {
     color: #fff;
   }
@@ -232,7 +239,6 @@ export default {
   &-disabled {
     cursor: not-allowed;
     opacity: 0.5;
-    pointer-events: none;
   }
   &-round {
     border-radius: 48rpx;
