@@ -216,6 +216,9 @@ export default {
   watch: {
     show(val) {
       this.flag = val
+    },
+    flag(val) {
+      this.$emit('update:show', val)
     }
   }
 }
