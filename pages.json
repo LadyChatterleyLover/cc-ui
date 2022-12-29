@@ -209,7 +209,7 @@
           }
         },
         {
-          "path": "backTop/index",
+          "path": "backtop/index",
           "style": {
             "navigationBarTitleText": "backtop回到顶部",
             "h5": {

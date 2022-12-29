@@ -4,7 +4,7 @@
     :hover-class="hoverClassName"
     :loading="loading"
     :class="[`${typeClass}`, `${sizeClass}`, `${isPlain}`, { 'cc-button-block': block }, { 'cc-button-disabled': disabled }, { 'cc-button-round': round }]"
-    :style="[{ background: color, customColor }, customStyle]"
+    :style="[{ background: color, ...customColor }, customStyle]"
     @click="handleClick"
   >
     <view class="cc-button-content">
